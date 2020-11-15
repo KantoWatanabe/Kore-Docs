@@ -5,4 +5,4 @@ A documentation about [Kore](https://github.com/KantoWatanabe/Kore).
 ```bash
 php vendor/bin/phpdoc -d KORE_DIR/src/ -t docs/
 ```
-The generated documents are available [here](https://kantowatanabe.github.io/Kore-Docs/namespaces/Kore.html).
+The generated documents are available [here](https://kantowatanabe.github.io/Kore-Docs/index.html).
