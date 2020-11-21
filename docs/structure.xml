@@ -622,85 +622,85 @@
       <error line="168" code="PPC:ERR-50007">No summary for property $body</error>
     </parse_markers>
   </file>
-  <file path="Command.php" generated-path="Command.html" hash="4fcc399ca843309c53c25478931e9240" package="Default">
+  <file path="Command.php" generated-path="Command.html" hash="212975e9222caa9a68f3e641b39f3661" package="Default">
     <docblock line="0">
-      <description></description>
+      <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
     <namespace-alias name="Log">\Kore\Log</namespace-alias>
-    <class final="false" abstract="true" namespace="Kore" line="6" package="Default">
+    <class final="false" abstract="true" namespace="Kore" line="15" package="Default">
       <extends/>
       <name>Command</name>
       <full_name>\Kore\Command</full_name>
-      <docblock line="6">
-        <description></description>
+      <docblock line="15">
+        <description>Command class</description>
         <long-description></long-description>
-        <tag name="package" line="6" description="Default"/>
+        <tag name="package" line="15" description="Default"/>
       </docblock>
-      <property static="false" visibility="protected" namespace="Kore" line="11" package="Default">
+      <property static="false" visibility="protected" namespace="Kore" line="22" package="Default">
         <name>$command</name>
         <full_name>\Kore\Command::$command</full_name>
         <default></default>
-        <docblock line="11">
-          <description></description>
+        <docblock line="22">
+          <description>command namespace</description>
           <long-description></long-description>
-          <tag name="var" line="11" description="" type="string" variable="">
+          <tag name="var" line="22" description="" type="string" variable="">
             <type>string</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="protected" namespace="Kore" line="15" package="Default">
+      <property static="false" visibility="protected" namespace="Kore" line="28" package="Default">
         <name>$args</name>
         <full_name>\Kore\Command::$args</full_name>
         <default>array()</default>
-        <docblock line="15">
-          <description></description>
+        <docblock line="28">
+          <description>command arguments</description>
           <long-description></long-description>
-          <tag name="var" line="15" description="" type="\Kore\array&lt;string&gt;" variable="">
+          <tag name="var" line="28" description="" type="\Kore\array&lt;string&gt;" variable="">
             <type>\Kore\array&lt;string&gt;</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="protected" namespace="Kore" line="19" package="Default">
+      <property static="false" visibility="protected" namespace="Kore" line="34" package="Default">
         <name>$opts</name>
         <full_name>\Kore\Command::$opts</full_name>
         <default>array()</default>
-        <docblock line="19">
-          <description></description>
+        <docblock line="34">
+          <description>command options</description>
           <long-description></long-description>
-          <tag name="var" line="19" description="" type="\Kore\array&lt;string&gt;" variable="">
+          <tag name="var" line="34" description="" type="\Kore\array&lt;string&gt;" variable="">
             <type>\Kore\array&lt;string&gt;</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="true" static="false" visibility="protected" namespace="Kore" line="24" package="Default">
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="Kore" line="42" package="Default">
         <name>exec</name>
         <full_name>\Kore\Command::exec()</full_name>
-        <docblock line="24">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="24" description="" type="void">
+        <docblock line="42">
+          <description>Processing Execution</description>
+          <long-description>The process is implemented in subclasses.</long-description>
+          <tag name="return" line="42" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="32" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="52" package="Default">
         <name>main</name>
         <full_name>\Kore\Command::main()</full_name>
-        <docblock line="32">
-          <description></description>
+        <docblock line="52">
+          <description>Main Processing</description>
           <long-description></long-description>
-          <tag name="param" line="32" description="" type="string" variable="$command">
+          <tag name="param" line="52" description="&lt;p&gt;command namespace&lt;/p&gt;" type="string" variable="$command">
             <type>string</type>
           </tag>
-          <tag name="param" line="32" description="" type="\Kore\array&lt;string&gt;" variable="$args">
+          <tag name="param" line="52" description="&lt;p&gt;command arguments&lt;/p&gt;" type="\Kore\array&lt;string&gt;" variable="$args">
             <type>\Kore\array&lt;string&gt;</type>
           </tag>
-          <tag name="param" line="32" description="" type="\Kore\array&lt;string&gt;" variable="$opts">
+          <tag name="param" line="52" description="&lt;p&gt;command options&lt;/p&gt;" type="\Kore\array&lt;string&gt;" variable="$opts">
             <type>\Kore\array&lt;string&gt;</type>
           </tag>
-          <tag name="return" line="32" description="" type="void">
+          <tag name="return" line="52" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -720,38 +720,41 @@
           <type>\Kore\array&lt;string&gt;</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="61" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="85" package="Default">
         <name>commandName</name>
         <full_name>\Kore\Command::commandName()</full_name>
-        <docblock line="61">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="61" description="" type="string">
+        <docblock line="85">
+          <description>Get the the command name</description>
+          <long-description>The default is the end of the command namespace.
+If you need to customize, please override it with subclasses.</long-description>
+          <tag name="return" line="85" description="command name" type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="71" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="100" package="Default">
         <name>logLevel</name>
         <full_name>\Kore\Command::logLevel()</full_name>
-        <docblock line="71">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="71" description="" type="integer">
+        <docblock line="100">
+          <description>Get the the log level</description>
+          <long-description>The default is Log::LEVEL_DEBUG.
+If you need to customize, please override it with subclasses.</long-description>
+          <tag name="return" line="100" description="log level" type="integer">
             <type>integer</type>
           </tag>
+          <tag name="see" line="100" description="" link="\Kore\Log"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="80" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="112" package="Default">
         <name>handleError</name>
         <full_name>\Kore\Command::handleError()</full_name>
-        <docblock line="80">
-          <description></description>
-          <long-description></long-description>
-          <tag name="param" line="80" description="" type="\Exception" variable="$e">
+        <docblock line="112">
+          <description>Handling Errors</description>
+          <long-description>If you need to customize the handling of errors, please override it with subclasses.</long-description>
+          <tag name="param" line="112" description="&lt;p&gt;errors&lt;/p&gt;" type="\Exception" variable="$e">
             <type>\Exception</type>
           </tag>
-          <tag name="return" line="80" description="" type="void">
+          <tag name="return" line="112" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -761,19 +764,19 @@
           <type>\Exception</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="93" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="125" package="Default">
         <name>getArg</name>
         <full_name>\Kore\Command::getArg()</full_name>
-        <docblock line="93">
-          <description></description>
-          <long-description></long-description>
-          <tag name="param" line="93" description="" type="string" variable="$key">
+        <docblock line="125">
+          <description>Get the the command arguments</description>
+          <long-description>If no key is specified, all command arguments are returned.</long-description>
+          <tag name="param" line="125" description="&lt;p&gt;command arguments key&lt;/p&gt;" type="string" variable="$key">
             <type>string</type>
           </tag>
-          <tag name="param" line="93" description="" type="mixed" variable="$default">
+          <tag name="param" line="125" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="93" description="" type="string|\Kore\array&lt;string&gt;">
+          <tag name="return" line="125" description="command arguments" type="string|\Kore\array&lt;string&gt;">
             <type>string</type>
             <type>\Kore\array&lt;string&gt;</type>
           </tag>
@@ -789,19 +792,19 @@
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="109" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="144" package="Default">
         <name>getOpt</name>
         <full_name>\Kore\Command::getOpt()</full_name>
-        <docblock line="109">
-          <description></description>
-          <long-description></long-description>
-          <tag name="param" line="109" description="" type="string" variable="$key">
+        <docblock line="144">
+          <description>Get the the command options</description>
+          <long-description>If no key is specified, all command options are returned.</long-description>
+          <tag name="param" line="144" description="&lt;p&gt;command options key&lt;/p&gt;" type="string" variable="$key">
             <type>string</type>
           </tag>
-          <tag name="param" line="109" description="" type="mixed" variable="$default">
+          <tag name="param" line="144" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="109" description="" type="string|\Kore\array&lt;string&gt;">
+          <tag name="return" line="144" description="command options" type="string|\Kore\array&lt;string&gt;">
             <type>string</type>
             <type>\Kore\array&lt;string&gt;</type>
           </tag>
@@ -818,20 +821,6 @@
         </argument>
       </method>
     </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="6" code="PPC:ERR-50005">No summary for class \Kore\Command</error>
-      <error line="24" code="PPC:ERR-50008">No summary for method exec()</error>
-      <error line="32" code="PPC:ERR-50008">No summary for method main()</error>
-      <error line="61" code="PPC:ERR-50008">No summary for method commandName()</error>
-      <error line="71" code="PPC:ERR-50008">No summary for method logLevel()</error>
-      <error line="80" code="PPC:ERR-50008">No summary for method handleError()</error>
-      <error line="93" code="PPC:ERR-50008">No summary for method getArg()</error>
-      <error line="109" code="PPC:ERR-50008">No summary for method getOpt()</error>
-      <error line="11" code="PPC:ERR-50007">No summary for property $command</error>
-      <error line="15" code="PPC:ERR-50007">No summary for property $args</error>
-      <error line="19" code="PPC:ERR-50007">No summary for property $opts</error>
-    </parse_markers>
   </file>
   <file path="Application.php" generated-path="Application.html" hash="cf1087aaa9a302ae9c76ec6f065e7874" package="Default">
     <docblock line="0">
