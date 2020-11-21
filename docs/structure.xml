@@ -1393,70 +1393,70 @@ Environment-independent configurations are defined in CONFIG_DIR/config-common.p
       </method>
     </class>
   </file>
-  <file path="Controller.php" generated-path="Controller.html" hash="634251fb39b13eae747fc62e293aa02c" package="Default">
+  <file path="Controller.php" generated-path="Controller.html" hash="d89e19e3e86bedd6f253df48dd5d7d80" package="Default">
     <docblock line="0">
-      <description></description>
+      <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
     <namespace-alias name="Log">\Kore\Log</namespace-alias>
-    <class final="false" abstract="true" namespace="Kore" line="6" package="Default">
+    <class final="false" abstract="true" namespace="Kore" line="15" package="Default">
       <extends/>
       <name>Controller</name>
       <full_name>\Kore\Controller</full_name>
-      <docblock line="6">
-        <description></description>
+      <docblock line="15">
+        <description>Controller class</description>
         <long-description></long-description>
-        <tag name="package" line="6" description="Default"/>
+        <tag name="package" line="15" description="Default"/>
       </docblock>
-      <property static="false" visibility="protected" namespace="Kore" line="11" package="Default">
+      <property static="false" visibility="protected" namespace="Kore" line="22" package="Default">
         <name>$controller</name>
         <full_name>\Kore\Controller::$controller</full_name>
         <default></default>
-        <docblock line="11">
-          <description></description>
+        <docblock line="22">
+          <description>controller namespace</description>
           <long-description></long-description>
-          <tag name="var" line="11" description="" type="string" variable="">
+          <tag name="var" line="22" description="" type="string" variable="">
             <type>string</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="protected" namespace="Kore" line="15" package="Default">
+      <property static="false" visibility="protected" namespace="Kore" line="28" package="Default">
         <name>$args</name>
         <full_name>\Kore\Controller::$args</full_name>
         <default>array()</default>
-        <docblock line="15">
-          <description></description>
+        <docblock line="28">
+          <description>path arguments</description>
           <long-description></long-description>
-          <tag name="var" line="15" description="" type="\Kore\array&lt;string&gt;" variable="">
+          <tag name="var" line="28" description="" type="\Kore\array&lt;string&gt;" variable="">
             <type>\Kore\array&lt;string&gt;</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="true" static="false" visibility="protected" namespace="Kore" line="20" package="Default">
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="Kore" line="36" package="Default">
         <name>action</name>
         <full_name>\Kore\Controller::action()</full_name>
-        <docblock line="20">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="20" description="" type="void">
+        <docblock line="36">
+          <description>Action</description>
+          <long-description>The action is implemented in subclasses.</long-description>
+          <tag name="return" line="36" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="27" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="45" package="Default">
         <name>main</name>
         <full_name>\Kore\Controller::main()</full_name>
-        <docblock line="27">
-          <description></description>
+        <docblock line="45">
+          <description>Main Processing</description>
           <long-description></long-description>
-          <tag name="param" line="27" description="" type="string" variable="$controller">
+          <tag name="param" line="45" description="&lt;p&gt;controller namespace&lt;/p&gt;" type="string" variable="$controller">
             <type>string</type>
           </tag>
-          <tag name="param" line="27" description="" type="\Kore\array&lt;string&gt;" variable="$args">
+          <tag name="param" line="45" description="&lt;p&gt;path arguments&lt;/p&gt;" type="\Kore\array&lt;string&gt;" variable="$args">
             <type>\Kore\array&lt;string&gt;</type>
           </tag>
-          <tag name="return" line="27" description="" type="void">
+          <tag name="return" line="45" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -1471,49 +1471,52 @@ Environment-independent configurations are defined in CONFIG_DIR/config-common.p
           <type>\Kore\array&lt;string&gt;</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="47" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="69" package="Default">
         <name>moduleName</name>
         <full_name>\Kore\Controller::moduleName()</full_name>
-        <docblock line="47">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="47" description="" type="string">
+        <docblock line="69">
+          <description>Get the the module name</description>
+          <long-description>The default is 'app'.
+If you need to customize, please override it with subclasses.</long-description>
+          <tag name="return" line="69" description="module name" type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="55" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="82" package="Default">
         <name>logLevel</name>
         <full_name>\Kore\Controller::logLevel()</full_name>
-        <docblock line="55">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="55" description="" type="integer">
+        <docblock line="82">
+          <description>Get the the log level</description>
+          <long-description>The default is Log::LEVEL_DEBUG.
+If you need to customize, please override it with subclasses.</long-description>
+          <tag name="return" line="82" description="log level" type="integer">
             <type>integer</type>
           </tag>
+          <tag name="see" line="82" description="" link="\Kore\Log"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="63" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="93" package="Default">
         <name>preaction</name>
         <full_name>\Kore\Controller::preaction()</full_name>
-        <docblock line="63">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="63" description="" type="void">
+        <docblock line="93">
+          <description>Preprocessing of the action</description>
+          <long-description>If you need to customize, please override it with subclasses.</long-description>
+          <tag name="return" line="93" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="72" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="105" package="Default">
         <name>handleError</name>
         <full_name>\Kore\Controller::handleError()</full_name>
-        <docblock line="72">
-          <description></description>
-          <long-description></long-description>
-          <tag name="param" line="72" description="" type="\Exception" variable="$e">
+        <docblock line="105">
+          <description>Handling Errors</description>
+          <long-description>If you need to customize the handling of errors, please override it with subclasses.</long-description>
+          <tag name="param" line="105" description="&lt;p&gt;errors&lt;/p&gt;" type="\Exception" variable="$e">
             <type>\Exception</type>
           </tag>
-          <tag name="return" line="72" description="" type="void">
+          <tag name="return" line="105" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -1523,30 +1526,30 @@ Environment-independent configurations are defined in CONFIG_DIR/config-common.p
           <type>\Exception</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="83" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="115" package="Default">
         <name>getMethod</name>
         <full_name>\Kore\Controller::getMethod()</full_name>
-        <docblock line="83">
-          <description></description>
+        <docblock line="115">
+          <description>Get the http method</description>
           <long-description></long-description>
-          <tag name="return" line="83" description="" type="string">
+          <tag name="return" line="115" description="http method" type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="93" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="127" package="Default">
         <name>getHeader</name>
         <full_name>\Kore\Controller::getHeader()</full_name>
-        <docblock line="93">
-          <description></description>
+        <docblock line="127">
+          <description>Get the http header</description>
           <long-description></long-description>
-          <tag name="param" line="93" description="" type="string" variable="$key">
+          <tag name="param" line="127" description="&lt;p&gt;header key&lt;/p&gt;" type="string" variable="$key">
             <type>string</type>
           </tag>
-          <tag name="param" line="93" description="" type="mixed" variable="$default">
+          <tag name="param" line="127" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="93" description="" type="string|null">
+          <tag name="return" line="127" description="http header" type="string|null">
             <type>string</type>
             <type>null</type>
           </tag>
@@ -1562,19 +1565,19 @@ Environment-independent configurations are defined in CONFIG_DIR/config-common.p
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="107" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="144" package="Default">
         <name>getQuery</name>
         <full_name>\Kore\Controller::getQuery()</full_name>
-        <docblock line="107">
-          <description></description>
-          <long-description></long-description>
-          <tag name="param" line="107" description="" type="string" variable="$key">
+        <docblock line="144">
+          <description>Get the query parameters</description>
+          <long-description>If no key is specified, all query parameters are returned.</long-description>
+          <tag name="param" line="144" description="&lt;p&gt;query parameters key&lt;/p&gt;" type="string" variable="$key">
             <type>string</type>
           </tag>
-          <tag name="param" line="107" description="" type="mixed" variable="$default">
+          <tag name="param" line="144" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="107" description="" type="string|\Kore\array&lt;string&gt;">
+          <tag name="return" line="144" description="query parameters" type="string|\Kore\array&lt;string&gt;">
             <type>string</type>
             <type>\Kore\array&lt;string&gt;</type>
           </tag>
@@ -1590,19 +1593,19 @@ Environment-independent configurations are defined in CONFIG_DIR/config-common.p
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="123" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="163" package="Default">
         <name>getPost</name>
         <full_name>\Kore\Controller::getPost()</full_name>
-        <docblock line="123">
-          <description></description>
-          <long-description></long-description>
-          <tag name="param" line="123" description="" type="string" variable="$key">
+        <docblock line="163">
+          <description>Get the post parameters</description>
+          <long-description>If no key is specified, all post parameters are returned.</long-description>
+          <tag name="param" line="163" description="&lt;p&gt;post parameters key&lt;/p&gt;" type="string" variable="$key">
             <type>string</type>
           </tag>
-          <tag name="param" line="123" description="" type="mixed" variable="$default">
+          <tag name="param" line="163" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="123" description="" type="string|\Kore\array&lt;string&gt;">
+          <tag name="return" line="163" description="post parameters" type="string|\Kore\array&lt;string&gt;">
             <type>string</type>
             <type>\Kore\array&lt;string&gt;</type>
           </tag>
@@ -1618,41 +1621,41 @@ Environment-independent configurations are defined in CONFIG_DIR/config-common.p
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="137" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="179" package="Default">
         <name>getBody</name>
         <full_name>\Kore\Controller::getBody()</full_name>
-        <docblock line="137">
-          <description></description>
+        <docblock line="179">
+          <description>Get the body data</description>
           <long-description></long-description>
-          <tag name="return" line="137" description="" type="string">
+          <tag name="return" line="179" description="body data" type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="147" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="191" package="Default">
         <name>getJsonBody</name>
         <full_name>\Kore\Controller::getJsonBody()</full_name>
-        <docblock line="147">
-          <description></description>
+        <docblock line="191">
+          <description>Get the body data in json format</description>
           <long-description></long-description>
-          <tag name="return" line="147" description="" type="\Kore\array&lt;mixed&gt;">
+          <tag name="return" line="191" description="body data" type="\Kore\array&lt;mixed&gt;">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="158" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="205" package="Default">
         <name>getCookie</name>
         <full_name>\Kore\Controller::getCookie()</full_name>
-        <docblock line="158">
-          <description></description>
-          <long-description></long-description>
-          <tag name="param" line="158" description="" type="string" variable="$key">
+        <docblock line="205">
+          <description>Get the cookie parameters</description>
+          <long-description>If no key is specified, all cookie parameters are returned.</long-description>
+          <tag name="param" line="205" description="&lt;p&gt;cookie parameters key&lt;/p&gt;" type="string" variable="$key">
             <type>string</type>
           </tag>
-          <tag name="param" line="158" description="" type="mixed" variable="$default">
+          <tag name="param" line="205" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="158" description="" type="string|\Kore\array&lt;string&gt;">
+          <tag name="return" line="205" description="cookie parameters" type="string|\Kore\array&lt;string&gt;">
             <type>string</type>
             <type>\Kore\array&lt;string&gt;</type>
           </tag>
@@ -1668,19 +1671,19 @@ Environment-independent configurations are defined in CONFIG_DIR/config-common.p
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="174" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="224" package="Default">
         <name>getArg</name>
         <full_name>\Kore\Controller::getArg()</full_name>
-        <docblock line="174">
-          <description></description>
-          <long-description></long-description>
-          <tag name="param" line="174" description="" type="string" variable="$key">
+        <docblock line="224">
+          <description>Get the path arguments</description>
+          <long-description>If no key is specified, all path arguments are returned.</long-description>
+          <tag name="param" line="224" description="&lt;p&gt;path arguments key&lt;/p&gt;" type="string" variable="$key">
             <type>string</type>
           </tag>
-          <tag name="param" line="174" description="" type="mixed" variable="$default">
+          <tag name="param" line="224" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="174" description="" type="string|\Kore\array&lt;string&gt;">
+          <tag name="return" line="224" description="path arguments" type="string|\Kore\array&lt;string&gt;">
             <type>string</type>
             <type>\Kore\array&lt;string&gt;</type>
           </tag>
@@ -1696,22 +1699,22 @@ Environment-independent configurations are defined in CONFIG_DIR/config-common.p
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="194" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="243" package="Default">
         <name>respondView</name>
         <full_name>\Kore\Controller::respondView()</full_name>
-        <docblock line="194">
-          <description></description>
+        <docblock line="243">
+          <description>Respond in view format</description>
           <long-description></long-description>
-          <tag name="param" line="194" description="" type="string" variable="$path">
+          <tag name="param" line="243" description="&lt;p&gt;view file path&lt;/p&gt;" type="string" variable="$path">
             <type>string</type>
           </tag>
-          <tag name="param" line="194" description="" type="\Kore\array&lt;mixed&gt;" variable="$data">
+          <tag name="param" line="243" description="&lt;p&gt;response data&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$data">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="param" line="194" description="" type="integer" variable="$responseCode">
+          <tag name="param" line="243" description="&lt;p&gt;http status code, the default is 200&lt;/p&gt;" type="integer" variable="$responseCode">
             <type>integer</type>
           </tag>
-          <tag name="return" line="194" description="" type="void">
+          <tag name="return" line="243" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -1731,19 +1734,19 @@ Environment-independent configurations are defined in CONFIG_DIR/config-common.p
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="205" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="256" package="Default">
         <name>extractView</name>
         <full_name>\Kore\Controller::extractView()</full_name>
-        <docblock line="205">
-          <description></description>
+        <docblock line="256">
+          <description>Extract the view</description>
           <long-description></long-description>
-          <tag name="param" line="205" description="" type="string" variable="$path">
+          <tag name="param" line="256" description="&lt;p&gt;view file path&lt;/p&gt;" type="string" variable="$path">
             <type>string</type>
           </tag>
-          <tag name="param" line="205" description="" type="\Kore\array&lt;mixed&gt;" variable="$data">
+          <tag name="param" line="256" description="&lt;p&gt;response data&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$data">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="return" line="205" description="" type="string|false">
+          <tag name="return" line="256" description="view" type="string|false">
             <type>string</type>
             <type>false</type>
           </tag>
@@ -1759,19 +1762,19 @@ Environment-independent configurations are defined in CONFIG_DIR/config-common.p
           <type>\Kore\array&lt;mixed&gt;</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="219" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="272" package="Default">
         <name>respondJson</name>
         <full_name>\Kore\Controller::respondJson()</full_name>
-        <docblock line="219">
-          <description></description>
+        <docblock line="272">
+          <description>Respond in json format</description>
           <long-description></long-description>
-          <tag name="param" line="219" description="" type="\Kore\array&lt;mixed&gt;" variable="$data">
+          <tag name="param" line="272" description="&lt;p&gt;response data&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$data">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="param" line="219" description="" type="integer" variable="$responseCode">
+          <tag name="param" line="272" description="&lt;p&gt;http status code, the default is 200&lt;/p&gt;" type="integer" variable="$responseCode">
             <type>integer</type>
           </tag>
-          <tag name="return" line="219" description="" type="void">
+          <tag name="return" line="272" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -1786,19 +1789,19 @@ Environment-independent configurations are defined in CONFIG_DIR/config-common.p
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="232" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="287" package="Default">
         <name>redirect</name>
         <full_name>\Kore\Controller::redirect()</full_name>
-        <docblock line="232">
-          <description></description>
+        <docblock line="287">
+          <description>Redirect</description>
           <long-description></long-description>
-          <tag name="param" line="232" description="" type="string" variable="$url">
+          <tag name="param" line="287" description="&lt;p&gt;redirect url&lt;/p&gt;" type="string" variable="$url">
             <type>string</type>
           </tag>
-          <tag name="param" line="232" description="" type="integer" variable="$responseCode">
+          <tag name="param" line="287" description="&lt;p&gt;http status code, the default is 302&lt;/p&gt;" type="integer" variable="$responseCode">
             <type>integer</type>
           </tag>
-          <tag name="return" line="232" description="" type="void">
+          <tag name="return" line="287" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -1814,30 +1817,6 @@ Environment-independent configurations are defined in CONFIG_DIR/config-common.p
         </argument>
       </method>
     </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="6" code="PPC:ERR-50005">No summary for class \Kore\Controller</error>
-      <error line="20" code="PPC:ERR-50008">No summary for method action()</error>
-      <error line="27" code="PPC:ERR-50008">No summary for method main()</error>
-      <error line="47" code="PPC:ERR-50008">No summary for method moduleName()</error>
-      <error line="55" code="PPC:ERR-50008">No summary for method logLevel()</error>
-      <error line="63" code="PPC:ERR-50008">No summary for method preaction()</error>
-      <error line="72" code="PPC:ERR-50008">No summary for method handleError()</error>
-      <error line="83" code="PPC:ERR-50008">No summary for method getMethod()</error>
-      <error line="93" code="PPC:ERR-50008">No summary for method getHeader()</error>
-      <error line="107" code="PPC:ERR-50008">No summary for method getQuery()</error>
-      <error line="123" code="PPC:ERR-50008">No summary for method getPost()</error>
-      <error line="137" code="PPC:ERR-50008">No summary for method getBody()</error>
-      <error line="147" code="PPC:ERR-50008">No summary for method getJsonBody()</error>
-      <error line="158" code="PPC:ERR-50008">No summary for method getCookie()</error>
-      <error line="174" code="PPC:ERR-50008">No summary for method getArg()</error>
-      <error line="194" code="PPC:ERR-50008">No summary for method respondView()</error>
-      <error line="205" code="PPC:ERR-50008">No summary for method extractView()</error>
-      <error line="219" code="PPC:ERR-50008">No summary for method respondJson()</error>
-      <error line="232" code="PPC:ERR-50008">No summary for method redirect()</error>
-      <error line="11" code="PPC:ERR-50007">No summary for property $controller</error>
-      <error line="15" code="PPC:ERR-50007">No summary for property $args</error>
-    </parse_markers>
   </file>
   <file path="DB.php" generated-path="DB.html" hash="f90f04b9dc23381e258327878ca9c5bc" package="Default">
     <docblock line="0">
