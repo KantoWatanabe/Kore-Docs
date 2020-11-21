@@ -114,7 +114,7 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">100</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">88</span>
                                 </a>
                             </li>
                             <li>
@@ -144,19 +144,19 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1128531625"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-573940464"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-1128531625" class="accordion-body collapse in">
+            <div id="namespace-573940464" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1212682095"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1791281284"></a>
                                 <a href="../namespaces/Kore.html" style="margin-left: 30px; padding-left: 0">Kore</a>
             </div>
-            <div id="namespace-1212682095" class="accordion-body collapse ">
+            <div id="namespace-1791281284" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -195,8 +195,8 @@
                     <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
 
                     <h1><small>\Kore</small>Application</h1>
-                    <p><em></em></p>
-                    
+                    <p><em>Application class</em></p>
+                    <p>Running web and cli applications.</p>
                     
                                         
                     <section id="summary">
@@ -294,8 +294,9 @@
             <article class="property">
                 <h3 class="protected ">$basePath</h3>
                 <pre class="signature">$basePath : string</pre>
-                <p><em></em></p>
-                
+                <p><em>Base path</em></p>
+                <p>Excluded when parsing the controller namespace.
+Used in running web applications.</p>
 
                                 <h4>Type</h4>
                 string
@@ -318,8 +319,10 @@
             <article class="property">
                 <h3 class="protected ">$defaultController</h3>
                 <pre class="signature">$defaultController : string</pre>
-                <p><em></em></p>
-                
+                <p><em>Default controller</em></p>
+                <p>Called if the controller is not specified.
+If unspecified, the default is 'index'.
+Used in running web applications.</p>
 
                                 <h4>Type</h4>
                 string
@@ -342,8 +345,9 @@
             <article class="property">
                 <h3 class="protected ">$notFound</h3>
                 <pre class="signature">$notFound : callable</pre>
-                <p><em></em></p>
-                
+                <p><em>Not found handler</em></p>
+                <p>Called when the controller is not found.
+Used in running web applications.</p>
 
                                 <h4>Type</h4>
                 callable
@@ -374,7 +378,7 @@
                 <h3 class="public ">setBasePath()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">setBasePath(string  <span class="argument">$basePath</span>) : void</pre>
-                <p><em></em></p>
+                <p><em>Set the base path</em></p>
                 
 
                                     <h4>Parameters</h4>
@@ -382,7 +386,7 @@
                                                     <tr>
                                 <td>string</td>
                                 <td>$basePath </td>
-                                <td><p>ex. 'mybasepath'</p></td>
+                                <td><p>bath path ex. 'mybasepath'</p></td>
                             </tr>
                                             </table>
                 
@@ -410,7 +414,7 @@
                 <h3 class="public ">setDefaultController()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">setDefaultController(string  <span class="argument">$defaultController</span>) : void</pre>
-                <p><em></em></p>
+                <p><em>Set the default controller</em></p>
                 
 
                                     <h4>Parameters</h4>
@@ -418,7 +422,7 @@
                                                     <tr>
                                 <td>string</td>
                                 <td>$defaultController </td>
-                                <td></td>
+                                <td><p>default controller</p></td>
                             </tr>
                                             </table>
                 
@@ -446,7 +450,7 @@
                 <h3 class="public ">setNotFound()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">setNotFound(callable  <span class="argument">$notFound</span>) : void</pre>
-                <p><em></em></p>
+                <p><em>Set the not found handler</em></p>
                 
 
                                     <h4>Parameters</h4>
@@ -454,7 +458,7 @@
                                                     <tr>
                                 <td>callable</td>
                                 <td>$notFound </td>
-                                <td></td>
+                                <td><p>not found handler</p></td>
                             </tr>
                                             </table>
                 
@@ -482,7 +486,7 @@
                 <h3 class="public ">run()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">run(string|null  <span class="argument">$path = null</span>) : void</pre>
-                <p><em></em></p>
+                <p><em>Running web applications</em></p>
                 
 
                                     <h4>Parameters</h4>
@@ -490,7 +494,7 @@
                                                     <tr>
                                 <td>string|null</td>
                                 <td>$path </td>
-                                <td></td>
+                                <td><p>request path</p></td>
                             </tr>
                                             </table>
                 
@@ -518,7 +522,7 @@
                 <h3 class="public ">runCmd()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">runCmd(\Kore\array&lt;string&gt;  <span class="argument">$argv</span>) : void</pre>
-                <p><em></em></p>
+                <p><em>Running cli applications</em></p>
                 
 
                                     <h4>Parameters</h4>
@@ -526,10 +530,15 @@
                                                     <tr>
                                 <td>\Kore\array<string></td>
                                 <td>$argv </td>
-                                <td></td>
+                                <td><p>command line argument</p></td>
                             </tr>
                                             </table>
                 
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Exception</dt>
+                            <dd><p>thrown when the command class is not found.</p></dd>
+                                                                    </dl>
                 
                 
                             </article>
@@ -554,7 +563,7 @@
                 <h3 class="protected ">parseController()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">parseController(string  <span class="argument">$path</span>) : \Kore\array&lt;mixed&gt;</pre>
-                <p><em></em></p>
+                <p><em>Parse the controller namespace from the request path</em></p>
                 
 
                                     <h4>Parameters</h4>
@@ -562,13 +571,19 @@
                                                     <tr>
                                 <td>string</td>
                                 <td>$path </td>
-                                <td></td>
+                                <td><p>request path</p></td>
                             </tr>
                                             </table>
                 
                 
                                     <h4>Returns</h4>
                     \Kore\array<mixed>
+                                            &mdash; <p>controller information
+array(
+controller class instance,
+controller namespace,
+path arguments
+)</p>
                                     
                             </article>
         </div>
@@ -592,7 +607,7 @@
                 <h3 class="protected ">parseCommand()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">parseCommand(\Kore\array&lt;string&gt;  <span class="argument">$argv</span>) : \Kore\array&lt;mixed&gt;</pre>
-                <p><em></em></p>
+                <p><em>Parse the command namespace from the command line argument</em></p>
                 
 
                                     <h4>Parameters</h4>
@@ -600,13 +615,20 @@
                                                     <tr>
                                 <td>\Kore\array<string></td>
                                 <td>$argv </td>
-                                <td></td>
+                                <td><p>command line argument</p></td>
                             </tr>
                                             </table>
                 
                 
                                     <h4>Returns</h4>
                     \Kore\array<mixed>
+                                            &mdash; <p>command information
+array(
+commadn class instance,
+command namespace,
+arguments,
+options
+)</p>
                                     
                             </article>
         </div>
@@ -673,7 +695,7 @@
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on November 15th, 2020 at 06:31.
+                    on November 21st, 2020 at 10:16.
                 </section>
             </section>
         </section>
