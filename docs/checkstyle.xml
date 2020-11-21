@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<checkstyle version="1.3.0">
+  <file name="bootstrap.php"/>
+  <file name="HttpClient.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="6" severity="error" message="No summary for class \Kore\HttpClient" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="142" severity="error" message="No summary for class \Kore\HttpResponse" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="15" severity="error" message="No summary for method get()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="27" severity="error" message="No summary for method post()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="39" severity="error" message="No summary for method put()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="51" severity="error" message="No summary for method patch()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="63" severity="error" message="No summary for method delete()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="76" severity="error" message="No summary for method communicate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="128" severity="error" message="No summary for method buildHeader()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="150" severity="error" message="No summary for method __construct()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="173" severity="error" message="No summary for method getHttpCode()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="181" severity="error" message="No summary for method getHeader()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="190" severity="error" message="No summary for method getHeaderLine()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="202" severity="error" message="No summary for method getBody()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="210" severity="error" message="No summary for method getJsonBody()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="160" severity="error" message="No summary for property $httpCode" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="164" severity="error" message="No summary for property $header" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="168" severity="error" message="No summary for property $body" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Command.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="6" severity="error" message="No summary for class \Kore\Command" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="24" severity="error" message="No summary for method exec()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="32" severity="error" message="No summary for method main()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="61" severity="error" message="No summary for method commandName()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="71" severity="error" message="No summary for method logLevel()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="80" severity="error" message="No summary for method handleError()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="93" severity="error" message="No summary for method getArg()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="109" severity="error" message="No summary for method getOpt()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="11" severity="error" message="No summary for property $command" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $args" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $opts" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Application.php"/>
+  <file name="Log.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="4" severity="error" message="No summary for class \Kore\Log" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="26" severity="error" message="No summary for method init()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="37" severity="error" message="No summary for method debug()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="49" severity="error" message="No summary for method info()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="61" severity="error" message="No summary for method warn()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="73" severity="error" message="No summary for method error()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="86" severity="error" message="No summary for method write()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="99" severity="error" message="No summary for method buildLog()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="14" severity="error" message="No summary for property $logName" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $logLevel" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Config.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="4" severity="error" message="No summary for class \Kore\Config" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="15" severity="error" message="No summary for method create()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="34" severity="error" message="No summary for method get()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="9" severity="error" message="No summary for property $config" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Controller.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="6" severity="error" message="No summary for class \Kore\Controller" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="20" severity="error" message="No summary for method action()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="27" severity="error" message="No summary for method main()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="47" severity="error" message="No summary for method moduleName()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="55" severity="error" message="No summary for method logLevel()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="63" severity="error" message="No summary for method preaction()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="72" severity="error" message="No summary for method handleError()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="83" severity="error" message="No summary for method getMethod()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="93" severity="error" message="No summary for method getHeader()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="107" severity="error" message="No summary for method getQuery()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="123" severity="error" message="No summary for method getPost()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="137" severity="error" message="No summary for method getBody()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="147" severity="error" message="No summary for method getJsonBody()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="158" severity="error" message="No summary for method getCookie()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="174" severity="error" message="No summary for method getArg()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="194" severity="error" message="No summary for method respondView()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="205" severity="error" message="No summary for method extractView()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="219" severity="error" message="No summary for method respondJson()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="232" severity="error" message="No summary for method redirect()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="11" severity="error" message="No summary for property $controller" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $args" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="DB.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="7" severity="error" message="No summary for class \Kore\DB" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="18" severity="error" message="No summary for method __construct()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="27" severity="error" message="No summary for method __clone()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="36" severity="error" message="No summary for method connection()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="50" severity="error" message="No summary for method connect()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="71" severity="error" message="No summary for method getPdo()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="81" severity="error" message="No summary for method select()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="94" severity="error" message="No summary for method selectFirst()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="107" severity="error" message="No summary for method count()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="120" severity="error" message="No summary for method insert()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="132" severity="error" message="No summary for method update()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="144" severity="error" message="No summary for method delete()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="155" severity="error" message="No summary for method transaction()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="172" severity="error" message="No summary for method getInClause()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="193" severity="error" message="No summary for method execute()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="218" severity="error" message="No summary for method debugValue()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="241" severity="error" message="No summary for method dataType()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="12" severity="error" message="No summary for property $pdo" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+</checkstyle>

@@ -1,0 +1,2271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project title="API Documentation" version="2.9.1">
+  <partials/>
+  <file path="bootstrap.php" generated-path="bootstrap.html" hash="6ab5ab62c2d562a96da983073502f4f8" package="Default">
+    <docblock line="0">
+      <description>Kore : Simple And Minimal Framework</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <constant namespace="" line="18" package="Default">
+      <name>APP_DIR</name>
+      <full_name>\APP_DIR</full_name>
+      <value>$app_dir</value>
+      <docblock line="18">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="18" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="19" package="Default">
+      <name>APP_NS</name>
+      <full_name>\APP_NS</full_name>
+      <value>$app_ns</value>
+      <docblock line="19">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="19" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="22" package="Default">
+      <name>CONFIG_DIR</name>
+      <full_name>\CONFIG_DIR</full_name>
+      <value>APP_DIR . '/config'</value>
+      <docblock line="22">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="22" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="23" package="Default">
+      <name>CONTROLLERS_DIR</name>
+      <full_name>\CONTROLLERS_DIR</full_name>
+      <value>APP_DIR . '/controllers'</value>
+      <docblock line="23">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="23" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="24" package="Default">
+      <name>COMMANDS_DIR</name>
+      <full_name>\COMMANDS_DIR</full_name>
+      <value>APP_DIR . '/commands'</value>
+      <docblock line="24">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="24" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="25" package="Default">
+      <name>VIEWS_DIR</name>
+      <full_name>\VIEWS_DIR</full_name>
+      <value>APP_DIR . '/views'</value>
+      <docblock line="25">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="25" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="26" package="Default">
+      <name>LIBS_DIR</name>
+      <full_name>\LIBS_DIR</full_name>
+      <value>APP_DIR . '/libs'</value>
+      <docblock line="26">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="26" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="27" package="Default">
+      <name>TMP_DIR</name>
+      <full_name>\TMP_DIR</full_name>
+      <value>dirname(APP_DIR) . '/tmp'</value>
+      <docblock line="27">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="27" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="28" package="Default">
+      <name>LOGS_DIR</name>
+      <full_name>\LOGS_DIR</full_name>
+      <value>TMP_DIR . '/logs'</value>
+      <docblock line="28">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="28" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="31" package="Default">
+      <name>CONTROLLERS_NS</name>
+      <full_name>\CONTROLLERS_NS</full_name>
+      <value>APP_NS . '\\controllers'</value>
+      <docblock line="31">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="31" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="32" package="Default">
+      <name>COMMANDS_NS</name>
+      <full_name>\COMMANDS_NS</full_name>
+      <value>APP_NS . '\\commands'</value>
+      <docblock line="32">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="32" description="Default"/>
+      </docblock>
+    </constant>
+    <function namespace="Kore" line="16" package="Default">
+      <name>bootstrap</name>
+      <full_name>\Kore\bootstrap()</full_name>
+      <docblock line="16">
+        <description>Initialize the application</description>
+        <long-description></long-description>
+        <tag name="package" line="16" description="Default"/>
+        <tag name="param" line="16" description="&lt;p&gt;Application Directory&lt;/p&gt;" type="string" variable="$app_dir">
+          <type>string</type>
+        </tag>
+        <tag name="param" line="16" description="&lt;p&gt;Application NameSpace&lt;/p&gt;" type="string" variable="$app_ns">
+          <type>string</type>
+        </tag>
+        <tag name="return" line="16" description="" type="void">
+          <type>void</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$app_dir</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$app_ns</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+    </function>
+  </file>
+  <file path="HttpClient.php" generated-path="HttpClient.html" hash="b905ce818f2fe2d8fce1f549a09f030b" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Log">\Kore\Log</namespace-alias>
+    <class final="false" abstract="false" namespace="Kore" line="6" package="Default">
+      <extends/>
+      <name>HttpClient</name>
+      <full_name>\Kore\HttpClient</full_name>
+      <docblock line="6">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="6" description="Default"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="15" package="Default">
+        <name>get</name>
+        <full_name>\Kore\HttpClient::get()</full_name>
+        <docblock line="15">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="15" description="" type="string" variable="$url">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="15" description="" type="\Kore\array&lt;mixed&gt;" variable="$params">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="param" line="15" description="" type="\Kore\array&lt;mixed&gt;" variable="$headers">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="param" line="15" description="" type="string|null" variable="$userpwd">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+          <tag name="return" line="15" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$url</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$params</name>
+          <default>array()</default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$headers</name>
+          <default>array()</default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$userpwd</name>
+          <default>null</default>
+          <type>string|null</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="27" package="Default">
+        <name>post</name>
+        <full_name>\Kore\HttpClient::post()</full_name>
+        <docblock line="27">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="27" description="" type="string" variable="$url">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="27" description="" type="\Kore\array&lt;mixed&gt;" variable="$params">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="param" line="27" description="" type="\Kore\array&lt;mixed&gt;" variable="$headers">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="param" line="27" description="" type="string|null" variable="$userpwd">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+          <tag name="return" line="27" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$url</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$params</name>
+          <default>array()</default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$headers</name>
+          <default>array()</default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$userpwd</name>
+          <default>null</default>
+          <type>string|null</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="39" package="Default">
+        <name>put</name>
+        <full_name>\Kore\HttpClient::put()</full_name>
+        <docblock line="39">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="39" description="" type="string" variable="$url">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="39" description="" type="\Kore\array&lt;mixed&gt;" variable="$params">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="param" line="39" description="" type="\Kore\array&lt;mixed&gt;" variable="$headers">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="param" line="39" description="" type="string|null" variable="$userpwd">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+          <tag name="return" line="39" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$url</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$params</name>
+          <default>array()</default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$headers</name>
+          <default>array()</default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$userpwd</name>
+          <default>null</default>
+          <type>string|null</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="51" package="Default">
+        <name>patch</name>
+        <full_name>\Kore\HttpClient::patch()</full_name>
+        <docblock line="51">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="51" description="" type="string" variable="$url">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="51" description="" type="\Kore\array&lt;mixed&gt;" variable="$params">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="param" line="51" description="" type="\Kore\array&lt;mixed&gt;" variable="$headers">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="param" line="51" description="" type="string|null" variable="$userpwd">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+          <tag name="return" line="51" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$url</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$params</name>
+          <default>array()</default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$headers</name>
+          <default>array()</default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$userpwd</name>
+          <default>null</default>
+          <type>string|null</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="63" package="Default">
+        <name>delete</name>
+        <full_name>\Kore\HttpClient::delete()</full_name>
+        <docblock line="63">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="63" description="" type="string" variable="$url">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="63" description="" type="\Kore\array&lt;mixed&gt;" variable="$params">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="param" line="63" description="" type="\Kore\array&lt;mixed&gt;" variable="$headers">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="param" line="63" description="" type="string|null" variable="$userpwd">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+          <tag name="return" line="63" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$url</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$params</name>
+          <default>array()</default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$headers</name>
+          <default>array()</default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$userpwd</name>
+          <default>null</default>
+          <type>string|null</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="76" package="Default">
+        <name>communicate</name>
+        <full_name>\Kore\HttpClient::communicate()</full_name>
+        <docblock line="76">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="76" description="" type="string" variable="$method">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="76" description="" type="string" variable="$url">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="76" description="" type="\Kore\array&lt;mixed&gt;" variable="$params">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="param" line="76" description="" type="\Kore\array&lt;mixed&gt;" variable="$headers">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="param" line="76" description="" type="string|null" variable="$userpwd">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+          <tag name="return" line="76" description="" type="\Kore\HttpResponse|false">
+            <type>\Kore\HttpResponse</type>
+            <type>false</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$method</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$url</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$params</name>
+          <default>array()</default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$headers</name>
+          <default>array()</default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$userpwd</name>
+          <default>null</default>
+          <type>string|null</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="128" package="Default">
+        <name>buildHeader</name>
+        <full_name>\Kore\HttpClient::buildHeader()</full_name>
+        <docblock line="128">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="128" description="" type="\Kore\array&lt;mixed&gt;" variable="$headers">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="return" line="128" description="" type="\Kore\array&lt;string&gt;">
+            <type>\Kore\array&lt;string&gt;</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$headers</name>
+          <default></default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+      </method>
+    </class>
+    <class final="false" abstract="false" namespace="Kore" line="142" package="Default">
+      <extends/>
+      <name>HttpResponse</name>
+      <full_name>\Kore\HttpResponse</full_name>
+      <docblock line="142">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="142" description="Default"/>
+      </docblock>
+      <property static="false" visibility="private" namespace="Kore" line="160" package="Default">
+        <name>$httpCode</name>
+        <full_name>\Kore\HttpResponse::$httpCode</full_name>
+        <default></default>
+        <docblock line="160">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="160" description="" type="integer" variable="">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="Kore" line="164" package="Default">
+        <name>$header</name>
+        <full_name>\Kore\HttpResponse::$header</full_name>
+        <default></default>
+        <docblock line="164">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="164" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="Kore" line="168" package="Default">
+        <name>$body</name>
+        <full_name>\Kore\HttpResponse::$body</full_name>
+        <default></default>
+        <docblock line="168">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="168" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="150" package="Default">
+        <name>__construct</name>
+        <full_name>\Kore\HttpResponse::__construct()</full_name>
+        <docblock line="150">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="150" description="" type="integer" variable="$httpCode">
+            <type>integer</type>
+          </tag>
+          <tag name="param" line="150" description="" type="string" variable="$header">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="150" description="" type="string" variable="$body">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="150" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$httpCode</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$header</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$body</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="173" package="Default">
+        <name>getHttpCode</name>
+        <full_name>\Kore\HttpResponse::getHttpCode()</full_name>
+        <docblock line="173">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="173" description="" type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="181" package="Default">
+        <name>getHeader</name>
+        <full_name>\Kore\HttpResponse::getHeader()</full_name>
+        <docblock line="181">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="181" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="190" package="Default">
+        <name>getHeaderLine</name>
+        <full_name>\Kore\HttpResponse::getHeaderLine()</full_name>
+        <docblock line="190">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="190" description="" type="string" variable="$key">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="190" description="" type="string|null">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="202" package="Default">
+        <name>getBody</name>
+        <full_name>\Kore\HttpResponse::getBody()</full_name>
+        <docblock line="202">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="202" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="210" package="Default">
+        <name>getJsonBody</name>
+        <full_name>\Kore\HttpResponse::getJsonBody()</full_name>
+        <docblock line="210">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="210" description="" type="\Kore\array&lt;mixed&gt;">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="6" code="PPC:ERR-50005">No summary for class \Kore\HttpClient</error>
+      <error line="142" code="PPC:ERR-50005">No summary for class \Kore\HttpResponse</error>
+      <error line="15" code="PPC:ERR-50008">No summary for method get()</error>
+      <error line="27" code="PPC:ERR-50008">No summary for method post()</error>
+      <error line="39" code="PPC:ERR-50008">No summary for method put()</error>
+      <error line="51" code="PPC:ERR-50008">No summary for method patch()</error>
+      <error line="63" code="PPC:ERR-50008">No summary for method delete()</error>
+      <error line="76" code="PPC:ERR-50008">No summary for method communicate()</error>
+      <error line="128" code="PPC:ERR-50008">No summary for method buildHeader()</error>
+      <error line="150" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="173" code="PPC:ERR-50008">No summary for method getHttpCode()</error>
+      <error line="181" code="PPC:ERR-50008">No summary for method getHeader()</error>
+      <error line="190" code="PPC:ERR-50008">No summary for method getHeaderLine()</error>
+      <error line="202" code="PPC:ERR-50008">No summary for method getBody()</error>
+      <error line="210" code="PPC:ERR-50008">No summary for method getJsonBody()</error>
+      <error line="160" code="PPC:ERR-50007">No summary for property $httpCode</error>
+      <error line="164" code="PPC:ERR-50007">No summary for property $header</error>
+      <error line="168" code="PPC:ERR-50007">No summary for property $body</error>
+    </parse_markers>
+  </file>
+  <file path="Command.php" generated-path="Command.html" hash="4fcc399ca843309c53c25478931e9240" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Log">\Kore\Log</namespace-alias>
+    <class final="false" abstract="true" namespace="Kore" line="6" package="Default">
+      <extends/>
+      <name>Command</name>
+      <full_name>\Kore\Command</full_name>
+      <docblock line="6">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="6" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Kore" line="11" package="Default">
+        <name>$command</name>
+        <full_name>\Kore\Command::$command</full_name>
+        <default></default>
+        <docblock line="11">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="11" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Kore" line="15" package="Default">
+        <name>$args</name>
+        <full_name>\Kore\Command::$args</full_name>
+        <default>array()</default>
+        <docblock line="15">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="15" description="" type="\Kore\array&lt;string&gt;" variable="">
+            <type>\Kore\array&lt;string&gt;</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Kore" line="19" package="Default">
+        <name>$opts</name>
+        <full_name>\Kore\Command::$opts</full_name>
+        <default>array()</default>
+        <docblock line="19">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="19" description="" type="\Kore\array&lt;string&gt;" variable="">
+            <type>\Kore\array&lt;string&gt;</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="Kore" line="24" package="Default">
+        <name>exec</name>
+        <full_name>\Kore\Command::exec()</full_name>
+        <docblock line="24">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="24" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="32" package="Default">
+        <name>main</name>
+        <full_name>\Kore\Command::main()</full_name>
+        <docblock line="32">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="32" description="" type="string" variable="$command">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="32" description="" type="\Kore\array&lt;string&gt;" variable="$args">
+            <type>\Kore\array&lt;string&gt;</type>
+          </tag>
+          <tag name="param" line="32" description="" type="\Kore\array&lt;string&gt;" variable="$opts">
+            <type>\Kore\array&lt;string&gt;</type>
+          </tag>
+          <tag name="return" line="32" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$command</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$args</name>
+          <default></default>
+          <type>\Kore\array&lt;string&gt;</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$opts</name>
+          <default></default>
+          <type>\Kore\array&lt;string&gt;</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="61" package="Default">
+        <name>commandName</name>
+        <full_name>\Kore\Command::commandName()</full_name>
+        <docblock line="61">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="61" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="71" package="Default">
+        <name>logLevel</name>
+        <full_name>\Kore\Command::logLevel()</full_name>
+        <docblock line="71">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="71" description="" type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="80" package="Default">
+        <name>handleError</name>
+        <full_name>\Kore\Command::handleError()</full_name>
+        <docblock line="80">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="80" description="" type="\Exception" variable="$e">
+            <type>\Exception</type>
+          </tag>
+          <tag name="return" line="80" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$e</name>
+          <default></default>
+          <type>\Exception</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="93" package="Default">
+        <name>getArg</name>
+        <full_name>\Kore\Command::getArg()</full_name>
+        <docblock line="93">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="93" description="" type="string" variable="$key">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="93" description="" type="mixed" variable="$default">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="93" description="" type="string|\Kore\array&lt;string&gt;">
+            <type>string</type>
+            <type>\Kore\array&lt;string&gt;</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default>null</default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$default</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="109" package="Default">
+        <name>getOpt</name>
+        <full_name>\Kore\Command::getOpt()</full_name>
+        <docblock line="109">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="109" description="" type="string" variable="$key">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="109" description="" type="mixed" variable="$default">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="109" description="" type="string|\Kore\array&lt;string&gt;">
+            <type>string</type>
+            <type>\Kore\array&lt;string&gt;</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default>null</default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$default</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="6" code="PPC:ERR-50005">No summary for class \Kore\Command</error>
+      <error line="24" code="PPC:ERR-50008">No summary for method exec()</error>
+      <error line="32" code="PPC:ERR-50008">No summary for method main()</error>
+      <error line="61" code="PPC:ERR-50008">No summary for method commandName()</error>
+      <error line="71" code="PPC:ERR-50008">No summary for method logLevel()</error>
+      <error line="80" code="PPC:ERR-50008">No summary for method handleError()</error>
+      <error line="93" code="PPC:ERR-50008">No summary for method getArg()</error>
+      <error line="109" code="PPC:ERR-50008">No summary for method getOpt()</error>
+      <error line="11" code="PPC:ERR-50007">No summary for property $command</error>
+      <error line="15" code="PPC:ERR-50007">No summary for property $args</error>
+      <error line="19" code="PPC:ERR-50007">No summary for property $opts</error>
+    </parse_markers>
+  </file>
+  <file path="Application.php" generated-path="Application.html" hash="cf1087aaa9a302ae9c76ec6f065e7874" package="Default">
+    <docblock line="0">
+      <description>Kore : Simple And Minimal Framework</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Kore" line="14" package="Default">
+      <extends/>
+      <name>Application</name>
+      <full_name>\Kore\Application</full_name>
+      <docblock line="14">
+        <description>Application class</description>
+        <long-description>Running web and cli applications.</long-description>
+        <tag name="package" line="14" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Kore" line="23" package="Default">
+        <name>$basePath</name>
+        <full_name>\Kore\Application::$basePath</full_name>
+        <default>''</default>
+        <docblock line="23">
+          <description>Base path</description>
+          <long-description>Excluded when parsing the controller namespace.
+Used in running web applications.</long-description>
+          <tag name="var" line="23" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Kore" line="32" package="Default">
+        <name>$defaultController</name>
+        <full_name>\Kore\Application::$defaultController</full_name>
+        <default>'index'</default>
+        <docblock line="32">
+          <description>Default controller</description>
+          <long-description>Called if the controller is not specified.
+If unspecified, the default is 'index'.
+Used in running web applications.</long-description>
+          <tag name="var" line="32" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Kore" line="40" package="Default">
+        <name>$notFound</name>
+        <full_name>\Kore\Application::$notFound</full_name>
+        <default></default>
+        <docblock line="40">
+          <description>Not found handler</description>
+          <long-description>Called when the controller is not found.
+Used in running web applications.</long-description>
+          <tag name="var" line="40" description="" type="callable" variable="">
+            <type>callable</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="48" package="Default">
+        <name>setBasePath</name>
+        <full_name>\Kore\Application::setBasePath()</full_name>
+        <docblock line="48">
+          <description>Set the base path</description>
+          <long-description></long-description>
+          <tag name="param" line="48" description="&lt;p&gt;bath path ex. 'mybasepath'&lt;/p&gt;" type="string" variable="$basePath">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="48" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$basePath</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="59" package="Default">
+        <name>setDefaultController</name>
+        <full_name>\Kore\Application::setDefaultController()</full_name>
+        <docblock line="59">
+          <description>Set the default controller</description>
+          <long-description></long-description>
+          <tag name="param" line="59" description="&lt;p&gt;default controller&lt;/p&gt;" type="string" variable="$defaultController">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="59" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$defaultController</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="70" package="Default">
+        <name>setNotFound</name>
+        <full_name>\Kore\Application::setNotFound()</full_name>
+        <docblock line="70">
+          <description>Set the not found handler</description>
+          <long-description></long-description>
+          <tag name="param" line="70" description="&lt;p&gt;not found handler&lt;/p&gt;" type="callable" variable="$notFound">
+            <type>callable</type>
+          </tag>
+          <tag name="return" line="70" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$notFound</name>
+          <default></default>
+          <type>callable</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="83" package="Default">
+        <name>run</name>
+        <full_name>\Kore\Application::run()</full_name>
+        <docblock line="83">
+          <description>Running web applications</description>
+          <long-description></long-description>
+          <tag name="param" line="83" description="&lt;p&gt;request path&lt;/p&gt;" type="string|null" variable="$path">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+          <tag name="return" line="83" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$path</name>
+          <default>null</default>
+          <type>string|null</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="122" package="Default">
+        <name>parseController</name>
+        <full_name>\Kore\Application::parseController()</full_name>
+        <docblock line="122">
+          <description>Parse the controller namespace from the request path</description>
+          <long-description></long-description>
+          <tag name="param" line="122" description="&lt;p&gt;request path&lt;/p&gt;" type="string" variable="$path">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="122" description="controller information&#10;                     array(&#10;                         controller class instance,&#10;                         controller namespace,&#10;                         path arguments&#10;                     )" type="\Kore\array&lt;mixed&gt;">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$path</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="151" package="Default">
+        <name>runCmd</name>
+        <full_name>\Kore\Application::runCmd()</full_name>
+        <docblock line="151">
+          <description>Running cli applications</description>
+          <long-description></long-description>
+          <tag name="param" line="151" description="&lt;p&gt;command line argument&lt;/p&gt;" type="\Kore\array&lt;string&gt;" variable="$argv">
+            <type>\Kore\array&lt;string&gt;</type>
+          </tag>
+          <tag name="return" line="151" description="" type="void">
+            <type>void</type>
+          </tag>
+          <tag name="throws" line="151" description="thrown when the command class is not found." type="\Exception">
+            <type>\Exception</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$argv</name>
+          <default></default>
+          <type>\Kore\array&lt;string&gt;</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="178" package="Default">
+        <name>parseCommand</name>
+        <full_name>\Kore\Application::parseCommand()</full_name>
+        <docblock line="178">
+          <description>Parse the command namespace from the command line argument</description>
+          <long-description></long-description>
+          <tag name="param" line="178" description="&lt;p&gt;command line argument&lt;/p&gt;" type="\Kore\array&lt;string&gt;" variable="$argv">
+            <type>\Kore\array&lt;string&gt;</type>
+          </tag>
+          <tag name="return" line="178" description="command information&#10;                     array(&#10;                         commadn class instance,&#10;                         command namespace,&#10;                         arguments,&#10;                         options&#10;                     )" type="\Kore\array&lt;mixed&gt;">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$argv</name>
+          <default></default>
+          <type>\Kore\array&lt;string&gt;</type>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="Log.php" generated-path="Log.html" hash="76a3419fae3f89b750cb2450fade8a19" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Kore" line="4" package="Default">
+      <extends/>
+      <name>Log</name>
+      <full_name>\Kore\Log</full_name>
+      <docblock line="4">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="4" description="Default"/>
+      </docblock>
+      <constant namespace="Kore" line="6" package="Default">
+        <name>LEVEL_DEBUG</name>
+        <full_name>\Kore\Log::LEVEL_DEBUG</full_name>
+        <value>10</value>
+        <docblock line="6">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Kore" line="7" package="Default">
+        <name>LEVEL_INFO</name>
+        <full_name>\Kore\Log::LEVEL_INFO</full_name>
+        <value>20</value>
+        <docblock line="7">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Kore" line="8" package="Default">
+        <name>LEVEL_WARN</name>
+        <full_name>\Kore\Log::LEVEL_WARN</full_name>
+        <value>30</value>
+        <docblock line="8">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Kore" line="9" package="Default">
+        <name>LEVEL_ERROR</name>
+        <full_name>\Kore\Log::LEVEL_ERROR</full_name>
+        <value>40</value>
+        <docblock line="9">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <property static="true" visibility="protected" namespace="Kore" line="14" package="Default">
+        <name>$logName</name>
+        <full_name>\Kore\Log::$logName</full_name>
+        <default></default>
+        <docblock line="14">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="14" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="true" visibility="protected" namespace="Kore" line="19" package="Default">
+        <name>$logLevel</name>
+        <full_name>\Kore\Log::$logLevel</full_name>
+        <default></default>
+        <docblock line="19">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="19" description="" type="integer" variable="">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="26" package="Default">
+        <name>init</name>
+        <full_name>\Kore\Log::init()</full_name>
+        <docblock line="26">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="26" description="" type="string" variable="$logName">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="26" description="" type="integer" variable="$logLevel">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="26" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$logName</name>
+          <default>'app'</default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$logLevel</name>
+          <default>self::LEVEL_DEBUG</default>
+          <type>integer</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="37" package="Default">
+        <name>debug</name>
+        <full_name>\Kore\Log::debug()</full_name>
+        <docblock line="37">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="37" description="" type="string" variable="$msg">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="37" description="" type="mixed" variable="$obj">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="37" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$msg</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$obj</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="49" package="Default">
+        <name>info</name>
+        <full_name>\Kore\Log::info()</full_name>
+        <docblock line="49">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="49" description="" type="string" variable="$msg">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="49" description="" type="mixed" variable="$obj">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="49" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$msg</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$obj</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="61" package="Default">
+        <name>warn</name>
+        <full_name>\Kore\Log::warn()</full_name>
+        <docblock line="61">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="61" description="" type="string" variable="$msg">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="61" description="" type="mixed" variable="$obj">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="61" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$msg</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$obj</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="73" package="Default">
+        <name>error</name>
+        <full_name>\Kore\Log::error()</full_name>
+        <docblock line="73">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="73" description="" type="string" variable="$msg">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="73" description="" type="mixed" variable="$obj">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="73" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$msg</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$obj</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="Kore" line="86" package="Default">
+        <name>write</name>
+        <full_name>\Kore\Log::write()</full_name>
+        <docblock line="86">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="86" description="" type="string" variable="$level">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="86" description="" type="string" variable="$msg">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="86" description="" type="mixed" variable="$obj">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="86" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$level</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$msg</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$obj</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="Kore" line="99" package="Default">
+        <name>buildLog</name>
+        <full_name>\Kore\Log::buildLog()</full_name>
+        <docblock line="99">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="99" description="" type="string" variable="$level">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="99" description="" type="string" variable="$msg">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="99" description="" type="mixed" variable="$obj">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="99" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$level</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$msg</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$obj</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="4" code="PPC:ERR-50005">No summary for class \Kore\Log</error>
+      <error line="26" code="PPC:ERR-50008">No summary for method init()</error>
+      <error line="37" code="PPC:ERR-50008">No summary for method debug()</error>
+      <error line="49" code="PPC:ERR-50008">No summary for method info()</error>
+      <error line="61" code="PPC:ERR-50008">No summary for method warn()</error>
+      <error line="73" code="PPC:ERR-50008">No summary for method error()</error>
+      <error line="86" code="PPC:ERR-50008">No summary for method write()</error>
+      <error line="99" code="PPC:ERR-50008">No summary for method buildLog()</error>
+      <error line="14" code="PPC:ERR-50007">No summary for property $logName</error>
+      <error line="19" code="PPC:ERR-50007">No summary for property $logLevel</error>
+    </parse_markers>
+  </file>
+  <file path="Config.php" generated-path="Config.html" hash="e52349eeb8d8361802a94221156271c2" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Kore" line="4" package="Default">
+      <extends/>
+      <name>Config</name>
+      <full_name>\Kore\Config</full_name>
+      <docblock line="4">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="4" description="Default"/>
+      </docblock>
+      <property static="true" visibility="private" namespace="Kore" line="9" package="Default">
+        <name>$config</name>
+        <full_name>\Kore\Config::$config</full_name>
+        <default></default>
+        <docblock line="9">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="9" description="" type="\Kore\array&lt;mixed&gt;" variable="">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="15" package="Default">
+        <name>create</name>
+        <full_name>\Kore\Config::create()</full_name>
+        <docblock line="15">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="15" description="" type="string|null" variable="$env">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+          <tag name="return" line="15" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$env</name>
+          <default>null</default>
+          <type>string|null</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="34" package="Default">
+        <name>get</name>
+        <full_name>\Kore\Config::get()</full_name>
+        <docblock line="34">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="34" description="" type="string|null" variable="$key">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+          <tag name="param" line="34" description="" type="mixed" variable="$default">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="34" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default>null</default>
+          <type>string|null</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$default</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="4" code="PPC:ERR-50005">No summary for class \Kore\Config</error>
+      <error line="15" code="PPC:ERR-50008">No summary for method create()</error>
+      <error line="34" code="PPC:ERR-50008">No summary for method get()</error>
+      <error line="9" code="PPC:ERR-50007">No summary for property $config</error>
+    </parse_markers>
+  </file>
+  <file path="Controller.php" generated-path="Controller.html" hash="634251fb39b13eae747fc62e293aa02c" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Log">\Kore\Log</namespace-alias>
+    <class final="false" abstract="true" namespace="Kore" line="6" package="Default">
+      <extends/>
+      <name>Controller</name>
+      <full_name>\Kore\Controller</full_name>
+      <docblock line="6">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="6" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Kore" line="11" package="Default">
+        <name>$controller</name>
+        <full_name>\Kore\Controller::$controller</full_name>
+        <default></default>
+        <docblock line="11">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="11" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Kore" line="15" package="Default">
+        <name>$args</name>
+        <full_name>\Kore\Controller::$args</full_name>
+        <default>array()</default>
+        <docblock line="15">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="15" description="" type="\Kore\array&lt;string&gt;" variable="">
+            <type>\Kore\array&lt;string&gt;</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="Kore" line="20" package="Default">
+        <name>action</name>
+        <full_name>\Kore\Controller::action()</full_name>
+        <docblock line="20">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="20" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="27" package="Default">
+        <name>main</name>
+        <full_name>\Kore\Controller::main()</full_name>
+        <docblock line="27">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="27" description="" type="string" variable="$controller">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="27" description="" type="\Kore\array&lt;string&gt;" variable="$args">
+            <type>\Kore\array&lt;string&gt;</type>
+          </tag>
+          <tag name="return" line="27" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$controller</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$args</name>
+          <default></default>
+          <type>\Kore\array&lt;string&gt;</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="47" package="Default">
+        <name>moduleName</name>
+        <full_name>\Kore\Controller::moduleName()</full_name>
+        <docblock line="47">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="47" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="55" package="Default">
+        <name>logLevel</name>
+        <full_name>\Kore\Controller::logLevel()</full_name>
+        <docblock line="55">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="55" description="" type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="63" package="Default">
+        <name>preaction</name>
+        <full_name>\Kore\Controller::preaction()</full_name>
+        <docblock line="63">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="63" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="72" package="Default">
+        <name>handleError</name>
+        <full_name>\Kore\Controller::handleError()</full_name>
+        <docblock line="72">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="72" description="" type="\Exception" variable="$e">
+            <type>\Exception</type>
+          </tag>
+          <tag name="return" line="72" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$e</name>
+          <default></default>
+          <type>\Exception</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="83" package="Default">
+        <name>getMethod</name>
+        <full_name>\Kore\Controller::getMethod()</full_name>
+        <docblock line="83">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="83" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="93" package="Default">
+        <name>getHeader</name>
+        <full_name>\Kore\Controller::getHeader()</full_name>
+        <docblock line="93">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="93" description="" type="string" variable="$key">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="93" description="" type="mixed" variable="$default">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="93" description="" type="string|null">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$default</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="107" package="Default">
+        <name>getQuery</name>
+        <full_name>\Kore\Controller::getQuery()</full_name>
+        <docblock line="107">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="107" description="" type="string" variable="$key">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="107" description="" type="mixed" variable="$default">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="107" description="" type="string|\Kore\array&lt;string&gt;">
+            <type>string</type>
+            <type>\Kore\array&lt;string&gt;</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default>null</default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$default</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="123" package="Default">
+        <name>getPost</name>
+        <full_name>\Kore\Controller::getPost()</full_name>
+        <docblock line="123">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="123" description="" type="string" variable="$key">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="123" description="" type="mixed" variable="$default">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="123" description="" type="string|\Kore\array&lt;string&gt;">
+            <type>string</type>
+            <type>\Kore\array&lt;string&gt;</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default>null</default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$default</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="137" package="Default">
+        <name>getBody</name>
+        <full_name>\Kore\Controller::getBody()</full_name>
+        <docblock line="137">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="137" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="147" package="Default">
+        <name>getJsonBody</name>
+        <full_name>\Kore\Controller::getJsonBody()</full_name>
+        <docblock line="147">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="147" description="" type="\Kore\array&lt;mixed&gt;">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="158" package="Default">
+        <name>getCookie</name>
+        <full_name>\Kore\Controller::getCookie()</full_name>
+        <docblock line="158">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="158" description="" type="string" variable="$key">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="158" description="" type="mixed" variable="$default">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="158" description="" type="string|\Kore\array&lt;string&gt;">
+            <type>string</type>
+            <type>\Kore\array&lt;string&gt;</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default>null</default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$default</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="174" package="Default">
+        <name>getArg</name>
+        <full_name>\Kore\Controller::getArg()</full_name>
+        <docblock line="174">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="174" description="" type="string" variable="$key">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="174" description="" type="mixed" variable="$default">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="174" description="" type="string|\Kore\array&lt;string&gt;">
+            <type>string</type>
+            <type>\Kore\array&lt;string&gt;</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default>null</default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$default</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="194" package="Default">
+        <name>respondView</name>
+        <full_name>\Kore\Controller::respondView()</full_name>
+        <docblock line="194">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="194" description="" type="string" variable="$path">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="194" description="" type="\Kore\array&lt;mixed&gt;" variable="$data">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="param" line="194" description="" type="integer" variable="$responseCode">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="194" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$path</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default>array()</default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$responseCode</name>
+          <default>200</default>
+          <type>integer</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="205" package="Default">
+        <name>extractView</name>
+        <full_name>\Kore\Controller::extractView()</full_name>
+        <docblock line="205">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="205" description="" type="string" variable="$path">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="205" description="" type="\Kore\array&lt;mixed&gt;" variable="$data">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="return" line="205" description="" type="string|false">
+            <type>string</type>
+            <type>false</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$path</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default>array()</default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="219" package="Default">
+        <name>respondJson</name>
+        <full_name>\Kore\Controller::respondJson()</full_name>
+        <docblock line="219">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="219" description="" type="\Kore\array&lt;mixed&gt;" variable="$data">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="param" line="219" description="" type="integer" variable="$responseCode">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="219" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default>array()</default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$responseCode</name>
+          <default>200</default>
+          <type>integer</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="232" package="Default">
+        <name>redirect</name>
+        <full_name>\Kore\Controller::redirect()</full_name>
+        <docblock line="232">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="232" description="" type="string" variable="$url">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="232" description="" type="integer" variable="$responseCode">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="232" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$url</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$responseCode</name>
+          <default>302</default>
+          <type>integer</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="6" code="PPC:ERR-50005">No summary for class \Kore\Controller</error>
+      <error line="20" code="PPC:ERR-50008">No summary for method action()</error>
+      <error line="27" code="PPC:ERR-50008">No summary for method main()</error>
+      <error line="47" code="PPC:ERR-50008">No summary for method moduleName()</error>
+      <error line="55" code="PPC:ERR-50008">No summary for method logLevel()</error>
+      <error line="63" code="PPC:ERR-50008">No summary for method preaction()</error>
+      <error line="72" code="PPC:ERR-50008">No summary for method handleError()</error>
+      <error line="83" code="PPC:ERR-50008">No summary for method getMethod()</error>
+      <error line="93" code="PPC:ERR-50008">No summary for method getHeader()</error>
+      <error line="107" code="PPC:ERR-50008">No summary for method getQuery()</error>
+      <error line="123" code="PPC:ERR-50008">No summary for method getPost()</error>
+      <error line="137" code="PPC:ERR-50008">No summary for method getBody()</error>
+      <error line="147" code="PPC:ERR-50008">No summary for method getJsonBody()</error>
+      <error line="158" code="PPC:ERR-50008">No summary for method getCookie()</error>
+      <error line="174" code="PPC:ERR-50008">No summary for method getArg()</error>
+      <error line="194" code="PPC:ERR-50008">No summary for method respondView()</error>
+      <error line="205" code="PPC:ERR-50008">No summary for method extractView()</error>
+      <error line="219" code="PPC:ERR-50008">No summary for method respondJson()</error>
+      <error line="232" code="PPC:ERR-50008">No summary for method redirect()</error>
+      <error line="11" code="PPC:ERR-50007">No summary for property $controller</error>
+      <error line="15" code="PPC:ERR-50007">No summary for property $args</error>
+    </parse_markers>
+  </file>
+  <file path="DB.php" generated-path="DB.html" hash="f90f04b9dc23381e258327878ca9c5bc" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Config">\Kore\Config</namespace-alias>
+    <namespace-alias name="Log">\Kore\Log</namespace-alias>
+    <class final="false" abstract="false" namespace="Kore" line="7" package="Default">
+      <extends/>
+      <name>DB</name>
+      <full_name>\Kore\DB</full_name>
+      <docblock line="7">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="7" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Kore" line="12" package="Default">
+        <name>$pdo</name>
+        <full_name>\Kore\DB::$pdo</full_name>
+        <default></default>
+        <docblock line="12">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="12" description="" type="\PDO" variable="">
+            <type>\PDO</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="true" abstract="false" static="false" visibility="private" namespace="Kore" line="18" package="Default">
+        <name>__construct</name>
+        <full_name>\Kore\DB::__construct()</full_name>
+        <docblock line="18">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="18" description="" type="string" variable="$dbconfig">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="18" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$dbconfig</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="true" abstract="false" static="false" visibility="public" namespace="Kore" line="27" package="Default">
+        <name>__clone</name>
+        <full_name>\Kore\DB::__clone()</full_name>
+        <docblock line="27">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="27" description="" type="void">
+            <type>void</type>
+          </tag>
+          <tag name="throws" line="27" description="" type="\Exception">
+            <type>\Exception</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="36" package="Default">
+        <name>connection</name>
+        <full_name>\Kore\DB::connection()</full_name>
+        <docblock line="36">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="36" description="" type="string" variable="$dbconfig">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="36" description="" type="\Kore\DB">
+            <type>\Kore\DB</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$dbconfig</name>
+          <default>'database'</default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="50" package="Default">
+        <name>connect</name>
+        <full_name>\Kore\DB::connect()</full_name>
+        <docblock line="50">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="50" description="" type="string" variable="$dbconfig">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="50" description="" type="void">
+            <type>void</type>
+          </tag>
+          <tag name="throws" line="50" description="" type="\PDOException">
+            <type>\PDOException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$dbconfig</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="71" package="Default">
+        <name>getPdo</name>
+        <full_name>\Kore\DB::getPdo()</full_name>
+        <docblock line="71">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="71" description="" type="\PDO">
+            <type>\PDO</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="81" package="Default">
+        <name>select</name>
+        <full_name>\Kore\DB::select()</full_name>
+        <docblock line="81">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="81" description="" type="string" variable="$query">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="81" description="" type="\Kore\array&lt;mixed&gt;" variable="$params">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="return" line="81" description="" type="\Kore\array&lt;mixed&gt;">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$query</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$params</name>
+          <default>array()</default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="94" package="Default">
+        <name>selectFirst</name>
+        <full_name>\Kore\DB::selectFirst()</full_name>
+        <docblock line="94">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="94" description="" type="string" variable="$query">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="94" description="" type="\Kore\array&lt;mixed&gt;" variable="$params">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="return" line="94" description="" type="\Kore\array&lt;mixed&gt;">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$query</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$params</name>
+          <default>array()</default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="107" package="Default">
+        <name>count</name>
+        <full_name>\Kore\DB::count()</full_name>
+        <docblock line="107">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="107" description="" type="string" variable="$query">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="107" description="" type="\Kore\array&lt;mixed&gt;" variable="$params">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="return" line="107" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$query</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$params</name>
+          <default>array()</default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="120" package="Default">
+        <name>insert</name>
+        <full_name>\Kore\DB::insert()</full_name>
+        <docblock line="120">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="120" description="" type="string" variable="$query">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="120" description="" type="\Kore\array&lt;mixed&gt;" variable="$params">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="return" line="120" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$query</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$params</name>
+          <default>array()</default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="132" package="Default">
+        <name>update</name>
+        <full_name>\Kore\DB::update()</full_name>
+        <docblock line="132">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="132" description="" type="string" variable="$query">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="132" description="" type="\Kore\array&lt;mixed&gt;" variable="$params">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="return" line="132" description="" type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$query</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$params</name>
+          <default>array()</default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="144" package="Default">
+        <name>delete</name>
+        <full_name>\Kore\DB::delete()</full_name>
+        <docblock line="144">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="144" description="" type="string" variable="$query">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="144" description="" type="\Kore\array&lt;mixed&gt;" variable="$params">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="return" line="144" description="" type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$query</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$params</name>
+          <default>array()</default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="155" package="Default">
+        <name>transaction</name>
+        <full_name>\Kore\DB::transaction()</full_name>
+        <docblock line="155">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="155" description="" type="callable" variable="$callback">
+            <type>callable</type>
+          </tag>
+          <tag name="return" line="155" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$callback</name>
+          <default></default>
+          <type>callable</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="172" package="Default">
+        <name>getInClause</name>
+        <full_name>\Kore\DB::getInClause()</full_name>
+        <docblock line="172">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="172" description="" type="string" variable="$marker">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="172" description="" type="\Kore\array&lt;mixed&gt;" variable="$values">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="return" line="172" description="" type="\Kore\array&lt;mixed&gt;">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$marker</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$values</name>
+          <default></default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Kore" line="193" package="Default">
+        <name>execute</name>
+        <full_name>\Kore\DB::execute()</full_name>
+        <docblock line="193">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="193" description="" type="string" variable="$query">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="193" description="" type="\Kore\array&lt;mixed&gt;" variable="$params">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="return" line="193" description="" type="\PDOStatement&lt;mixed&gt;">
+            <type>\PDOStatement&lt;mixed&gt;</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$query</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$params</name>
+          <default></default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Kore" line="218" package="Default">
+        <name>debugValue</name>
+        <full_name>\Kore\DB::debugValue()</full_name>
+        <docblock line="218">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="218" description="" type="mixed" variable="$value">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="218" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$value</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Kore" line="241" package="Default">
+        <name>dataType</name>
+        <full_name>\Kore\DB::dataType()</full_name>
+        <docblock line="241">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="241" description="" type="mixed" variable="$value">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="241" description="" type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$value</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="7" code="PPC:ERR-50005">No summary for class \Kore\DB</error>
+      <error line="18" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="27" code="PPC:ERR-50008">No summary for method __clone()</error>
+      <error line="36" code="PPC:ERR-50008">No summary for method connection()</error>
+      <error line="50" code="PPC:ERR-50008">No summary for method connect()</error>
+      <error line="71" code="PPC:ERR-50008">No summary for method getPdo()</error>
+      <error line="81" code="PPC:ERR-50008">No summary for method select()</error>
+      <error line="94" code="PPC:ERR-50008">No summary for method selectFirst()</error>
+      <error line="107" code="PPC:ERR-50008">No summary for method count()</error>
+      <error line="120" code="PPC:ERR-50008">No summary for method insert()</error>
+      <error line="132" code="PPC:ERR-50008">No summary for method update()</error>
+      <error line="144" code="PPC:ERR-50008">No summary for method delete()</error>
+      <error line="155" code="PPC:ERR-50008">No summary for method transaction()</error>
+      <error line="172" code="PPC:ERR-50008">No summary for method getInClause()</error>
+      <error line="193" code="PPC:ERR-50008">No summary for method execute()</error>
+      <error line="218" code="PPC:ERR-50008">No summary for method debugValue()</error>
+      <error line="241" code="PPC:ERR-50008">No summary for method dataType()</error>
+      <error line="12" code="PPC:ERR-50007">No summary for property $pdo</error>
+    </parse_markers>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="global" full_name="global"/>
+  <namespace name="global" full_name="global"/>
+  <namespace name="Kore" full_name="Kore"/>
+  <deprecated count="0"/>
+</project>
