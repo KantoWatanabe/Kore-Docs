@@ -1006,94 +1006,94 @@ Used in running web applications.</long-description>
       </method>
     </class>
   </file>
-  <file path="Log.php" generated-path="Log.html" hash="76a3419fae3f89b750cb2450fade8a19" package="Default">
+  <file path="Log.php" generated-path="Log.html" hash="f7bb1c799248bf65500b71eba2e6034b" package="Default">
     <docblock line="0">
-      <description></description>
+      <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <class final="false" abstract="false" namespace="Kore" line="4" package="Default">
+    <class final="false" abstract="false" namespace="Kore" line="13" package="Default">
       <extends/>
       <name>Log</name>
       <full_name>\Kore\Log</full_name>
-      <docblock line="4">
-        <description></description>
+      <docblock line="13">
+        <description>Log class</description>
         <long-description></long-description>
-        <tag name="package" line="4" description="Default"/>
+        <tag name="package" line="13" description="Default"/>
       </docblock>
-      <constant namespace="Kore" line="6" package="Default">
+      <constant namespace="Kore" line="15" package="Default">
         <name>LEVEL_DEBUG</name>
         <full_name>\Kore\Log::LEVEL_DEBUG</full_name>
         <value>10</value>
-        <docblock line="6">
+        <docblock line="15">
           <description></description>
           <long-description></long-description>
         </docblock>
       </constant>
-      <constant namespace="Kore" line="7" package="Default">
+      <constant namespace="Kore" line="16" package="Default">
         <name>LEVEL_INFO</name>
         <full_name>\Kore\Log::LEVEL_INFO</full_name>
         <value>20</value>
-        <docblock line="7">
+        <docblock line="16">
           <description></description>
           <long-description></long-description>
         </docblock>
       </constant>
-      <constant namespace="Kore" line="8" package="Default">
+      <constant namespace="Kore" line="17" package="Default">
         <name>LEVEL_WARN</name>
         <full_name>\Kore\Log::LEVEL_WARN</full_name>
         <value>30</value>
-        <docblock line="8">
+        <docblock line="17">
           <description></description>
           <long-description></long-description>
         </docblock>
       </constant>
-      <constant namespace="Kore" line="9" package="Default">
+      <constant namespace="Kore" line="18" package="Default">
         <name>LEVEL_ERROR</name>
         <full_name>\Kore\Log::LEVEL_ERROR</full_name>
         <value>40</value>
-        <docblock line="9">
+        <docblock line="18">
           <description></description>
           <long-description></long-description>
         </docblock>
       </constant>
-      <property static="true" visibility="protected" namespace="Kore" line="14" package="Default">
+      <property static="true" visibility="protected" namespace="Kore" line="25" package="Default">
         <name>$logName</name>
         <full_name>\Kore\Log::$logName</full_name>
         <default></default>
-        <docblock line="14">
-          <description></description>
+        <docblock line="25">
+          <description>log name</description>
           <long-description></long-description>
-          <tag name="var" line="14" description="" type="string" variable="">
+          <tag name="var" line="25" description="" type="string" variable="">
             <type>string</type>
           </tag>
         </docblock>
       </property>
-      <property static="true" visibility="protected" namespace="Kore" line="19" package="Default">
+      <property static="true" visibility="protected" namespace="Kore" line="32" package="Default">
         <name>$logLevel</name>
         <full_name>\Kore\Log::$logLevel</full_name>
         <default></default>
-        <docblock line="19">
-          <description></description>
+        <docblock line="32">
+          <description>log level</description>
           <long-description></long-description>
-          <tag name="var" line="19" description="" type="integer" variable="">
+          <tag name="var" line="32" description="" type="integer" variable="">
             <type>integer</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="26" package="Default">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="41" package="Default">
         <name>init</name>
         <full_name>\Kore\Log::init()</full_name>
-        <docblock line="26">
-          <description></description>
+        <docblock line="41">
+          <description>Initialize</description>
           <long-description></long-description>
-          <tag name="param" line="26" description="" type="string" variable="$logName">
+          <tag name="param" line="41" description="&lt;p&gt;log name, the default is 'app'&lt;/p&gt;" type="string" variable="$logName">
             <type>string</type>
           </tag>
-          <tag name="param" line="26" description="" type="integer" variable="$logLevel">
+          <tag name="param" line="41" description="&lt;p&gt;log level, the default is LEVEL_DEBUG&lt;/p&gt;" type="integer" variable="$logLevel">
             <type>integer</type>
           </tag>
-          <tag name="return" line="26" description="" type="void">
+          <tag name="return" line="41" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -1108,19 +1108,19 @@ Used in running web applications.</long-description>
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="37" package="Default">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="54" package="Default">
         <name>debug</name>
         <full_name>\Kore\Log::debug()</full_name>
-        <docblock line="37">
-          <description></description>
+        <docblock line="54">
+          <description>Debug output</description>
           <long-description></long-description>
-          <tag name="param" line="37" description="" type="string" variable="$msg">
+          <tag name="param" line="54" description="&lt;p&gt;message&lt;/p&gt;" type="string" variable="$msg">
             <type>string</type>
           </tag>
-          <tag name="param" line="37" description="" type="mixed" variable="$obj">
+          <tag name="param" line="54" description="&lt;p&gt;object&lt;/p&gt;" type="mixed" variable="$obj">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="37" description="" type="void">
+          <tag name="return" line="54" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -1135,19 +1135,19 @@ Used in running web applications.</long-description>
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="49" package="Default">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="68" package="Default">
         <name>info</name>
         <full_name>\Kore\Log::info()</full_name>
-        <docblock line="49">
-          <description></description>
+        <docblock line="68">
+          <description>Information output</description>
           <long-description></long-description>
-          <tag name="param" line="49" description="" type="string" variable="$msg">
+          <tag name="param" line="68" description="&lt;p&gt;message&lt;/p&gt;" type="string" variable="$msg">
             <type>string</type>
           </tag>
-          <tag name="param" line="49" description="" type="mixed" variable="$obj">
+          <tag name="param" line="68" description="&lt;p&gt;object&lt;/p&gt;" type="mixed" variable="$obj">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="49" description="" type="void">
+          <tag name="return" line="68" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -1162,19 +1162,19 @@ Used in running web applications.</long-description>
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="61" package="Default">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="82" package="Default">
         <name>warn</name>
         <full_name>\Kore\Log::warn()</full_name>
-        <docblock line="61">
-          <description></description>
+        <docblock line="82">
+          <description>Warning output</description>
           <long-description></long-description>
-          <tag name="param" line="61" description="" type="string" variable="$msg">
+          <tag name="param" line="82" description="&lt;p&gt;message&lt;/p&gt;" type="string" variable="$msg">
             <type>string</type>
           </tag>
-          <tag name="param" line="61" description="" type="mixed" variable="$obj">
+          <tag name="param" line="82" description="&lt;p&gt;object&lt;/p&gt;" type="mixed" variable="$obj">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="61" description="" type="void">
+          <tag name="return" line="82" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -1189,19 +1189,19 @@ Used in running web applications.</long-description>
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="73" package="Default">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="96" package="Default">
         <name>error</name>
         <full_name>\Kore\Log::error()</full_name>
-        <docblock line="73">
-          <description></description>
+        <docblock line="96">
+          <description>Error output</description>
           <long-description></long-description>
-          <tag name="param" line="73" description="" type="string" variable="$msg">
+          <tag name="param" line="96" description="&lt;p&gt;message&lt;/p&gt;" type="string" variable="$msg">
             <type>string</type>
           </tag>
-          <tag name="param" line="73" description="" type="mixed" variable="$obj">
+          <tag name="param" line="96" description="&lt;p&gt;object&lt;/p&gt;" type="mixed" variable="$obj">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="73" description="" type="void">
+          <tag name="return" line="96" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -1216,22 +1216,22 @@ Used in running web applications.</long-description>
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="protected" namespace="Kore" line="86" package="Default">
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="Kore" line="111" package="Default">
         <name>write</name>
         <full_name>\Kore\Log::write()</full_name>
-        <docblock line="86">
-          <description></description>
+        <docblock line="111">
+          <description>Write logs</description>
           <long-description></long-description>
-          <tag name="param" line="86" description="" type="string" variable="$level">
+          <tag name="param" line="111" description="&lt;p&gt;level name&lt;/p&gt;" type="string" variable="$level">
             <type>string</type>
           </tag>
-          <tag name="param" line="86" description="" type="string" variable="$msg">
+          <tag name="param" line="111" description="&lt;p&gt;message&lt;/p&gt;" type="string" variable="$msg">
             <type>string</type>
           </tag>
-          <tag name="param" line="86" description="" type="mixed" variable="$obj">
+          <tag name="param" line="111" description="&lt;p&gt;object&lt;/p&gt;" type="mixed" variable="$obj">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="86" description="" type="void">
+          <tag name="return" line="111" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -1251,22 +1251,22 @@ Used in running web applications.</long-description>
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="protected" namespace="Kore" line="99" package="Default">
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="Kore" line="126" package="Default">
         <name>buildLog</name>
         <full_name>\Kore\Log::buildLog()</full_name>
-        <docblock line="99">
-          <description></description>
+        <docblock line="126">
+          <description>Build logs</description>
           <long-description></long-description>
-          <tag name="param" line="99" description="" type="string" variable="$level">
+          <tag name="param" line="126" description="&lt;p&gt;level name&lt;/p&gt;" type="string" variable="$level">
             <type>string</type>
           </tag>
-          <tag name="param" line="99" description="" type="string" variable="$msg">
+          <tag name="param" line="126" description="&lt;p&gt;message&lt;/p&gt;" type="string" variable="$msg">
             <type>string</type>
           </tag>
-          <tag name="param" line="99" description="" type="mixed" variable="$obj">
+          <tag name="param" line="126" description="&lt;p&gt;object&lt;/p&gt;" type="mixed" variable="$obj">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="99" description="" type="string">
+          <tag name="return" line="126" description="logs" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -1287,19 +1287,6 @@ Used in running web applications.</long-description>
         </argument>
       </method>
     </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="4" code="PPC:ERR-50005">No summary for class \Kore\Log</error>
-      <error line="26" code="PPC:ERR-50008">No summary for method init()</error>
-      <error line="37" code="PPC:ERR-50008">No summary for method debug()</error>
-      <error line="49" code="PPC:ERR-50008">No summary for method info()</error>
-      <error line="61" code="PPC:ERR-50008">No summary for method warn()</error>
-      <error line="73" code="PPC:ERR-50008">No summary for method error()</error>
-      <error line="86" code="PPC:ERR-50008">No summary for method write()</error>
-      <error line="99" code="PPC:ERR-50008">No summary for method buildLog()</error>
-      <error line="14" code="PPC:ERR-50007">No summary for property $logName</error>
-      <error line="19" code="PPC:ERR-50007">No summary for property $logLevel</error>
-    </parse_markers>
   </file>
   <file path="Config.php" generated-path="Config.html" hash="8f3325c971dd88aaaa4de15a968baa0a" package="Default">
     <docblock line="0">
