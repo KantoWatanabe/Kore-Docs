@@ -31,7 +31,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">30</span></a></li>
+                <span class="label label-info">11</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -61,18 +61,12 @@
 <li class="nav-header">
 <i title="Methods" class="icon-custom icon-method"></i> Methods
                     <ul>
-<li class="method public "><a href="#method___construct" title="__construct() :: "><span class="description">__construct()
-        </span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#method_getBody" title="getBody() :: "><span class="description">getBody()
-        </span><pre>getBody()</pre></a></li>
-<li class="method public "><a href="#method_getHeader" title="getHeader() :: "><span class="description">getHeader()
-        </span><pre>getHeader()</pre></a></li>
-<li class="method public "><a href="#method_getHeaderLine" title="getHeaderLine() :: "><span class="description">getHeaderLine()
-        </span><pre>getHeaderLine()</pre></a></li>
-<li class="method public "><a href="#method_getHttpCode" title="getHttpCode() :: "><span class="description">getHttpCode()
-        </span><pre>getHttpCode()</pre></a></li>
-<li class="method public "><a href="#method_getJsonBody" title="getJsonBody() :: "><span class="description">getJsonBody()
-        </span><pre>getJsonBody()</pre></a></li>
+<li class="method public "><a href="#method___construct" title="__construct() :: __construct method"><span class="description">__construct method</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_getBody" title="getBody() :: Get the response body"><span class="description">Get the response body</span><pre>getBody()</pre></a></li>
+<li class="method public "><a href="#method_getHeader" title="getHeader() :: Get the response headers"><span class="description">Get the response headers</span><pre>getHeader()</pre></a></li>
+<li class="method public "><a href="#method_getHeaderLine" title="getHeaderLine() :: Get the header value by specifying the header name"><span class="description">Get the header value by specifying the header name</span><pre>getHeaderLine()</pre></a></li>
+<li class="method public "><a href="#method_getHttpCode" title="getHttpCode() :: Get the http status code"><span class="description">Get the http status code</span><pre>getHttpCode()</pre></a></li>
+<li class="method public "><a href="#method_getJsonBody" title="getJsonBody() :: Get the response body in json format"><span class="description">Get the response body in json format</span><pre>getJsonBody()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header">
@@ -81,9 +75,9 @@
 </li>
 <li class="nav-header private">» Private
                     <ul>
-<li class="property private "><a href="#property_body" title="$body() :: "><span class="description"></span><pre>$body</pre></a></li>
-<li class="property private "><a href="#property_header" title="$header() :: "><span class="description"></span><pre>$header</pre></a></li>
-<li class="property private "><a href="#property_httpCode" title="$httpCode() :: "><span class="description"></span><pre>$httpCode</pre></a></li>
+<li class="property private "><a href="#property_body" title="$body() :: response body"><span class="description"></span><pre>$body</pre></a></li>
+<li class="property private "><a href="#property_header" title="$header() :: response headers"><span class="description"></span><pre>$header</pre></a></li>
+<li class="property private "><a href="#property_httpCode" title="$httpCode() :: http status code"><span class="description"></span><pre>$httpCode</pre></a></li>
 </ul>
 </li>
 </ul>
@@ -99,7 +93,7 @@
 </li>
 </ul>
 <div xmlns:php="http://php.net/xsl" class="element class">
-<p class="short_description"></p>
+<p class="short_description">HttpResponse class</p>
 <div class="details">
 <div class="long_description"></div>
 <table class="table table-bordered"><tr>
@@ -109,8 +103,7 @@
 <h3>
 <i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
 <a id="method___construct"></a><div class="element clickable method public method___construct " data-toggle="collapse" data-target=".method___construct .collapse" title="public">
-<h2>__construct()
-        </h2>
+<h2>__construct method</h2>
 <pre>__construct(integer $httpCode, string $header, string $body) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
@@ -118,43 +111,39 @@
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$httpCode</h4>
-<code>integer</code>
-</div>
+<code>integer</code><p>http status code</p></div>
 <div class="subelement argument">
 <h4>$header</h4>
-<code>string</code>
-</div>
+<code>string</code><p>response headers</p></div>
 <div class="subelement argument">
 <h4>$body</h4>
-<code>string</code>
-</div>
+<code>string</code><p>response body</p></div>
 </div></div>
 </div>
 <a id="method_getBody"></a><div class="element clickable method public method_getBody " data-toggle="collapse" data-target=".method_getBody .collapse" title="public">
-<h2>getBody()
-        </h2>
+<h2>Get the response body</h2>
 <pre>getBody() : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Returns</h3>
-<div class="subelement response"><code>string</code></div>
+<div class="subelement response">
+<code>string</code>response body</div>
 </div></div>
 </div>
 <a id="method_getHeader"></a><div class="element clickable method public method_getHeader " data-toggle="collapse" data-target=".method_getHeader .collapse" title="public">
-<h2>getHeader()
-        </h2>
+<h2>Get the response headers</h2>
 <pre>getHeader() : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Returns</h3>
-<div class="subelement response"><code>string</code></div>
+<div class="subelement response">
+<code>string</code>response headers</div>
 </div></div>
 </div>
 <a id="method_getHeaderLine"></a><div class="element clickable method public method_getHeaderLine " data-toggle="collapse" data-target=".method_getHeaderLine .collapse" title="public">
-<h2>getHeaderLine()
-        </h2>
+<h2>Get the header value by specifying the header name</h2>
 <pre>getHeaderLine(string $key) : string | null</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
@@ -162,40 +151,38 @@
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$key</h4>
-<code>string</code>
-</div>
+<code>string</code><p>header name</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>string</code><code>null</code>
-</div>
+<code>string</code><code>null</code>header value</div>
 </div></div>
 </div>
 <a id="method_getHttpCode"></a><div class="element clickable method public method_getHttpCode " data-toggle="collapse" data-target=".method_getHttpCode .collapse" title="public">
-<h2>getHttpCode()
-        </h2>
+<h2>Get the http status code</h2>
 <pre>getHttpCode() : integer</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Returns</h3>
-<div class="subelement response"><code>integer</code></div>
+<div class="subelement response">
+<code>integer</code>http status code</div>
 </div></div>
 </div>
 <a id="method_getJsonBody"></a><div class="element clickable method public method_getJsonBody " data-toggle="collapse" data-target=".method_getJsonBody .collapse" title="public">
-<h2>getJsonBody()
-        </h2>
+<h2>Get the response body in json format</h2>
 <pre>getJsonBody() : \Kore\array&lt;mixed&gt;</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Returns</h3>
-<div class="subelement response"><code>\Kore\array&lt;mixed&gt;</code></div>
+<div class="subelement response">
+<code>\Kore\array&lt;mixed&gt;</code>response body</div>
 </div></div>
 </div>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
 <a id="property_body"> </a><div class="element clickable property private property_body" data-toggle="collapse" data-target=".property_body .collapse" title="private">
-<h2>$body</h2>
+<h2>response body</h2>
 <pre>$body : string</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
@@ -205,7 +192,7 @@
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 <a id="property_header"> </a><div class="element clickable property private property_header" data-toggle="collapse" data-target=".property_header .collapse" title="private">
-<h2>$header</h2>
+<h2>response headers</h2>
 <pre>$header : string</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
@@ -215,7 +202,7 @@
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 <a id="property_httpCode"> </a><div class="element clickable property private property_httpCode" data-toggle="collapse" data-target=".property_httpCode .collapse" title="private">
-<h2>$httpCode</h2>
+<h2>http status code</h2>
 <pre>$httpCode : integer</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
@@ -231,7 +218,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.1</a> and<br>
-            generated on 2020-11-22T22:55:52+09:00.<br></footer></div>
+            generated on 2020-11-22T23:49:33+09:00.<br></footer></div>
 </div>
 </body>
 </html>
