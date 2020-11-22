@@ -1818,45 +1818,45 @@ If you need to customize, please override it with subclasses.</long-description>
       </method>
     </class>
   </file>
-  <file path="DB.php" generated-path="DB.html" hash="f90f04b9dc23381e258327878ca9c5bc" package="Default">
+  <file path="DB.php" generated-path="DB.html" hash="8b46f24ead347bd5142b28740fd11bab" package="Default">
     <docblock line="0">
-      <description></description>
+      <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
     <namespace-alias name="Config">\Kore\Config</namespace-alias>
     <namespace-alias name="Log">\Kore\Log</namespace-alias>
-    <class final="false" abstract="false" namespace="Kore" line="7" package="Default">
+    <class final="false" abstract="false" namespace="Kore" line="17" package="Default">
       <extends/>
       <name>DB</name>
       <full_name>\Kore\DB</full_name>
-      <docblock line="7">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="7" description="Default"/>
+      <docblock line="17">
+        <description>DB class</description>
+        <long-description>Managing database operations</long-description>
+        <tag name="package" line="17" description="Default"/>
       </docblock>
-      <property static="false" visibility="protected" namespace="Kore" line="12" package="Default">
+      <property static="false" visibility="protected" namespace="Kore" line="24" package="Default">
         <name>$pdo</name>
         <full_name>\Kore\DB::$pdo</full_name>
         <default></default>
-        <docblock line="12">
-          <description></description>
+        <docblock line="24">
+          <description>\PDO instance</description>
           <long-description></long-description>
-          <tag name="var" line="12" description="" type="\PDO" variable="">
+          <tag name="var" line="24" description="" type="\PDO" variable="">
             <type>\PDO</type>
           </tag>
         </docblock>
       </property>
-      <method final="true" abstract="false" static="false" visibility="private" namespace="Kore" line="18" package="Default">
+      <method final="true" abstract="false" static="false" visibility="private" namespace="Kore" line="32" package="Default">
         <name>__construct</name>
         <full_name>\Kore\DB::__construct()</full_name>
-        <docblock line="18">
-          <description></description>
+        <docblock line="32">
+          <description>__construct method</description>
           <long-description></long-description>
-          <tag name="param" line="18" description="" type="string" variable="$dbconfig">
+          <tag name="param" line="32" description="&lt;p&gt;DB configuration key&lt;/p&gt;" type="string" variable="$dbconfig">
             <type>string</type>
           </tag>
-          <tag name="return" line="18" description="" type="void">
+          <tag name="return" line="32" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -1866,30 +1866,30 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>string</type>
         </argument>
       </method>
-      <method final="true" abstract="false" static="false" visibility="public" namespace="Kore" line="27" package="Default">
+      <method final="true" abstract="false" static="false" visibility="public" namespace="Kore" line="43" package="Default">
         <name>__clone</name>
         <full_name>\Kore\DB::__clone()</full_name>
-        <docblock line="27">
-          <description></description>
+        <docblock line="43">
+          <description>__clone method</description>
           <long-description></long-description>
-          <tag name="return" line="27" description="" type="void">
+          <tag name="return" line="43" description="" type="void">
             <type>void</type>
           </tag>
-          <tag name="throws" line="27" description="" type="\Exception">
+          <tag name="throws" line="43" description="Thrown in when __clone is called" type="\Exception">
             <type>\Exception</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="36" package="Default">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="54" package="Default">
         <name>connection</name>
         <full_name>\Kore\DB::connection()</full_name>
-        <docblock line="36">
-          <description></description>
+        <docblock line="54">
+          <description>Get DB instance corresponding to the DB configuration key</description>
           <long-description></long-description>
-          <tag name="param" line="36" description="" type="string" variable="$dbconfig">
+          <tag name="param" line="54" description="&lt;p&gt;DB configuration key&lt;/p&gt;" type="string" variable="$dbconfig">
             <type>string</type>
           </tag>
-          <tag name="return" line="36" description="" type="\Kore\DB">
+          <tag name="return" line="54" description="DB instance" type="\Kore\DB">
             <type>\Kore\DB</type>
           </tag>
           <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
@@ -1900,19 +1900,22 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="50" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="71" package="Default">
         <name>connect</name>
         <full_name>\Kore\DB::connect()</full_name>
-        <docblock line="50">
-          <description></description>
+        <docblock line="71">
+          <description>Access DB</description>
           <long-description></long-description>
-          <tag name="param" line="50" description="" type="string" variable="$dbconfig">
+          <tag name="param" line="71" description="&lt;p&gt;DB configuration key&lt;/p&gt;" type="string" variable="$dbconfig">
             <type>string</type>
           </tag>
-          <tag name="return" line="50" description="" type="void">
+          <tag name="return" line="71" description="" type="void">
             <type>void</type>
           </tag>
-          <tag name="throws" line="50" description="" type="\PDOException">
+          <tag name="throws" line="71" description="Thrown in when the DB configuration does not exist" type="\Exception">
+            <type>\Exception</type>
+          </tag>
+          <tag name="throws" line="71" description="Thrown when DB access fails" type="\PDOException">
             <type>\PDOException</type>
           </tag>
         </docblock>
@@ -1922,30 +1925,30 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="71" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="94" package="Default">
         <name>getPdo</name>
         <full_name>\Kore\DB::getPdo()</full_name>
-        <docblock line="71">
-          <description></description>
+        <docblock line="94">
+          <description>Get \PDO instance</description>
           <long-description></long-description>
-          <tag name="return" line="71" description="" type="\PDO">
+          <tag name="return" line="94" description="\PDO instance" type="\PDO">
             <type>\PDO</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="81" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="106" package="Default">
         <name>select</name>
         <full_name>\Kore\DB::select()</full_name>
-        <docblock line="81">
-          <description></description>
+        <docblock line="106">
+          <description>Run the select statement</description>
           <long-description></long-description>
-          <tag name="param" line="81" description="" type="string" variable="$query">
+          <tag name="param" line="106" description="&lt;p&gt;SQL query&lt;/p&gt;" type="string" variable="$query">
             <type>string</type>
           </tag>
-          <tag name="param" line="81" description="" type="\Kore\array&lt;mixed&gt;" variable="$params">
+          <tag name="param" line="106" description="&lt;p&gt;SQL query parameters&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$params">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="return" line="81" description="" type="\Kore\array&lt;mixed&gt;">
+          <tag name="return" line="106" description="query results" type="\Kore\array&lt;mixed&gt;">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
         </docblock>
@@ -1960,19 +1963,19 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>\Kore\array&lt;mixed&gt;</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="94" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="121" package="Default">
         <name>selectFirst</name>
         <full_name>\Kore\DB::selectFirst()</full_name>
-        <docblock line="94">
-          <description></description>
+        <docblock line="121">
+          <description>Run the select statement, get only one record</description>
           <long-description></long-description>
-          <tag name="param" line="94" description="" type="string" variable="$query">
+          <tag name="param" line="121" description="&lt;p&gt;SQL query&lt;/p&gt;" type="string" variable="$query">
             <type>string</type>
           </tag>
-          <tag name="param" line="94" description="" type="\Kore\array&lt;mixed&gt;" variable="$params">
+          <tag name="param" line="121" description="&lt;p&gt;SQL query parameters&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$params">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="return" line="94" description="" type="\Kore\array&lt;mixed&gt;">
+          <tag name="return" line="121" description="query results" type="\Kore\array&lt;mixed&gt;">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
         </docblock>
@@ -1987,19 +1990,19 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>\Kore\array&lt;mixed&gt;</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="107" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="136" package="Default">
         <name>count</name>
         <full_name>\Kore\DB::count()</full_name>
-        <docblock line="107">
-          <description></description>
+        <docblock line="136">
+          <description>Run the select count statement</description>
           <long-description></long-description>
-          <tag name="param" line="107" description="" type="string" variable="$query">
+          <tag name="param" line="136" description="&lt;p&gt;SQL query&lt;/p&gt;" type="string" variable="$query">
             <type>string</type>
           </tag>
-          <tag name="param" line="107" description="" type="\Kore\array&lt;mixed&gt;" variable="$params">
+          <tag name="param" line="136" description="&lt;p&gt;SQL query parameters&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$params">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="return" line="107" description="" type="mixed">
+          <tag name="return" line="136" description="query results" type="mixed">
             <type>mixed</type>
           </tag>
         </docblock>
@@ -2014,19 +2017,19 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>\Kore\array&lt;mixed&gt;</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="120" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="151" package="Default">
         <name>insert</name>
         <full_name>\Kore\DB::insert()</full_name>
-        <docblock line="120">
-          <description></description>
+        <docblock line="151">
+          <description>Run the insert statement</description>
           <long-description></long-description>
-          <tag name="param" line="120" description="" type="string" variable="$query">
+          <tag name="param" line="151" description="&lt;p&gt;SQL query&lt;/p&gt;" type="string" variable="$query">
             <type>string</type>
           </tag>
-          <tag name="param" line="120" description="" type="\Kore\array&lt;mixed&gt;" variable="$params">
+          <tag name="param" line="151" description="&lt;p&gt;SQL query parameters&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$params">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="return" line="120" description="" type="string">
+          <tag name="return" line="151" description="last insert ID" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -2041,19 +2044,19 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>\Kore\array&lt;mixed&gt;</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="132" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="165" package="Default">
         <name>update</name>
         <full_name>\Kore\DB::update()</full_name>
-        <docblock line="132">
-          <description></description>
+        <docblock line="165">
+          <description>Run the update statement</description>
           <long-description></long-description>
-          <tag name="param" line="132" description="" type="string" variable="$query">
+          <tag name="param" line="165" description="&lt;p&gt;SQL query&lt;/p&gt;" type="string" variable="$query">
             <type>string</type>
           </tag>
-          <tag name="param" line="132" description="" type="\Kore\array&lt;mixed&gt;" variable="$params">
+          <tag name="param" line="165" description="&lt;p&gt;SQL query parameters&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$params">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="return" line="132" description="" type="integer">
+          <tag name="return" line="165" description="number of updated records" type="integer">
             <type>integer</type>
           </tag>
         </docblock>
@@ -2068,19 +2071,19 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>\Kore\array&lt;mixed&gt;</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="144" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="179" package="Default">
         <name>delete</name>
         <full_name>\Kore\DB::delete()</full_name>
-        <docblock line="144">
-          <description></description>
+        <docblock line="179">
+          <description>Run the delete statement</description>
           <long-description></long-description>
-          <tag name="param" line="144" description="" type="string" variable="$query">
+          <tag name="param" line="179" description="&lt;p&gt;SQL query&lt;/p&gt;" type="string" variable="$query">
             <type>string</type>
           </tag>
-          <tag name="param" line="144" description="" type="\Kore\array&lt;mixed&gt;" variable="$params">
+          <tag name="param" line="179" description="&lt;p&gt;SQL query parameters&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$params">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="return" line="144" description="" type="integer">
+          <tag name="return" line="179" description="number of deleted records" type="integer">
             <type>integer</type>
           </tag>
         </docblock>
@@ -2095,16 +2098,16 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>\Kore\array&lt;mixed&gt;</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="155" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="193" package="Default">
         <name>transaction</name>
         <full_name>\Kore\DB::transaction()</full_name>
-        <docblock line="155">
-          <description></description>
-          <long-description></long-description>
-          <tag name="param" line="155" description="" type="callable" variable="$callback">
+        <docblock line="193">
+          <description>Run in a transaction</description>
+          <long-description>Rollback if an exception is raised in the callback.</long-description>
+          <tag name="param" line="193" description="&lt;p&gt;callback processing&lt;/p&gt;" type="callable" variable="$callback">
             <type>callable</type>
           </tag>
-          <tag name="return" line="155" description="" type="void">
+          <tag name="return" line="193" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -2114,19 +2117,19 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>callable</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="172" package="Default">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="220" package="Default">
         <name>getInClause</name>
         <full_name>\Kore\DB::getInClause()</full_name>
-        <docblock line="172">
-          <description></description>
+        <docblock line="220">
+          <description>Get the IN clause</description>
           <long-description></long-description>
-          <tag name="param" line="172" description="" type="string" variable="$marker">
+          <tag name="param" line="220" description="&lt;p&gt;parameter marker&lt;/p&gt;" type="string" variable="$marker">
             <type>string</type>
           </tag>
-          <tag name="param" line="172" description="" type="\Kore\array&lt;mixed&gt;" variable="$values">
+          <tag name="param" line="220" description="&lt;p&gt;value specified in the IN clause&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$values">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="return" line="172" description="" type="\Kore\array&lt;mixed&gt;">
+          <tag name="return" line="220" description="IN clause information&#10;                     array(&#10;                         'IN (:MARKER_0, :MARKER_1, :MARKER_2)',&#10;                         array(&#10;                             'MARKER_0' =&gt; 'value',&#10;                             'MARKER_1' =&gt; 'value',&#10;                             'MARKER_2' =&gt; 'value'&#10;                         )&#10;                     )" type="\Kore\array&lt;mixed&gt;">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
         </docblock>
@@ -2141,19 +2144,19 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>\Kore\array&lt;mixed&gt;</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Kore" line="193" package="Default">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Kore" line="243" package="Default">
         <name>execute</name>
         <full_name>\Kore\DB::execute()</full_name>
-        <docblock line="193">
-          <description></description>
+        <docblock line="243">
+          <description>Run the query statement</description>
           <long-description></long-description>
-          <tag name="param" line="193" description="" type="string" variable="$query">
+          <tag name="param" line="243" description="&lt;p&gt;SQL query&lt;/p&gt;" type="string" variable="$query">
             <type>string</type>
           </tag>
-          <tag name="param" line="193" description="" type="\Kore\array&lt;mixed&gt;" variable="$params">
+          <tag name="param" line="243" description="&lt;p&gt;SQL query parameters&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$params">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="return" line="193" description="" type="\PDOStatement&lt;mixed&gt;">
+          <tag name="return" line="243" description="\PDOStatement object" type="\PDOStatement&lt;mixed&gt;">
             <type>\PDOStatement&lt;mixed&gt;</type>
           </tag>
         </docblock>
@@ -2168,16 +2171,16 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>\Kore\array&lt;mixed&gt;</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Kore" line="218" package="Default">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Kore" line="270" package="Default">
         <name>debugValue</name>
         <full_name>\Kore\DB::debugValue()</full_name>
-        <docblock line="218">
-          <description></description>
+        <docblock line="270">
+          <description>Get the debug value from the variable</description>
           <long-description></long-description>
-          <tag name="param" line="218" description="" type="mixed" variable="$value">
+          <tag name="param" line="270" description="&lt;p&gt;variable&lt;/p&gt;" type="mixed" variable="$value">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="218" description="" type="mixed">
+          <tag name="return" line="270" description="debug value" type="mixed">
             <type>mixed</type>
           </tag>
         </docblock>
@@ -2187,16 +2190,16 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Kore" line="241" package="Default">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Kore" line="295" package="Default">
         <name>dataType</name>
         <full_name>\Kore\DB::dataType()</full_name>
-        <docblock line="241">
-          <description></description>
+        <docblock line="295">
+          <description>Get the data_type from the variable</description>
           <long-description></long-description>
-          <tag name="param" line="241" description="" type="mixed" variable="$value">
+          <tag name="param" line="295" description="&lt;p&gt;variable&lt;/p&gt;" type="mixed" variable="$value">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="241" description="" type="integer">
+          <tag name="return" line="295" description="data_type" type="integer">
             <type>integer</type>
           </tag>
         </docblock>
@@ -2207,27 +2210,6 @@ If you need to customize, please override it with subclasses.</long-description>
         </argument>
       </method>
     </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="7" code="PPC:ERR-50005">No summary for class \Kore\DB</error>
-      <error line="18" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="27" code="PPC:ERR-50008">No summary for method __clone()</error>
-      <error line="36" code="PPC:ERR-50008">No summary for method connection()</error>
-      <error line="50" code="PPC:ERR-50008">No summary for method connect()</error>
-      <error line="71" code="PPC:ERR-50008">No summary for method getPdo()</error>
-      <error line="81" code="PPC:ERR-50008">No summary for method select()</error>
-      <error line="94" code="PPC:ERR-50008">No summary for method selectFirst()</error>
-      <error line="107" code="PPC:ERR-50008">No summary for method count()</error>
-      <error line="120" code="PPC:ERR-50008">No summary for method insert()</error>
-      <error line="132" code="PPC:ERR-50008">No summary for method update()</error>
-      <error line="144" code="PPC:ERR-50008">No summary for method delete()</error>
-      <error line="155" code="PPC:ERR-50008">No summary for method transaction()</error>
-      <error line="172" code="PPC:ERR-50008">No summary for method getInClause()</error>
-      <error line="193" code="PPC:ERR-50008">No summary for method execute()</error>
-      <error line="218" code="PPC:ERR-50008">No summary for method debugValue()</error>
-      <error line="241" code="PPC:ERR-50008">No summary for method dataType()</error>
-      <error line="12" code="PPC:ERR-50007">No summary for property $pdo</error>
-    </parse_markers>
   </file>
   <package name="Default" full_name="Default"/>
   <package name="global" full_name="global"/>
