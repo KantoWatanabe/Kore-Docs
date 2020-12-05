@@ -1288,7 +1288,7 @@ Used in running web applications.</long-description>
       </method>
     </class>
   </file>
-  <file path="Config.php" generated-path="Config.html" hash="8f3325c971dd88aaaa4de15a968baa0a" package="Default">
+  <file path="Config.php" generated-path="Config.html" hash="ca8c618e04f8567689040965850a9693" package="Default">
     <docblock line="0">
       <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
@@ -1340,20 +1340,21 @@ Environment-independent configurations are defined in CONFIG_DIR/config-common.p
           <type>string|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="56" package="Default">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="57" package="Default">
         <name>get</name>
         <full_name>\Kore\Config::get()</full_name>
-        <docblock line="56">
+        <docblock line="57">
           <description>Get the configurations</description>
-          <long-description>If no key is specified, all configurations are returned.</long-description>
-          <tag name="param" line="56" description="&lt;p&gt;configuration key&lt;/p&gt;" type="string|null" variable="$key">
+          <long-description>If no key is specified, all configurations are returned.
+If the key is passed dot-delimited, it is interpreted as an array path.</long-description>
+          <tag name="param" line="57" description="&lt;p&gt;configuration key&lt;/p&gt;" type="string|null" variable="$key">
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="param" line="56" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
+          <tag name="param" line="57" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="56" description="configurations" type="mixed">
+          <tag name="return" line="57" description="configurations" type="mixed">
             <type>mixed</type>
           </tag>
         </docblock>
@@ -1795,7 +1796,7 @@ If you need to customize, please override it with subclasses.</long-description>
       </method>
     </class>
   </file>
-  <file path="DB.php" generated-path="DB.html" hash="8b46f24ead347bd5142b28740fd11bab" package="Default">
+  <file path="DB.php" generated-path="DB.html" hash="fc24d60027f389c6d1fa74899acd6e0e" package="Default">
     <docblock line="0">
       <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
@@ -2094,19 +2095,52 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>callable</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="220" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="210" package="Default">
+        <name>beginTransaction</name>
+        <full_name>\Kore\DB::beginTransaction()</full_name>
+        <docblock line="210">
+          <description>Begin transaction</description>
+          <long-description></long-description>
+          <tag name="return" line="210" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="220" package="Default">
+        <name>commit</name>
+        <full_name>\Kore\DB::commit()</full_name>
+        <docblock line="220">
+          <description>Commit</description>
+          <long-description></long-description>
+          <tag name="return" line="220" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="230" package="Default">
+        <name>rollback</name>
+        <full_name>\Kore\DB::rollback()</full_name>
+        <docblock line="230">
+          <description>Rollback</description>
+          <long-description></long-description>
+          <tag name="return" line="230" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="250" package="Default">
         <name>getInClause</name>
         <full_name>\Kore\DB::getInClause()</full_name>
-        <docblock line="220">
+        <docblock line="250">
           <description>Get the IN clause</description>
           <long-description></long-description>
-          <tag name="param" line="220" description="&lt;p&gt;parameter marker&lt;/p&gt;" type="string" variable="$marker">
+          <tag name="param" line="250" description="&lt;p&gt;parameter marker&lt;/p&gt;" type="string" variable="$marker">
             <type>string</type>
           </tag>
-          <tag name="param" line="220" description="&lt;p&gt;value specified in the IN clause&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$values">
+          <tag name="param" line="250" description="&lt;p&gt;value specified in the IN clause&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$values">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="return" line="220" description="IN clause information&#10;                     array(&#10;                         'IN (:MARKER_0, :MARKER_1, :MARKER_2)',&#10;                         array(&#10;                             'MARKER_0' =&gt; 'value',&#10;                             'MARKER_1' =&gt; 'value',&#10;                             'MARKER_2' =&gt; 'value'&#10;                         )&#10;                     )" type="\Kore\array&lt;mixed&gt;">
+          <tag name="return" line="250" description="IN clause information&#10;                     array(&#10;                         'IN (:MARKER_0, :MARKER_1, :MARKER_2)',&#10;                         array(&#10;                             'MARKER_0' =&gt; 'value',&#10;                             'MARKER_1' =&gt; 'value',&#10;                             'MARKER_2' =&gt; 'value'&#10;                         )&#10;                     )" type="\Kore\array&lt;mixed&gt;">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
         </docblock>
@@ -2121,19 +2155,19 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>\Kore\array&lt;mixed&gt;</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Kore" line="243" package="Default">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Kore" line="273" package="Default">
         <name>execute</name>
         <full_name>\Kore\DB::execute()</full_name>
-        <docblock line="243">
+        <docblock line="273">
           <description>Run the query statement</description>
           <long-description></long-description>
-          <tag name="param" line="243" description="&lt;p&gt;SQL query&lt;/p&gt;" type="string" variable="$query">
+          <tag name="param" line="273" description="&lt;p&gt;SQL query&lt;/p&gt;" type="string" variable="$query">
             <type>string</type>
           </tag>
-          <tag name="param" line="243" description="&lt;p&gt;SQL query parameters&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$params">
+          <tag name="param" line="273" description="&lt;p&gt;SQL query parameters&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$params">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="return" line="243" description="\PDOStatement object" type="\PDOStatement&lt;mixed&gt;">
+          <tag name="return" line="273" description="\PDOStatement object" type="\PDOStatement&lt;mixed&gt;">
             <type>\PDOStatement&lt;mixed&gt;</type>
           </tag>
         </docblock>
@@ -2148,16 +2182,16 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>\Kore\array&lt;mixed&gt;</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Kore" line="270" package="Default">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Kore" line="300" package="Default">
         <name>debugValue</name>
         <full_name>\Kore\DB::debugValue()</full_name>
-        <docblock line="270">
+        <docblock line="300">
           <description>Get the debug value from the variable</description>
           <long-description></long-description>
-          <tag name="param" line="270" description="&lt;p&gt;variable&lt;/p&gt;" type="mixed" variable="$value">
+          <tag name="param" line="300" description="&lt;p&gt;variable&lt;/p&gt;" type="mixed" variable="$value">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="270" description="debug value" type="mixed">
+          <tag name="return" line="300" description="debug value" type="mixed">
             <type>mixed</type>
           </tag>
         </docblock>
@@ -2167,16 +2201,16 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Kore" line="295" package="Default">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Kore" line="325" package="Default">
         <name>dataType</name>
         <full_name>\Kore\DB::dataType()</full_name>
-        <docblock line="295">
+        <docblock line="325">
           <description>Get the data_type from the variable</description>
           <long-description></long-description>
-          <tag name="param" line="295" description="&lt;p&gt;variable&lt;/p&gt;" type="mixed" variable="$value">
+          <tag name="param" line="325" description="&lt;p&gt;variable&lt;/p&gt;" type="mixed" variable="$value">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="295" description="data_type" type="integer">
+          <tag name="return" line="325" description="data_type" type="integer">
             <type>integer</type>
           </tag>
         </docblock>
