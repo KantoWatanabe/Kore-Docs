@@ -66,12 +66,24 @@
 <li class="method public "><a href="#method_patch" title="patch() :: PATCH Communication"><span class="description">PATCH Communication</span><pre>patch()</pre></a></li>
 <li class="method public "><a href="#method_post" title="post() :: POST Communication"><span class="description">POST Communication</span><pre>post()</pre></a></li>
 <li class="method public "><a href="#method_put" title="put() :: PUT Communication"><span class="description">PUT Communication</span><pre>put()</pre></a></li>
+<li class="method public "><a href="#method_setConnectTimeout" title="setConnectTimeout() :: Set connect timeout"><span class="description">Set connect timeout</span><pre>setConnectTimeout()</pre></a></li>
+<li class="method public "><a href="#method_setTimeout" title="setTimeout() :: Set timeout"><span class="description">Set timeout</span><pre>setTimeout()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header protected">» Protected
                     <ul>
 <li class="method protected "><a href="#method_buildHeader" title="buildHeader() :: Build headers"><span class="description">Build headers</span><pre>buildHeader()</pre></a></li>
 <li class="method protected "><a href="#method_communicate" title="communicate() :: Communication Processing"><span class="description">Communication Processing</span><pre>communicate()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i title="Properties" class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_connectTimeout" title="$connectTimeout() :: connect timeout"><span class="description"></span><pre>$connectTimeout</pre></a></li>
+<li class="property protected "><a href="#property_timeout" title="$timeout() :: timeout"><span class="description"></span><pre>$timeout</pre></a></li>
 </ul>
 </li>
 </ul>
@@ -237,6 +249,30 @@
 </div>
 </div></div>
 </div>
+<a id="method_setConnectTimeout"></a><div class="element clickable method public method_setConnectTimeout " data-toggle="collapse" data-target=".method_setConnectTimeout .collapse" title="public">
+<h2>Set connect timeout</h2>
+<pre>setConnectTimeout(integer $connectTimeout) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$connectTimeout</h4>
+<code>integer</code><p>connect timeout</p></div>
+</div></div>
+</div>
+<a id="method_setTimeout"></a><div class="element clickable method public method_setTimeout " data-toggle="collapse" data-target=".method_setTimeout .collapse" title="public">
+<h2>Set timeout</h2>
+<pre>setTimeout(integer $timeout) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$timeout</h4>
+<code>integer</code><p>timeout</p></div>
+</div></div>
+</div>
 <a id="method_buildHeader"></a><div class="element clickable method protected method_buildHeader " data-toggle="collapse" data-target=".method_buildHeader .collapse" title="protected">
 <h2>Build headers</h2>
 <pre>buildHeader(\Kore\array&lt;mixed&gt; $headers) : \Kore\array&lt;string&gt;</pre>
@@ -283,6 +319,32 @@
 <code>\Kore\HttpResponse</code><code>false</code>\Kore\HttpResponse</div>
 </div></div>
 </div>
+<h3>
+<i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_connectTimeout"> </a><div class="element clickable property protected property_connectTimeout" data-toggle="collapse" data-target=".property_connectTimeout .collapse" title="protected">
+<h2>connect timeout</h2>
+<pre>$connectTimeout : integer</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>300</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Used as the value of CURLOPT_CONNECTTIMEOUT.
+If unspecified, the default is 300.
+For unlimited, specify 0.</p></div></div></div>
+</div>
+<a id="property_timeout"> </a><div class="element clickable property protected property_timeout" data-toggle="collapse" data-target=".property_timeout .collapse" title="protected">
+<h2>timeout</h2>
+<pre>$timeout : integer</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>300</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Used as the value of CURLOPT_TIMEOUT.
+If unspecified, the default is 300.
+For unlimited, specify 0.</p></div></div></div>
+</div>
 </div>
 </div>
 </div>
@@ -290,7 +352,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.1</a> and<br>
-            generated on 2020-12-19T16:12:20+09:00.<br></footer></div>
+            generated on 2021-01-17T23:17:48+09:00.<br></footer></div>
 </div>
 </body>
 </html>
