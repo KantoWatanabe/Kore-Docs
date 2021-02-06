@@ -60,17 +60,19 @@
 </li>
 <li class="nav-header">
 <i title="Functions" class="icon-custom icon-function"></i> Functions</li>
+<li xmlns:php="http://php.net/xsl" class="function  "><a href="#function_array_get_recursive" title="array_get_recursive() :: Get array values recursively"><span class="description">Get array values recursively</span><pre>array_get_recursive</pre></a></li>
 <li xmlns:php="http://php.net/xsl" class="function  "><a href="#function_bootstrap" title="bootstrap() :: Initialize the application"><span class="description">Initialize the application</span><pre>bootstrap</pre></a></li>
+<li xmlns:php="http://php.net/xsl" class="function  "><a href="#function_url_add_query" title="url_add_query() :: Add query parameters to URL"><span class="description">Add query parameters to URL</span><pre>url_add_query</pre></a></li>
 <li class="nav-header">
 <i title="Classes" class="icon-custom icon-class"></i> Classes</li>
-<li><a href="#Application" title="Application class">Application</a></li>
-<li><a href="#Controller" title="Controller class">Controller</a></li>
 <li><a href="#HttpClient" title="HttpClient class">HttpClient</a></li>
 <li><a href="#HttpResponse" title="HttpResponse class">HttpResponse</a></li>
-<li><a href="#Config" title="Config class">Config</a></li>
-<li><a href="#DB" title="DB class">DB</a></li>
 <li><a href="#Command" title="Command class">Command</a></li>
+<li><a href="#Application" title="Application class">Application</a></li>
 <li><a href="#Log" title="Log class">Log</a></li>
+<li><a href="#Config" title="Config class">Config</a></li>
+<li><a href="#Controller" title="Controller class">Controller</a></li>
+<li><a href="#DB" title="DB class">DB</a></li>
 <li class="nav-header">
 <i title="Constants" class="icon-custom icon-constant"></i> Constants</li>
 <li xmlns:php="http://php.net/xsl" class="constant  "><a href="#constant_APP_DIR" title="APP_DIR() :: "><span class="description">APP_DIR</span><pre>APP_DIR</pre></a></li>
@@ -93,6 +95,31 @@
 <div class="package-indent">
 <h3>
 <i title="Functions" class="icon-custom icon-function"></i> Functions</h3>
+<a xmlns:php="http://php.net/xsl" id="function_array_get_recursive"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_array_get_recursive " data-toggle="collapse" data-target=".function_array_get_recursive .collapse" title="">
+<h2>Get array values recursively</h2>
+<pre>array_get_recursive(\array&lt;mixed&gt; $array, string $key, mixed $default<code> = null</code>) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$array</h4>
+<code>\array&lt;mixed&gt;</code><p>array</p></div>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code><p>key</p></div>
+<div class="subelement argument">
+<h4>$default</h4>
+<code>mixed</code><p>default value</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>value</div>
+</div></div>
+</div>
 <a xmlns:php="http://php.net/xsl" id="function_bootstrap"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_bootstrap " data-toggle="collapse" data-target=".function_bootstrap .collapse" title="">
 <h2>Initialize the application</h2>
 <pre>bootstrap(string $app_dir, string $app_ns) : void</pre>
@@ -110,6 +137,28 @@
 <div class="subelement argument">
 <h4>$app_ns</h4>
 <code>string</code><p>Application NameSpace</p></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_url_add_query"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_url_add_query " data-toggle="collapse" data-target=".function_url_add_query .collapse" title="">
+<h2>Add query parameters to URL</h2>
+<pre>url_add_query(string $url, \array&lt;mixed&gt; $params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$url</h4>
+<code>string</code><p>URL</p></div>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>\array&lt;mixed&gt;</code><p>Query parameters</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>URL with query parameters</div>
 </div></div>
 </div>
 <h3>
@@ -310,7 +359,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.1</a> and<br>
-            generated on 2021-01-17T23:17:48+09:00.<br></footer></div>
+            generated on 2021-02-06T20:45:11+09:00.<br></footer></div>
 </div>
 </body>
 </html>

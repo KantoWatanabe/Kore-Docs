@@ -1,634 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project title="API Documentation" version="2.9.1">
   <partials/>
-  <file path="Application.php" generated-path="Application.html" hash="cf1087aaa9a302ae9c76ec6f065e7874" package="Default">
+  <file path="bootstrap.php" generated-path="bootstrap.html" hash="9d60a0b2b682973bc1ac2e5350429d52" package="Default">
     <docblock line="0">
       <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <class final="false" abstract="false" namespace="Kore" line="14" package="Default">
-      <extends/>
-      <name>Application</name>
-      <full_name>\Kore\Application</full_name>
-      <docblock line="14">
-        <description>Application class</description>
-        <long-description>Running web and cli applications.</long-description>
-        <tag name="package" line="14" description="Default"/>
-      </docblock>
-      <property static="false" visibility="protected" namespace="Kore" line="23" package="Default">
-        <name>$basePath</name>
-        <full_name>\Kore\Application::$basePath</full_name>
-        <default>''</default>
-        <docblock line="23">
-          <description>Base path</description>
-          <long-description>Excluded when parsing the controller namespace.
-Used in running web applications.</long-description>
-          <tag name="var" line="23" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="Kore" line="32" package="Default">
-        <name>$defaultController</name>
-        <full_name>\Kore\Application::$defaultController</full_name>
-        <default>'index'</default>
-        <docblock line="32">
-          <description>Default controller</description>
-          <long-description>Called if the controller is not specified.
-If unspecified, the default is 'index'.
-Used in running web applications.</long-description>
-          <tag name="var" line="32" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="Kore" line="40" package="Default">
-        <name>$notFound</name>
-        <full_name>\Kore\Application::$notFound</full_name>
-        <default></default>
-        <docblock line="40">
-          <description>Not found handler</description>
-          <long-description>Called when the controller is not found.
-Used in running web applications.</long-description>
-          <tag name="var" line="40" description="" type="callable" variable="">
-            <type>callable</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="48" package="Default">
-        <name>setBasePath</name>
-        <full_name>\Kore\Application::setBasePath()</full_name>
-        <docblock line="48">
-          <description>Set the base path</description>
-          <long-description></long-description>
-          <tag name="param" line="48" description="&lt;p&gt;bath path ex. 'mybasepath'&lt;/p&gt;" type="string" variable="$basePath">
-            <type>string</type>
-          </tag>
-          <tag name="return" line="48" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$basePath</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="59" package="Default">
-        <name>setDefaultController</name>
-        <full_name>\Kore\Application::setDefaultController()</full_name>
-        <docblock line="59">
-          <description>Set the default controller</description>
-          <long-description></long-description>
-          <tag name="param" line="59" description="&lt;p&gt;default controller&lt;/p&gt;" type="string" variable="$defaultController">
-            <type>string</type>
-          </tag>
-          <tag name="return" line="59" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$defaultController</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="70" package="Default">
-        <name>setNotFound</name>
-        <full_name>\Kore\Application::setNotFound()</full_name>
-        <docblock line="70">
-          <description>Set the not found handler</description>
-          <long-description></long-description>
-          <tag name="param" line="70" description="&lt;p&gt;not found handler&lt;/p&gt;" type="callable" variable="$notFound">
-            <type>callable</type>
-          </tag>
-          <tag name="return" line="70" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$notFound</name>
-          <default></default>
-          <type>callable</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="83" package="Default">
-        <name>run</name>
-        <full_name>\Kore\Application::run()</full_name>
-        <docblock line="83">
-          <description>Running web applications</description>
-          <long-description></long-description>
-          <tag name="param" line="83" description="&lt;p&gt;request path&lt;/p&gt;" type="string|null" variable="$path">
-            <type>string</type>
-            <type>null</type>
-          </tag>
-          <tag name="return" line="83" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$path</name>
-          <default>null</default>
-          <type>string|null</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="122" package="Default">
-        <name>parseController</name>
-        <full_name>\Kore\Application::parseController()</full_name>
-        <docblock line="122">
-          <description>Parse the controller namespace from the request path</description>
-          <long-description></long-description>
-          <tag name="param" line="122" description="&lt;p&gt;request path&lt;/p&gt;" type="string" variable="$path">
-            <type>string</type>
-          </tag>
-          <tag name="return" line="122" description="controller information&#10;                     array(&#10;                         controller class instance,&#10;                         controller namespace,&#10;                         path arguments&#10;                     )" type="\Kore\array&lt;mixed&gt;">
-            <type>\Kore\array&lt;mixed&gt;</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$path</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="151" package="Default">
-        <name>runCmd</name>
-        <full_name>\Kore\Application::runCmd()</full_name>
-        <docblock line="151">
-          <description>Running cli applications</description>
-          <long-description></long-description>
-          <tag name="param" line="151" description="&lt;p&gt;command line argument&lt;/p&gt;" type="\Kore\array&lt;string&gt;" variable="$argv">
-            <type>\Kore\array&lt;string&gt;</type>
-          </tag>
-          <tag name="return" line="151" description="" type="void">
-            <type>void</type>
-          </tag>
-          <tag name="throws" line="151" description="thrown when the command class is not found." type="\Exception">
-            <type>\Exception</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$argv</name>
-          <default></default>
-          <type>\Kore\array&lt;string&gt;</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="178" package="Default">
-        <name>parseCommand</name>
-        <full_name>\Kore\Application::parseCommand()</full_name>
-        <docblock line="178">
-          <description>Parse the command namespace from the command line argument</description>
-          <long-description></long-description>
-          <tag name="param" line="178" description="&lt;p&gt;command line argument&lt;/p&gt;" type="\Kore\array&lt;string&gt;" variable="$argv">
-            <type>\Kore\array&lt;string&gt;</type>
-          </tag>
-          <tag name="return" line="178" description="command information&#10;                     array(&#10;                         commadn class instance,&#10;                         command namespace,&#10;                         arguments,&#10;                         options&#10;                     )" type="\Kore\array&lt;mixed&gt;">
-            <type>\Kore\array&lt;mixed&gt;</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$argv</name>
-          <default></default>
-          <type>\Kore\array&lt;string&gt;</type>
-        </argument>
-      </method>
-    </class>
-  </file>
-  <file path="Controller.php" generated-path="Controller.html" hash="23f303097dcda95299a811f83f5ecade" package="Default">
-    <docblock line="0">
-      <description>Kore : Simple And Minimal Framework</description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <namespace-alias name="Log">\Kore\Log</namespace-alias>
-    <class final="false" abstract="true" namespace="Kore" line="15" package="Default">
-      <extends/>
-      <name>Controller</name>
-      <full_name>\Kore\Controller</full_name>
-      <docblock line="15">
-        <description>Controller class</description>
+    <constant namespace="" line="18" package="Default">
+      <name>APP_DIR</name>
+      <full_name>\APP_DIR</full_name>
+      <value>$app_dir</value>
+      <docblock line="18">
+        <description></description>
         <long-description></long-description>
-        <tag name="package" line="15" description="Default"/>
+        <tag name="package" line="18" description="Default"/>
       </docblock>
-      <property static="false" visibility="protected" namespace="Kore" line="22" package="Default">
-        <name>$controller</name>
-        <full_name>\Kore\Controller::$controller</full_name>
+    </constant>
+    <constant namespace="" line="19" package="Default">
+      <name>APP_NS</name>
+      <full_name>\APP_NS</full_name>
+      <value>$app_ns</value>
+      <docblock line="19">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="19" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="22" package="Default">
+      <name>CONFIG_DIR</name>
+      <full_name>\CONFIG_DIR</full_name>
+      <value>APP_DIR . '/config'</value>
+      <docblock line="22">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="22" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="23" package="Default">
+      <name>CONTROLLERS_DIR</name>
+      <full_name>\CONTROLLERS_DIR</full_name>
+      <value>APP_DIR . '/controllers'</value>
+      <docblock line="23">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="23" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="24" package="Default">
+      <name>COMMANDS_DIR</name>
+      <full_name>\COMMANDS_DIR</full_name>
+      <value>APP_DIR . '/commands'</value>
+      <docblock line="24">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="24" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="25" package="Default">
+      <name>VIEWS_DIR</name>
+      <full_name>\VIEWS_DIR</full_name>
+      <value>APP_DIR . '/views'</value>
+      <docblock line="25">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="25" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="26" package="Default">
+      <name>LIBS_DIR</name>
+      <full_name>\LIBS_DIR</full_name>
+      <value>APP_DIR . '/libs'</value>
+      <docblock line="26">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="26" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="27" package="Default">
+      <name>TMP_DIR</name>
+      <full_name>\TMP_DIR</full_name>
+      <value>dirname(APP_DIR) . '/tmp'</value>
+      <docblock line="27">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="27" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="28" package="Default">
+      <name>LOGS_DIR</name>
+      <full_name>\LOGS_DIR</full_name>
+      <value>TMP_DIR . '/logs'</value>
+      <docblock line="28">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="28" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="31" package="Default">
+      <name>CONTROLLERS_NS</name>
+      <full_name>\CONTROLLERS_NS</full_name>
+      <value>APP_NS . '\\controllers'</value>
+      <docblock line="31">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="31" description="Default"/>
+      </docblock>
+    </constant>
+    <constant namespace="" line="32" package="Default">
+      <name>COMMANDS_NS</name>
+      <full_name>\COMMANDS_NS</full_name>
+      <value>APP_NS . '\\commands'</value>
+      <docblock line="32">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="32" description="Default"/>
+      </docblock>
+    </constant>
+    <function namespace="Kore" line="16" package="Default">
+      <name>bootstrap</name>
+      <full_name>\Kore\bootstrap()</full_name>
+      <docblock line="16">
+        <description>Initialize the application</description>
+        <long-description></long-description>
+        <tag name="package" line="16" description="Default"/>
+        <tag name="param" line="16" description="&lt;p&gt;Application Directory&lt;/p&gt;" type="string" variable="$app_dir">
+          <type>string</type>
+        </tag>
+        <tag name="param" line="16" description="&lt;p&gt;Application NameSpace&lt;/p&gt;" type="string" variable="$app_ns">
+          <type>string</type>
+        </tag>
+        <tag name="return" line="16" description="" type="void">
+          <type>void</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$app_dir</name>
         <default></default>
-        <docblock line="22">
-          <description>controller namespace</description>
-          <long-description></long-description>
-          <tag name="var" line="22" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="Kore" line="28" package="Default">
-        <name>$args</name>
-        <full_name>\Kore\Controller::$args</full_name>
-        <default>array()</default>
-        <docblock line="28">
-          <description>path arguments</description>
-          <long-description></long-description>
-          <tag name="var" line="28" description="" type="\Kore\array&lt;string&gt;" variable="">
-            <type>\Kore\array&lt;string&gt;</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="true" static="false" visibility="protected" namespace="Kore" line="36" package="Default">
-        <name>action</name>
-        <full_name>\Kore\Controller::action()</full_name>
-        <docblock line="36">
-          <description>Action</description>
-          <long-description>The action is implemented in subclasses.</long-description>
-          <tag name="return" line="36" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="45" package="Default">
-        <name>main</name>
-        <full_name>\Kore\Controller::main()</full_name>
-        <docblock line="45">
-          <description>Main Processing</description>
-          <long-description></long-description>
-          <tag name="param" line="45" description="&lt;p&gt;controller namespace&lt;/p&gt;" type="string" variable="$controller">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="45" description="&lt;p&gt;path arguments&lt;/p&gt;" type="\Kore\array&lt;string&gt;" variable="$args">
-            <type>\Kore\array&lt;string&gt;</type>
-          </tag>
-          <tag name="return" line="45" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$controller</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$args</name>
-          <default></default>
-          <type>\Kore\array&lt;string&gt;</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="69" package="Default">
-        <name>moduleName</name>
-        <full_name>\Kore\Controller::moduleName()</full_name>
-        <docblock line="69">
-          <description>Get the the module name</description>
-          <long-description>The default is 'app'.
-If you need to customize, please override it with subclasses.</long-description>
-          <tag name="return" line="69" description="module name" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="82" package="Default">
-        <name>logLevel</name>
-        <full_name>\Kore\Controller::logLevel()</full_name>
-        <docblock line="82">
-          <description>Get the the log level</description>
-          <long-description>The default is Log::LEVEL_DEBUG.
-If you need to customize, please override it with subclasses.</long-description>
-          <tag name="return" line="82" description="log level" type="integer">
-            <type>integer</type>
-          </tag>
-          <tag name="see" line="82" description="" link="\Kore\Log"/>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="93" package="Default">
-        <name>preaction</name>
-        <full_name>\Kore\Controller::preaction()</full_name>
-        <docblock line="93">
-          <description>Preprocessing of the action</description>
-          <long-description>If you need to customize, please override it with subclasses.</long-description>
-          <tag name="return" line="93" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="105" package="Default">
-        <name>handleError</name>
-        <full_name>\Kore\Controller::handleError()</full_name>
-        <docblock line="105">
-          <description>Handling Errors</description>
-          <long-description>If you need to customize the handling of errors, please override it with subclasses.</long-description>
-          <tag name="param" line="105" description="&lt;p&gt;errors&lt;/p&gt;" type="\Exception" variable="$e">
-            <type>\Exception</type>
-          </tag>
-          <tag name="return" line="105" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$e</name>
-          <default></default>
-          <type>\Exception</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="115" package="Default">
-        <name>getMethod</name>
-        <full_name>\Kore\Controller::getMethod()</full_name>
-        <docblock line="115">
-          <description>Get the http method</description>
-          <long-description></long-description>
-          <tag name="return" line="115" description="http method" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="127" package="Default">
-        <name>getHeader</name>
-        <full_name>\Kore\Controller::getHeader()</full_name>
-        <docblock line="127">
-          <description>Get the http header</description>
-          <long-description></long-description>
-          <tag name="param" line="127" description="&lt;p&gt;header key&lt;/p&gt;" type="string" variable="$key">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="127" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
-            <type>mixed</type>
-          </tag>
-          <tag name="return" line="127" description="http header" type="string|null">
-            <type>string</type>
-            <type>null</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$key</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$default</name>
-          <default>null</default>
-          <type>mixed</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="144" package="Default">
-        <name>getQuery</name>
-        <full_name>\Kore\Controller::getQuery()</full_name>
-        <docblock line="144">
-          <description>Get the query parameters</description>
-          <long-description>If no key is specified, all query parameters are returned.</long-description>
-          <tag name="param" line="144" description="&lt;p&gt;query parameters key&lt;/p&gt;" type="string|null" variable="$key">
-            <type>string</type>
-            <type>null</type>
-          </tag>
-          <tag name="param" line="144" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
-            <type>mixed</type>
-          </tag>
-          <tag name="return" line="144" description="query parameters" type="string|\Kore\array&lt;string&gt;|null">
-            <type>string</type>
-            <type>\Kore\array&lt;string&gt;</type>
-            <type>null</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$key</name>
-          <default>null</default>
-          <type>string|null</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$default</name>
-          <default>null</default>
-          <type>mixed</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="163" package="Default">
-        <name>getPost</name>
-        <full_name>\Kore\Controller::getPost()</full_name>
-        <docblock line="163">
-          <description>Get the post parameters</description>
-          <long-description>If no key is specified, all post parameters are returned.</long-description>
-          <tag name="param" line="163" description="&lt;p&gt;post parameters key&lt;/p&gt;" type="string|null" variable="$key">
-            <type>string</type>
-            <type>null</type>
-          </tag>
-          <tag name="param" line="163" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
-            <type>mixed</type>
-          </tag>
-          <tag name="return" line="163" description="post parameters" type="string|\Kore\array&lt;string&gt;|null">
-            <type>string</type>
-            <type>\Kore\array&lt;string&gt;</type>
-            <type>null</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$key</name>
-          <default>null</default>
-          <type>string|null</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$default</name>
-          <default>null</default>
-          <type>mixed</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="179" package="Default">
-        <name>getBody</name>
-        <full_name>\Kore\Controller::getBody()</full_name>
-        <docblock line="179">
-          <description>Get the body data</description>
-          <long-description></long-description>
-          <tag name="return" line="179" description="body data" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="191" package="Default">
-        <name>getJsonBody</name>
-        <full_name>\Kore\Controller::getJsonBody()</full_name>
-        <docblock line="191">
-          <description>Get the body data in json format</description>
-          <long-description></long-description>
-          <tag name="return" line="191" description="body data" type="\Kore\array&lt;mixed&gt;">
-            <type>\Kore\array&lt;mixed&gt;</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="205" package="Default">
-        <name>getCookie</name>
-        <full_name>\Kore\Controller::getCookie()</full_name>
-        <docblock line="205">
-          <description>Get the cookie parameters</description>
-          <long-description>If no key is specified, all cookie parameters are returned.</long-description>
-          <tag name="param" line="205" description="&lt;p&gt;cookie parameters key&lt;/p&gt;" type="string|null" variable="$key">
-            <type>string</type>
-            <type>null</type>
-          </tag>
-          <tag name="param" line="205" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
-            <type>mixed</type>
-          </tag>
-          <tag name="return" line="205" description="cookie parameters" type="string|\Kore\array&lt;string&gt;|null">
-            <type>string</type>
-            <type>\Kore\array&lt;string&gt;</type>
-            <type>null</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$key</name>
-          <default>null</default>
-          <type>string|null</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$default</name>
-          <default>null</default>
-          <type>mixed</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="224" package="Default">
-        <name>getArg</name>
-        <full_name>\Kore\Controller::getArg()</full_name>
-        <docblock line="224">
-          <description>Get the path arguments</description>
-          <long-description>If no key is specified, all path arguments are returned.</long-description>
-          <tag name="param" line="224" description="&lt;p&gt;path arguments key&lt;/p&gt;" type="string|null" variable="$key">
-            <type>string</type>
-            <type>null</type>
-          </tag>
-          <tag name="param" line="224" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
-            <type>mixed</type>
-          </tag>
-          <tag name="return" line="224" description="path arguments" type="string|\Kore\array&lt;string&gt;|null">
-            <type>string</type>
-            <type>\Kore\array&lt;string&gt;</type>
-            <type>null</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$key</name>
-          <default>null</default>
-          <type>string|null</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$default</name>
-          <default>null</default>
-          <type>mixed</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="243" package="Default">
-        <name>respondView</name>
-        <full_name>\Kore\Controller::respondView()</full_name>
-        <docblock line="243">
-          <description>Respond in view format</description>
-          <long-description></long-description>
-          <tag name="param" line="243" description="&lt;p&gt;view file path&lt;/p&gt;" type="string" variable="$path">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="243" description="&lt;p&gt;response data&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$data">
-            <type>\Kore\array&lt;mixed&gt;</type>
-          </tag>
-          <tag name="param" line="243" description="&lt;p&gt;http status code, the default is 200&lt;/p&gt;" type="integer" variable="$responseCode">
-            <type>integer</type>
-          </tag>
-          <tag name="return" line="243" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$path</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$data</name>
-          <default>array()</default>
-          <type>\Kore\array&lt;mixed&gt;</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$responseCode</name>
-          <default>200</default>
-          <type>integer</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="256" package="Default">
-        <name>extractView</name>
-        <full_name>\Kore\Controller::extractView()</full_name>
-        <docblock line="256">
-          <description>Extract the view</description>
-          <long-description></long-description>
-          <tag name="param" line="256" description="&lt;p&gt;view file path&lt;/p&gt;" type="string" variable="$path">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="256" description="&lt;p&gt;response data&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$data">
-            <type>\Kore\array&lt;mixed&gt;</type>
-          </tag>
-          <tag name="return" line="256" description="view" type="string|false">
-            <type>string</type>
-            <type>false</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$path</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$data</name>
-          <default>array()</default>
-          <type>\Kore\array&lt;mixed&gt;</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="272" package="Default">
-        <name>respondJson</name>
-        <full_name>\Kore\Controller::respondJson()</full_name>
-        <docblock line="272">
-          <description>Respond in json format</description>
-          <long-description></long-description>
-          <tag name="param" line="272" description="&lt;p&gt;response data&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$data">
-            <type>\Kore\array&lt;mixed&gt;</type>
-          </tag>
-          <tag name="param" line="272" description="&lt;p&gt;http status code, the default is 200&lt;/p&gt;" type="integer" variable="$responseCode">
-            <type>integer</type>
-          </tag>
-          <tag name="return" line="272" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$data</name>
-          <default>array()</default>
-          <type>\Kore\array&lt;mixed&gt;</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$responseCode</name>
-          <default>200</default>
-          <type>integer</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="287" package="Default">
-        <name>redirect</name>
-        <full_name>\Kore\Controller::redirect()</full_name>
-        <docblock line="287">
-          <description>Redirect</description>
-          <long-description></long-description>
-          <tag name="param" line="287" description="&lt;p&gt;redirect url&lt;/p&gt;" type="string" variable="$url">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="287" description="&lt;p&gt;http status code, the default is 302&lt;/p&gt;" type="integer" variable="$responseCode">
-            <type>integer</type>
-          </tag>
-          <tag name="return" line="287" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$url</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$responseCode</name>
-          <default>302</default>
-          <type>integer</type>
-        </argument>
-      </method>
-    </class>
+        <type>string</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$app_ns</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+    </function>
   </file>
-  <file path="HttpClient.php" generated-path="HttpClient.html" hash="e9da48bdb58e1b1c08fba63b67d80713" package="Default">
+  <file path="HttpClient.php" generated-path="HttpClient.html" hash="df85f871ffec7950c6146f3f9cd34dde" package="Default">
     <docblock line="0">
       <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
@@ -1160,152 +678,687 @@ For unlimited, specify 0.</long-description>
       </method>
     </class>
   </file>
-  <file path="bootstrap.php" generated-path="bootstrap.html" hash="6ab5ab62c2d562a96da983073502f4f8" package="Default">
+  <file path="Command.php" generated-path="Command.html" hash="919398a37bdf5cddddf67aa4fd416e29" package="Default">
     <docblock line="0">
       <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <constant namespace="" line="18" package="Default">
-      <name>APP_DIR</name>
-      <full_name>\APP_DIR</full_name>
-      <value>$app_dir</value>
-      <docblock line="18">
-        <description></description>
+    <namespace-alias name="Log">\Kore\Log</namespace-alias>
+    <class final="false" abstract="true" namespace="Kore" line="15" package="Default">
+      <extends/>
+      <name>Command</name>
+      <full_name>\Kore\Command</full_name>
+      <docblock line="15">
+        <description>Command class</description>
         <long-description></long-description>
-        <tag name="package" line="18" description="Default"/>
+        <tag name="package" line="15" description="Default"/>
       </docblock>
-    </constant>
-    <constant namespace="" line="19" package="Default">
-      <name>APP_NS</name>
-      <full_name>\APP_NS</full_name>
-      <value>$app_ns</value>
-      <docblock line="19">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="19" description="Default"/>
-      </docblock>
-    </constant>
-    <constant namespace="" line="22" package="Default">
-      <name>CONFIG_DIR</name>
-      <full_name>\CONFIG_DIR</full_name>
-      <value>APP_DIR . '/config'</value>
-      <docblock line="22">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="22" description="Default"/>
-      </docblock>
-    </constant>
-    <constant namespace="" line="23" package="Default">
-      <name>CONTROLLERS_DIR</name>
-      <full_name>\CONTROLLERS_DIR</full_name>
-      <value>APP_DIR . '/controllers'</value>
-      <docblock line="23">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="23" description="Default"/>
-      </docblock>
-    </constant>
-    <constant namespace="" line="24" package="Default">
-      <name>COMMANDS_DIR</name>
-      <full_name>\COMMANDS_DIR</full_name>
-      <value>APP_DIR . '/commands'</value>
-      <docblock line="24">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="24" description="Default"/>
-      </docblock>
-    </constant>
-    <constant namespace="" line="25" package="Default">
-      <name>VIEWS_DIR</name>
-      <full_name>\VIEWS_DIR</full_name>
-      <value>APP_DIR . '/views'</value>
-      <docblock line="25">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="25" description="Default"/>
-      </docblock>
-    </constant>
-    <constant namespace="" line="26" package="Default">
-      <name>LIBS_DIR</name>
-      <full_name>\LIBS_DIR</full_name>
-      <value>APP_DIR . '/libs'</value>
-      <docblock line="26">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="26" description="Default"/>
-      </docblock>
-    </constant>
-    <constant namespace="" line="27" package="Default">
-      <name>TMP_DIR</name>
-      <full_name>\TMP_DIR</full_name>
-      <value>dirname(APP_DIR) . '/tmp'</value>
-      <docblock line="27">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="27" description="Default"/>
-      </docblock>
-    </constant>
-    <constant namespace="" line="28" package="Default">
-      <name>LOGS_DIR</name>
-      <full_name>\LOGS_DIR</full_name>
-      <value>TMP_DIR . '/logs'</value>
-      <docblock line="28">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="28" description="Default"/>
-      </docblock>
-    </constant>
-    <constant namespace="" line="31" package="Default">
-      <name>CONTROLLERS_NS</name>
-      <full_name>\CONTROLLERS_NS</full_name>
-      <value>APP_NS . '\\controllers'</value>
-      <docblock line="31">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="31" description="Default"/>
-      </docblock>
-    </constant>
-    <constant namespace="" line="32" package="Default">
-      <name>COMMANDS_NS</name>
-      <full_name>\COMMANDS_NS</full_name>
-      <value>APP_NS . '\\commands'</value>
-      <docblock line="32">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="32" description="Default"/>
-      </docblock>
-    </constant>
-    <function namespace="Kore" line="16" package="Default">
-      <name>bootstrap</name>
-      <full_name>\Kore\bootstrap()</full_name>
-      <docblock line="16">
-        <description>Initialize the application</description>
-        <long-description></long-description>
-        <tag name="package" line="16" description="Default"/>
-        <tag name="param" line="16" description="&lt;p&gt;Application Directory&lt;/p&gt;" type="string" variable="$app_dir">
-          <type>string</type>
-        </tag>
-        <tag name="param" line="16" description="&lt;p&gt;Application NameSpace&lt;/p&gt;" type="string" variable="$app_ns">
-          <type>string</type>
-        </tag>
-        <tag name="return" line="16" description="" type="void">
-          <type>void</type>
-        </tag>
-      </docblock>
-      <argument line="0" by_reference="false">
-        <name>$app_dir</name>
+      <property static="false" visibility="protected" namespace="Kore" line="22" package="Default">
+        <name>$command</name>
+        <full_name>\Kore\Command::$command</full_name>
         <default></default>
-        <type>string</type>
-      </argument>
-      <argument line="0" by_reference="false">
-        <name>$app_ns</name>
-        <default></default>
-        <type>string</type>
-      </argument>
-    </function>
+        <docblock line="22">
+          <description>command namespace</description>
+          <long-description></long-description>
+          <tag name="var" line="22" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Kore" line="28" package="Default">
+        <name>$args</name>
+        <full_name>\Kore\Command::$args</full_name>
+        <default>array()</default>
+        <docblock line="28">
+          <description>command arguments</description>
+          <long-description></long-description>
+          <tag name="var" line="28" description="" type="\Kore\array&lt;string&gt;" variable="">
+            <type>\Kore\array&lt;string&gt;</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Kore" line="34" package="Default">
+        <name>$opts</name>
+        <full_name>\Kore\Command::$opts</full_name>
+        <default>array()</default>
+        <docblock line="34">
+          <description>command options</description>
+          <long-description></long-description>
+          <tag name="var" line="34" description="" type="\Kore\array&lt;string&gt;" variable="">
+            <type>\Kore\array&lt;string&gt;</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="Kore" line="42" package="Default">
+        <name>exec</name>
+        <full_name>\Kore\Command::exec()</full_name>
+        <docblock line="42">
+          <description>Processing Execution</description>
+          <long-description>The process is implemented in subclasses.</long-description>
+          <tag name="return" line="42" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="52" package="Default">
+        <name>main</name>
+        <full_name>\Kore\Command::main()</full_name>
+        <docblock line="52">
+          <description>Main Processing</description>
+          <long-description></long-description>
+          <tag name="param" line="52" description="&lt;p&gt;command namespace&lt;/p&gt;" type="string" variable="$command">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="52" description="&lt;p&gt;command arguments&lt;/p&gt;" type="\Kore\array&lt;string&gt;" variable="$args">
+            <type>\Kore\array&lt;string&gt;</type>
+          </tag>
+          <tag name="param" line="52" description="&lt;p&gt;command options&lt;/p&gt;" type="\Kore\array&lt;string&gt;" variable="$opts">
+            <type>\Kore\array&lt;string&gt;</type>
+          </tag>
+          <tag name="return" line="52" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$command</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$args</name>
+          <default></default>
+          <type>\Kore\array&lt;string&gt;</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$opts</name>
+          <default></default>
+          <type>\Kore\array&lt;string&gt;</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="85" package="Default">
+        <name>commandName</name>
+        <full_name>\Kore\Command::commandName()</full_name>
+        <docblock line="85">
+          <description>Get the the command name</description>
+          <long-description>The default is the end of the command namespace.
+If you need to customize, please override it with subclasses.</long-description>
+          <tag name="return" line="85" description="command name" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="99" package="Default">
+        <name>logLevel</name>
+        <full_name>\Kore\Command::logLevel()</full_name>
+        <docblock line="99">
+          <description>Get the the log level</description>
+          <long-description>The default is Log::LEVEL_DEBUG.
+If you need to customize, please override it with subclasses.</long-description>
+          <tag name="return" line="99" description="log level" type="integer">
+            <type>integer</type>
+          </tag>
+          <tag name="see" line="99" description="" link="\Kore\Log"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="111" package="Default">
+        <name>handleError</name>
+        <full_name>\Kore\Command::handleError()</full_name>
+        <docblock line="111">
+          <description>Handling Errors</description>
+          <long-description>If you need to customize the handling of errors, please override it with subclasses.</long-description>
+          <tag name="param" line="111" description="&lt;p&gt;errors&lt;/p&gt;" type="\Exception" variable="$e">
+            <type>\Exception</type>
+          </tag>
+          <tag name="return" line="111" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$e</name>
+          <default></default>
+          <type>\Exception</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="124" package="Default">
+        <name>getArg</name>
+        <full_name>\Kore\Command::getArg()</full_name>
+        <docblock line="124">
+          <description>Get the the command arguments</description>
+          <long-description>If no key is specified, all command arguments are returned.</long-description>
+          <tag name="param" line="124" description="&lt;p&gt;command arguments key&lt;/p&gt;" type="string|null" variable="$key">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+          <tag name="param" line="124" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="124" description="command arguments" type="string|\Kore\array&lt;string&gt;|null">
+            <type>string</type>
+            <type>\Kore\array&lt;string&gt;</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default>null</default>
+          <type>string|null</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$default</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="143" package="Default">
+        <name>getOpt</name>
+        <full_name>\Kore\Command::getOpt()</full_name>
+        <docblock line="143">
+          <description>Get the the command options</description>
+          <long-description>If no key is specified, all command options are returned.</long-description>
+          <tag name="param" line="143" description="&lt;p&gt;command options key&lt;/p&gt;" type="string|null" variable="$key">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+          <tag name="param" line="143" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="143" description="command options" type="string|\Kore\array&lt;string&gt;|null">
+            <type>string</type>
+            <type>\Kore\array&lt;string&gt;</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default>null</default>
+          <type>string|null</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$default</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+    </class>
   </file>
-  <file path="Config.php" generated-path="Config.html" hash="ca8c618e04f8567689040965850a9693" package="Default">
+  <file path="Application.php" generated-path="Application.html" hash="cf1087aaa9a302ae9c76ec6f065e7874" package="Default">
+    <docblock line="0">
+      <description>Kore : Simple And Minimal Framework</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Kore" line="14" package="Default">
+      <extends/>
+      <name>Application</name>
+      <full_name>\Kore\Application</full_name>
+      <docblock line="14">
+        <description>Application class</description>
+        <long-description>Running web and cli applications.</long-description>
+        <tag name="package" line="14" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Kore" line="23" package="Default">
+        <name>$basePath</name>
+        <full_name>\Kore\Application::$basePath</full_name>
+        <default>''</default>
+        <docblock line="23">
+          <description>Base path</description>
+          <long-description>Excluded when parsing the controller namespace.
+Used in running web applications.</long-description>
+          <tag name="var" line="23" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Kore" line="32" package="Default">
+        <name>$defaultController</name>
+        <full_name>\Kore\Application::$defaultController</full_name>
+        <default>'index'</default>
+        <docblock line="32">
+          <description>Default controller</description>
+          <long-description>Called if the controller is not specified.
+If unspecified, the default is 'index'.
+Used in running web applications.</long-description>
+          <tag name="var" line="32" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Kore" line="40" package="Default">
+        <name>$notFound</name>
+        <full_name>\Kore\Application::$notFound</full_name>
+        <default></default>
+        <docblock line="40">
+          <description>Not found handler</description>
+          <long-description>Called when the controller is not found.
+Used in running web applications.</long-description>
+          <tag name="var" line="40" description="" type="callable" variable="">
+            <type>callable</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="48" package="Default">
+        <name>setBasePath</name>
+        <full_name>\Kore\Application::setBasePath()</full_name>
+        <docblock line="48">
+          <description>Set the base path</description>
+          <long-description></long-description>
+          <tag name="param" line="48" description="&lt;p&gt;bath path ex. 'mybasepath'&lt;/p&gt;" type="string" variable="$basePath">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="48" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$basePath</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="59" package="Default">
+        <name>setDefaultController</name>
+        <full_name>\Kore\Application::setDefaultController()</full_name>
+        <docblock line="59">
+          <description>Set the default controller</description>
+          <long-description></long-description>
+          <tag name="param" line="59" description="&lt;p&gt;default controller&lt;/p&gt;" type="string" variable="$defaultController">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="59" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$defaultController</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="70" package="Default">
+        <name>setNotFound</name>
+        <full_name>\Kore\Application::setNotFound()</full_name>
+        <docblock line="70">
+          <description>Set the not found handler</description>
+          <long-description></long-description>
+          <tag name="param" line="70" description="&lt;p&gt;not found handler&lt;/p&gt;" type="callable" variable="$notFound">
+            <type>callable</type>
+          </tag>
+          <tag name="return" line="70" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$notFound</name>
+          <default></default>
+          <type>callable</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="83" package="Default">
+        <name>run</name>
+        <full_name>\Kore\Application::run()</full_name>
+        <docblock line="83">
+          <description>Running web applications</description>
+          <long-description></long-description>
+          <tag name="param" line="83" description="&lt;p&gt;request path&lt;/p&gt;" type="string|null" variable="$path">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+          <tag name="return" line="83" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$path</name>
+          <default>null</default>
+          <type>string|null</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="122" package="Default">
+        <name>parseController</name>
+        <full_name>\Kore\Application::parseController()</full_name>
+        <docblock line="122">
+          <description>Parse the controller namespace from the request path</description>
+          <long-description></long-description>
+          <tag name="param" line="122" description="&lt;p&gt;request path&lt;/p&gt;" type="string" variable="$path">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="122" description="controller information&#10;                     array(&#10;                         controller class instance,&#10;                         controller namespace,&#10;                         path arguments&#10;                     )" type="\Kore\array&lt;mixed&gt;">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$path</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="151" package="Default">
+        <name>runCmd</name>
+        <full_name>\Kore\Application::runCmd()</full_name>
+        <docblock line="151">
+          <description>Running cli applications</description>
+          <long-description></long-description>
+          <tag name="param" line="151" description="&lt;p&gt;command line argument&lt;/p&gt;" type="\Kore\array&lt;string&gt;" variable="$argv">
+            <type>\Kore\array&lt;string&gt;</type>
+          </tag>
+          <tag name="return" line="151" description="" type="void">
+            <type>void</type>
+          </tag>
+          <tag name="throws" line="151" description="thrown when the command class is not found." type="\Exception">
+            <type>\Exception</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$argv</name>
+          <default></default>
+          <type>\Kore\array&lt;string&gt;</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="178" package="Default">
+        <name>parseCommand</name>
+        <full_name>\Kore\Application::parseCommand()</full_name>
+        <docblock line="178">
+          <description>Parse the command namespace from the command line argument</description>
+          <long-description></long-description>
+          <tag name="param" line="178" description="&lt;p&gt;command line argument&lt;/p&gt;" type="\Kore\array&lt;string&gt;" variable="$argv">
+            <type>\Kore\array&lt;string&gt;</type>
+          </tag>
+          <tag name="return" line="178" description="command information&#10;                     array(&#10;                         commadn class instance,&#10;                         command namespace,&#10;                         arguments,&#10;                         options&#10;                     )" type="\Kore\array&lt;mixed&gt;">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$argv</name>
+          <default></default>
+          <type>\Kore\array&lt;string&gt;</type>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="Log.php" generated-path="Log.html" hash="34c8da044884736e1e832daa9668a179" package="Default">
+    <docblock line="0">
+      <description>Kore : Simple And Minimal Framework</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Kore" line="13" package="Default">
+      <extends/>
+      <name>Log</name>
+      <full_name>\Kore\Log</full_name>
+      <docblock line="13">
+        <description>Log class</description>
+        <long-description></long-description>
+        <tag name="package" line="13" description="Default"/>
+      </docblock>
+      <constant namespace="Kore" line="15" package="Default">
+        <name>LEVEL_DEBUG</name>
+        <full_name>\Kore\Log::LEVEL_DEBUG</full_name>
+        <value>10</value>
+        <docblock line="15">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Kore" line="16" package="Default">
+        <name>LEVEL_INFO</name>
+        <full_name>\Kore\Log::LEVEL_INFO</full_name>
+        <value>20</value>
+        <docblock line="16">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Kore" line="17" package="Default">
+        <name>LEVEL_WARN</name>
+        <full_name>\Kore\Log::LEVEL_WARN</full_name>
+        <value>30</value>
+        <docblock line="17">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Kore" line="18" package="Default">
+        <name>LEVEL_ERROR</name>
+        <full_name>\Kore\Log::LEVEL_ERROR</full_name>
+        <value>40</value>
+        <docblock line="18">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <property static="true" visibility="protected" namespace="Kore" line="25" package="Default">
+        <name>$logName</name>
+        <full_name>\Kore\Log::$logName</full_name>
+        <default></default>
+        <docblock line="25">
+          <description>log name</description>
+          <long-description></long-description>
+          <tag name="var" line="25" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="true" visibility="protected" namespace="Kore" line="32" package="Default">
+        <name>$logLevel</name>
+        <full_name>\Kore\Log::$logLevel</full_name>
+        <default></default>
+        <docblock line="32">
+          <description>log level</description>
+          <long-description></long-description>
+          <tag name="var" line="32" description="" type="integer" variable="">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="41" package="Default">
+        <name>init</name>
+        <full_name>\Kore\Log::init()</full_name>
+        <docblock line="41">
+          <description>Initialize</description>
+          <long-description></long-description>
+          <tag name="param" line="41" description="&lt;p&gt;log name, the default is 'app'&lt;/p&gt;" type="string" variable="$logName">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="41" description="&lt;p&gt;log level, the default is LEVEL_DEBUG&lt;/p&gt;" type="integer" variable="$logLevel">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="41" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$logName</name>
+          <default>'app'</default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$logLevel</name>
+          <default>self::LEVEL_DEBUG</default>
+          <type>integer</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="54" package="Default">
+        <name>debug</name>
+        <full_name>\Kore\Log::debug()</full_name>
+        <docblock line="54">
+          <description>Debug output</description>
+          <long-description></long-description>
+          <tag name="param" line="54" description="&lt;p&gt;message&lt;/p&gt;" type="string" variable="$msg">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="54" description="&lt;p&gt;object&lt;/p&gt;" type="mixed" variable="$obj">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="54" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$msg</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$obj</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="68" package="Default">
+        <name>info</name>
+        <full_name>\Kore\Log::info()</full_name>
+        <docblock line="68">
+          <description>Information output</description>
+          <long-description></long-description>
+          <tag name="param" line="68" description="&lt;p&gt;message&lt;/p&gt;" type="string" variable="$msg">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="68" description="&lt;p&gt;object&lt;/p&gt;" type="mixed" variable="$obj">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="68" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$msg</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$obj</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="82" package="Default">
+        <name>warn</name>
+        <full_name>\Kore\Log::warn()</full_name>
+        <docblock line="82">
+          <description>Warning output</description>
+          <long-description></long-description>
+          <tag name="param" line="82" description="&lt;p&gt;message&lt;/p&gt;" type="string" variable="$msg">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="82" description="&lt;p&gt;object&lt;/p&gt;" type="mixed" variable="$obj">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="82" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$msg</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$obj</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="96" package="Default">
+        <name>error</name>
+        <full_name>\Kore\Log::error()</full_name>
+        <docblock line="96">
+          <description>Error output</description>
+          <long-description></long-description>
+          <tag name="param" line="96" description="&lt;p&gt;message&lt;/p&gt;" type="string" variable="$msg">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="96" description="&lt;p&gt;object&lt;/p&gt;" type="mixed" variable="$obj">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="96" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$msg</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$obj</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="Kore" line="111" package="Default">
+        <name>write</name>
+        <full_name>\Kore\Log::write()</full_name>
+        <docblock line="111">
+          <description>Write logs</description>
+          <long-description></long-description>
+          <tag name="param" line="111" description="&lt;p&gt;level name&lt;/p&gt;" type="string" variable="$level">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="111" description="&lt;p&gt;message&lt;/p&gt;" type="string" variable="$msg">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="111" description="&lt;p&gt;object&lt;/p&gt;" type="mixed" variable="$obj">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="111" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$level</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$msg</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$obj</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="Kore" line="126" package="Default">
+        <name>buildLog</name>
+        <full_name>\Kore\Log::buildLog()</full_name>
+        <docblock line="126">
+          <description>Build logs</description>
+          <long-description></long-description>
+          <tag name="param" line="126" description="&lt;p&gt;level name&lt;/p&gt;" type="string" variable="$level">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="126" description="&lt;p&gt;message&lt;/p&gt;" type="string" variable="$msg">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="126" description="&lt;p&gt;object&lt;/p&gt;" type="mixed" variable="$obj">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="126" description="logs" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$level</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$msg</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$obj</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="Config.php" generated-path="Config.html" hash="dc0a90e61acf764e8097113834ef13d5" package="Default">
     <docblock line="0">
       <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
@@ -1384,6 +1437,439 @@ If the key is passed dot-delimited, it is interpreted as an array path.</long-de
           <name>$default</name>
           <default>null</default>
           <type>mixed</type>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="Controller.php" generated-path="Controller.html" hash="23f303097dcda95299a811f83f5ecade" package="Default">
+    <docblock line="0">
+      <description>Kore : Simple And Minimal Framework</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Log">\Kore\Log</namespace-alias>
+    <class final="false" abstract="true" namespace="Kore" line="15" package="Default">
+      <extends/>
+      <name>Controller</name>
+      <full_name>\Kore\Controller</full_name>
+      <docblock line="15">
+        <description>Controller class</description>
+        <long-description></long-description>
+        <tag name="package" line="15" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Kore" line="22" package="Default">
+        <name>$controller</name>
+        <full_name>\Kore\Controller::$controller</full_name>
+        <default></default>
+        <docblock line="22">
+          <description>controller namespace</description>
+          <long-description></long-description>
+          <tag name="var" line="22" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Kore" line="28" package="Default">
+        <name>$args</name>
+        <full_name>\Kore\Controller::$args</full_name>
+        <default>array()</default>
+        <docblock line="28">
+          <description>path arguments</description>
+          <long-description></long-description>
+          <tag name="var" line="28" description="" type="\Kore\array&lt;string&gt;" variable="">
+            <type>\Kore\array&lt;string&gt;</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="Kore" line="36" package="Default">
+        <name>action</name>
+        <full_name>\Kore\Controller::action()</full_name>
+        <docblock line="36">
+          <description>Action</description>
+          <long-description>The action is implemented in subclasses.</long-description>
+          <tag name="return" line="36" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="45" package="Default">
+        <name>main</name>
+        <full_name>\Kore\Controller::main()</full_name>
+        <docblock line="45">
+          <description>Main Processing</description>
+          <long-description></long-description>
+          <tag name="param" line="45" description="&lt;p&gt;controller namespace&lt;/p&gt;" type="string" variable="$controller">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="45" description="&lt;p&gt;path arguments&lt;/p&gt;" type="\Kore\array&lt;string&gt;" variable="$args">
+            <type>\Kore\array&lt;string&gt;</type>
+          </tag>
+          <tag name="return" line="45" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$controller</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$args</name>
+          <default></default>
+          <type>\Kore\array&lt;string&gt;</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="69" package="Default">
+        <name>moduleName</name>
+        <full_name>\Kore\Controller::moduleName()</full_name>
+        <docblock line="69">
+          <description>Get the the module name</description>
+          <long-description>The default is 'app'.
+If you need to customize, please override it with subclasses.</long-description>
+          <tag name="return" line="69" description="module name" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="82" package="Default">
+        <name>logLevel</name>
+        <full_name>\Kore\Controller::logLevel()</full_name>
+        <docblock line="82">
+          <description>Get the the log level</description>
+          <long-description>The default is Log::LEVEL_DEBUG.
+If you need to customize, please override it with subclasses.</long-description>
+          <tag name="return" line="82" description="log level" type="integer">
+            <type>integer</type>
+          </tag>
+          <tag name="see" line="82" description="" link="\Kore\Log"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="93" package="Default">
+        <name>preaction</name>
+        <full_name>\Kore\Controller::preaction()</full_name>
+        <docblock line="93">
+          <description>Preprocessing of the action</description>
+          <long-description>If you need to customize, please override it with subclasses.</long-description>
+          <tag name="return" line="93" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="105" package="Default">
+        <name>handleError</name>
+        <full_name>\Kore\Controller::handleError()</full_name>
+        <docblock line="105">
+          <description>Handling Errors</description>
+          <long-description>If you need to customize the handling of errors, please override it with subclasses.</long-description>
+          <tag name="param" line="105" description="&lt;p&gt;errors&lt;/p&gt;" type="\Exception" variable="$e">
+            <type>\Exception</type>
+          </tag>
+          <tag name="return" line="105" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$e</name>
+          <default></default>
+          <type>\Exception</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="115" package="Default">
+        <name>getMethod</name>
+        <full_name>\Kore\Controller::getMethod()</full_name>
+        <docblock line="115">
+          <description>Get the http method</description>
+          <long-description></long-description>
+          <tag name="return" line="115" description="http method" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="127" package="Default">
+        <name>getHeader</name>
+        <full_name>\Kore\Controller::getHeader()</full_name>
+        <docblock line="127">
+          <description>Get the http header</description>
+          <long-description></long-description>
+          <tag name="param" line="127" description="&lt;p&gt;header key&lt;/p&gt;" type="string" variable="$key">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="127" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="127" description="http header" type="string|null">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$default</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="144" package="Default">
+        <name>getQuery</name>
+        <full_name>\Kore\Controller::getQuery()</full_name>
+        <docblock line="144">
+          <description>Get the query parameters</description>
+          <long-description>If no key is specified, all query parameters are returned.</long-description>
+          <tag name="param" line="144" description="&lt;p&gt;query parameters key&lt;/p&gt;" type="string|null" variable="$key">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+          <tag name="param" line="144" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="144" description="query parameters" type="string|\Kore\array&lt;string&gt;|null">
+            <type>string</type>
+            <type>\Kore\array&lt;string&gt;</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default>null</default>
+          <type>string|null</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$default</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="163" package="Default">
+        <name>getPost</name>
+        <full_name>\Kore\Controller::getPost()</full_name>
+        <docblock line="163">
+          <description>Get the post parameters</description>
+          <long-description>If no key is specified, all post parameters are returned.</long-description>
+          <tag name="param" line="163" description="&lt;p&gt;post parameters key&lt;/p&gt;" type="string|null" variable="$key">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+          <tag name="param" line="163" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="163" description="post parameters" type="string|\Kore\array&lt;string&gt;|null">
+            <type>string</type>
+            <type>\Kore\array&lt;string&gt;</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default>null</default>
+          <type>string|null</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$default</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="179" package="Default">
+        <name>getBody</name>
+        <full_name>\Kore\Controller::getBody()</full_name>
+        <docblock line="179">
+          <description>Get the body data</description>
+          <long-description></long-description>
+          <tag name="return" line="179" description="body data" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="191" package="Default">
+        <name>getJsonBody</name>
+        <full_name>\Kore\Controller::getJsonBody()</full_name>
+        <docblock line="191">
+          <description>Get the body data in json format</description>
+          <long-description></long-description>
+          <tag name="return" line="191" description="body data" type="\Kore\array&lt;mixed&gt;">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="205" package="Default">
+        <name>getCookie</name>
+        <full_name>\Kore\Controller::getCookie()</full_name>
+        <docblock line="205">
+          <description>Get the cookie parameters</description>
+          <long-description>If no key is specified, all cookie parameters are returned.</long-description>
+          <tag name="param" line="205" description="&lt;p&gt;cookie parameters key&lt;/p&gt;" type="string|null" variable="$key">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+          <tag name="param" line="205" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="205" description="cookie parameters" type="string|\Kore\array&lt;string&gt;|null">
+            <type>string</type>
+            <type>\Kore\array&lt;string&gt;</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default>null</default>
+          <type>string|null</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$default</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="224" package="Default">
+        <name>getArg</name>
+        <full_name>\Kore\Controller::getArg()</full_name>
+        <docblock line="224">
+          <description>Get the path arguments</description>
+          <long-description>If no key is specified, all path arguments are returned.</long-description>
+          <tag name="param" line="224" description="&lt;p&gt;path arguments key&lt;/p&gt;" type="string|null" variable="$key">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+          <tag name="param" line="224" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="224" description="path arguments" type="string|\Kore\array&lt;string&gt;|null">
+            <type>string</type>
+            <type>\Kore\array&lt;string&gt;</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default>null</default>
+          <type>string|null</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$default</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="243" package="Default">
+        <name>respondView</name>
+        <full_name>\Kore\Controller::respondView()</full_name>
+        <docblock line="243">
+          <description>Respond in view format</description>
+          <long-description></long-description>
+          <tag name="param" line="243" description="&lt;p&gt;view file path&lt;/p&gt;" type="string" variable="$path">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="243" description="&lt;p&gt;response data&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$data">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="param" line="243" description="&lt;p&gt;http status code, the default is 200&lt;/p&gt;" type="integer" variable="$responseCode">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="243" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$path</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default>array()</default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$responseCode</name>
+          <default>200</default>
+          <type>integer</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="256" package="Default">
+        <name>extractView</name>
+        <full_name>\Kore\Controller::extractView()</full_name>
+        <docblock line="256">
+          <description>Extract the view</description>
+          <long-description></long-description>
+          <tag name="param" line="256" description="&lt;p&gt;view file path&lt;/p&gt;" type="string" variable="$path">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="256" description="&lt;p&gt;response data&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$data">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="return" line="256" description="view" type="string|false">
+            <type>string</type>
+            <type>false</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$path</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default>array()</default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="272" package="Default">
+        <name>respondJson</name>
+        <full_name>\Kore\Controller::respondJson()</full_name>
+        <docblock line="272">
+          <description>Respond in json format</description>
+          <long-description></long-description>
+          <tag name="param" line="272" description="&lt;p&gt;response data&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$data">
+            <type>\Kore\array&lt;mixed&gt;</type>
+          </tag>
+          <tag name="param" line="272" description="&lt;p&gt;http status code, the default is 200&lt;/p&gt;" type="integer" variable="$responseCode">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="272" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default>array()</default>
+          <type>\Kore\array&lt;mixed&gt;</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$responseCode</name>
+          <default>200</default>
+          <type>integer</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="287" package="Default">
+        <name>redirect</name>
+        <full_name>\Kore\Controller::redirect()</full_name>
+        <docblock line="287">
+          <description>Redirect</description>
+          <long-description></long-description>
+          <tag name="param" line="287" description="&lt;p&gt;redirect url&lt;/p&gt;" type="string" variable="$url">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="287" description="&lt;p&gt;http status code, the default is 302&lt;/p&gt;" type="integer" variable="$responseCode">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="287" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$url</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$responseCode</name>
+          <default>302</default>
+          <type>integer</type>
         </argument>
       </method>
     </class>
@@ -1814,491 +2300,76 @@ If the key is passed dot-delimited, it is interpreted as an array path.</long-de
       </method>
     </class>
   </file>
-  <file path="Command.php" generated-path="Command.html" hash="919398a37bdf5cddddf67aa4fd416e29" package="Default">
+  <file path="helpers.php" generated-path="helpers.html" hash="a1246af58f96a54091a4d4fb6a59926d" package="Default">
     <docblock line="0">
       <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <namespace-alias name="Log">\Kore\Log</namespace-alias>
-    <class final="false" abstract="true" namespace="Kore" line="15" package="Default">
-      <extends/>
-      <name>Command</name>
-      <full_name>\Kore\Command</full_name>
-      <docblock line="15">
-        <description>Command class</description>
+    <function namespace="" line="14" package="Default">
+      <name>url_add_query</name>
+      <full_name>\url_add_query()</full_name>
+      <docblock line="14">
+        <description>Add query parameters to URL</description>
         <long-description></long-description>
-        <tag name="package" line="15" description="Default"/>
-      </docblock>
-      <property static="false" visibility="protected" namespace="Kore" line="22" package="Default">
-        <name>$command</name>
-        <full_name>\Kore\Command::$command</full_name>
-        <default></default>
-        <docblock line="22">
-          <description>command namespace</description>
-          <long-description></long-description>
-          <tag name="var" line="22" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="Kore" line="28" package="Default">
-        <name>$args</name>
-        <full_name>\Kore\Command::$args</full_name>
-        <default>array()</default>
-        <docblock line="28">
-          <description>command arguments</description>
-          <long-description></long-description>
-          <tag name="var" line="28" description="" type="\Kore\array&lt;string&gt;" variable="">
-            <type>\Kore\array&lt;string&gt;</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="protected" namespace="Kore" line="34" package="Default">
-        <name>$opts</name>
-        <full_name>\Kore\Command::$opts</full_name>
-        <default>array()</default>
-        <docblock line="34">
-          <description>command options</description>
-          <long-description></long-description>
-          <tag name="var" line="34" description="" type="\Kore\array&lt;string&gt;" variable="">
-            <type>\Kore\array&lt;string&gt;</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="true" static="false" visibility="protected" namespace="Kore" line="42" package="Default">
-        <name>exec</name>
-        <full_name>\Kore\Command::exec()</full_name>
-        <docblock line="42">
-          <description>Processing Execution</description>
-          <long-description>The process is implemented in subclasses.</long-description>
-          <tag name="return" line="42" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="52" package="Default">
-        <name>main</name>
-        <full_name>\Kore\Command::main()</full_name>
-        <docblock line="52">
-          <description>Main Processing</description>
-          <long-description></long-description>
-          <tag name="param" line="52" description="&lt;p&gt;command namespace&lt;/p&gt;" type="string" variable="$command">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="52" description="&lt;p&gt;command arguments&lt;/p&gt;" type="\Kore\array&lt;string&gt;" variable="$args">
-            <type>\Kore\array&lt;string&gt;</type>
-          </tag>
-          <tag name="param" line="52" description="&lt;p&gt;command options&lt;/p&gt;" type="\Kore\array&lt;string&gt;" variable="$opts">
-            <type>\Kore\array&lt;string&gt;</type>
-          </tag>
-          <tag name="return" line="52" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$command</name>
-          <default></default>
+        <tag name="package" line="14" description="Default"/>
+        <tag name="param" line="14" description="&lt;p&gt;URL&lt;/p&gt;" type="string" variable="$url">
           <type>string</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$args</name>
-          <default></default>
-          <type>\Kore\array&lt;string&gt;</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$opts</name>
-          <default></default>
-          <type>\Kore\array&lt;string&gt;</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="85" package="Default">
-        <name>commandName</name>
-        <full_name>\Kore\Command::commandName()</full_name>
-        <docblock line="85">
-          <description>Get the the command name</description>
-          <long-description>The default is the end of the command namespace.
-If you need to customize, please override it with subclasses.</long-description>
-          <tag name="return" line="85" description="command name" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="99" package="Default">
-        <name>logLevel</name>
-        <full_name>\Kore\Command::logLevel()</full_name>
-        <docblock line="99">
-          <description>Get the the log level</description>
-          <long-description>The default is Log::LEVEL_DEBUG.
-If you need to customize, please override it with subclasses.</long-description>
-          <tag name="return" line="99" description="log level" type="integer">
-            <type>integer</type>
-          </tag>
-          <tag name="see" line="99" description="" link="\Kore\Log"/>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="111" package="Default">
-        <name>handleError</name>
-        <full_name>\Kore\Command::handleError()</full_name>
-        <docblock line="111">
-          <description>Handling Errors</description>
-          <long-description>If you need to customize the handling of errors, please override it with subclasses.</long-description>
-          <tag name="param" line="111" description="&lt;p&gt;errors&lt;/p&gt;" type="\Exception" variable="$e">
-            <type>\Exception</type>
-          </tag>
-          <tag name="return" line="111" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$e</name>
-          <default></default>
-          <type>\Exception</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="124" package="Default">
-        <name>getArg</name>
-        <full_name>\Kore\Command::getArg()</full_name>
-        <docblock line="124">
-          <description>Get the the command arguments</description>
-          <long-description>If no key is specified, all command arguments are returned.</long-description>
-          <tag name="param" line="124" description="&lt;p&gt;command arguments key&lt;/p&gt;" type="string|null" variable="$key">
-            <type>string</type>
-            <type>null</type>
-          </tag>
-          <tag name="param" line="124" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
-            <type>mixed</type>
-          </tag>
-          <tag name="return" line="124" description="command arguments" type="string|\Kore\array&lt;string&gt;|null">
-            <type>string</type>
-            <type>\Kore\array&lt;string&gt;</type>
-            <type>null</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$key</name>
-          <default>null</default>
-          <type>string|null</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$default</name>
-          <default>null</default>
-          <type>mixed</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="143" package="Default">
-        <name>getOpt</name>
-        <full_name>\Kore\Command::getOpt()</full_name>
-        <docblock line="143">
-          <description>Get the the command options</description>
-          <long-description>If no key is specified, all command options are returned.</long-description>
-          <tag name="param" line="143" description="&lt;p&gt;command options key&lt;/p&gt;" type="string|null" variable="$key">
-            <type>string</type>
-            <type>null</type>
-          </tag>
-          <tag name="param" line="143" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
-            <type>mixed</type>
-          </tag>
-          <tag name="return" line="143" description="command options" type="string|\Kore\array&lt;string&gt;|null">
-            <type>string</type>
-            <type>\Kore\array&lt;string&gt;</type>
-            <type>null</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$key</name>
-          <default>null</default>
-          <type>string|null</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$default</name>
-          <default>null</default>
-          <type>mixed</type>
-        </argument>
-      </method>
-    </class>
-  </file>
-  <file path="Log.php" generated-path="Log.html" hash="34c8da044884736e1e832daa9668a179" package="Default">
-    <docblock line="0">
-      <description>Kore : Simple And Minimal Framework</description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="Kore" line="13" package="Default">
-      <extends/>
-      <name>Log</name>
-      <full_name>\Kore\Log</full_name>
-      <docblock line="13">
-        <description>Log class</description>
+        </tag>
+        <tag name="param" line="14" description="&lt;p&gt;Query parameters&lt;/p&gt;" type="\array&lt;mixed&gt;" variable="$params">
+          <type>\array&lt;mixed&gt;</type>
+        </tag>
+        <tag name="return" line="14" description="URL with query parameters" type="string">
+          <type>string</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$url</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$params</name>
+        <default></default>
+        <type>\array&lt;mixed&gt;</type>
+      </argument>
+    </function>
+    <function namespace="" line="28" package="Default">
+      <name>array_get_recursive</name>
+      <full_name>\array_get_recursive()</full_name>
+      <docblock line="28">
+        <description>Get array values recursively</description>
         <long-description></long-description>
-        <tag name="package" line="13" description="Default"/>
+        <tag name="package" line="28" description="Default"/>
+        <tag name="param" line="28" description="&lt;p&gt;array&lt;/p&gt;" type="\array&lt;mixed&gt;" variable="$array">
+          <type>\array&lt;mixed&gt;</type>
+        </tag>
+        <tag name="param" line="28" description="&lt;p&gt;key&lt;/p&gt;" type="string" variable="$key">
+          <type>string</type>
+        </tag>
+        <tag name="param" line="28" description="&lt;p&gt;default value&lt;/p&gt;" type="mixed" variable="$default">
+          <type>mixed</type>
+        </tag>
+        <tag name="return" line="28" description="value" type="mixed">
+          <type>mixed</type>
+        </tag>
       </docblock>
-      <constant namespace="Kore" line="15" package="Default">
-        <name>LEVEL_DEBUG</name>
-        <full_name>\Kore\Log::LEVEL_DEBUG</full_name>
-        <value>10</value>
-        <docblock line="15">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </constant>
-      <constant namespace="Kore" line="16" package="Default">
-        <name>LEVEL_INFO</name>
-        <full_name>\Kore\Log::LEVEL_INFO</full_name>
-        <value>20</value>
-        <docblock line="16">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </constant>
-      <constant namespace="Kore" line="17" package="Default">
-        <name>LEVEL_WARN</name>
-        <full_name>\Kore\Log::LEVEL_WARN</full_name>
-        <value>30</value>
-        <docblock line="17">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </constant>
-      <constant namespace="Kore" line="18" package="Default">
-        <name>LEVEL_ERROR</name>
-        <full_name>\Kore\Log::LEVEL_ERROR</full_name>
-        <value>40</value>
-        <docblock line="18">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </constant>
-      <property static="true" visibility="protected" namespace="Kore" line="25" package="Default">
-        <name>$logName</name>
-        <full_name>\Kore\Log::$logName</full_name>
+      <argument line="0" by_reference="false">
+        <name>$array</name>
         <default></default>
-        <docblock line="25">
-          <description>log name</description>
-          <long-description></long-description>
-          <tag name="var" line="25" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="true" visibility="protected" namespace="Kore" line="32" package="Default">
-        <name>$logLevel</name>
-        <full_name>\Kore\Log::$logLevel</full_name>
+        <type>\array&lt;mixed&gt;</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$key</name>
         <default></default>
-        <docblock line="32">
-          <description>log level</description>
-          <long-description></long-description>
-          <tag name="var" line="32" description="" type="integer" variable="">
-            <type>integer</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="41" package="Default">
-        <name>init</name>
-        <full_name>\Kore\Log::init()</full_name>
-        <docblock line="41">
-          <description>Initialize</description>
-          <long-description></long-description>
-          <tag name="param" line="41" description="&lt;p&gt;log name, the default is 'app'&lt;/p&gt;" type="string" variable="$logName">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="41" description="&lt;p&gt;log level, the default is LEVEL_DEBUG&lt;/p&gt;" type="integer" variable="$logLevel">
-            <type>integer</type>
-          </tag>
-          <tag name="return" line="41" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$logName</name>
-          <default>'app'</default>
-          <type>string</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$logLevel</name>
-          <default>self::LEVEL_DEBUG</default>
-          <type>integer</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="54" package="Default">
-        <name>debug</name>
-        <full_name>\Kore\Log::debug()</full_name>
-        <docblock line="54">
-          <description>Debug output</description>
-          <long-description></long-description>
-          <tag name="param" line="54" description="&lt;p&gt;message&lt;/p&gt;" type="string" variable="$msg">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="54" description="&lt;p&gt;object&lt;/p&gt;" type="mixed" variable="$obj">
-            <type>mixed</type>
-          </tag>
-          <tag name="return" line="54" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$msg</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$obj</name>
-          <default>null</default>
-          <type>mixed</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="68" package="Default">
-        <name>info</name>
-        <full_name>\Kore\Log::info()</full_name>
-        <docblock line="68">
-          <description>Information output</description>
-          <long-description></long-description>
-          <tag name="param" line="68" description="&lt;p&gt;message&lt;/p&gt;" type="string" variable="$msg">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="68" description="&lt;p&gt;object&lt;/p&gt;" type="mixed" variable="$obj">
-            <type>mixed</type>
-          </tag>
-          <tag name="return" line="68" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$msg</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$obj</name>
-          <default>null</default>
-          <type>mixed</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="82" package="Default">
-        <name>warn</name>
-        <full_name>\Kore\Log::warn()</full_name>
-        <docblock line="82">
-          <description>Warning output</description>
-          <long-description></long-description>
-          <tag name="param" line="82" description="&lt;p&gt;message&lt;/p&gt;" type="string" variable="$msg">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="82" description="&lt;p&gt;object&lt;/p&gt;" type="mixed" variable="$obj">
-            <type>mixed</type>
-          </tag>
-          <tag name="return" line="82" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$msg</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$obj</name>
-          <default>null</default>
-          <type>mixed</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="96" package="Default">
-        <name>error</name>
-        <full_name>\Kore\Log::error()</full_name>
-        <docblock line="96">
-          <description>Error output</description>
-          <long-description></long-description>
-          <tag name="param" line="96" description="&lt;p&gt;message&lt;/p&gt;" type="string" variable="$msg">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="96" description="&lt;p&gt;object&lt;/p&gt;" type="mixed" variable="$obj">
-            <type>mixed</type>
-          </tag>
-          <tag name="return" line="96" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$msg</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$obj</name>
-          <default>null</default>
-          <type>mixed</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="protected" namespace="Kore" line="111" package="Default">
-        <name>write</name>
-        <full_name>\Kore\Log::write()</full_name>
-        <docblock line="111">
-          <description>Write logs</description>
-          <long-description></long-description>
-          <tag name="param" line="111" description="&lt;p&gt;level name&lt;/p&gt;" type="string" variable="$level">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="111" description="&lt;p&gt;message&lt;/p&gt;" type="string" variable="$msg">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="111" description="&lt;p&gt;object&lt;/p&gt;" type="mixed" variable="$obj">
-            <type>mixed</type>
-          </tag>
-          <tag name="return" line="111" description="" type="void">
-            <type>void</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$level</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$msg</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$obj</name>
-          <default></default>
-          <type>mixed</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="protected" namespace="Kore" line="126" package="Default">
-        <name>buildLog</name>
-        <full_name>\Kore\Log::buildLog()</full_name>
-        <docblock line="126">
-          <description>Build logs</description>
-          <long-description></long-description>
-          <tag name="param" line="126" description="&lt;p&gt;level name&lt;/p&gt;" type="string" variable="$level">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="126" description="&lt;p&gt;message&lt;/p&gt;" type="string" variable="$msg">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="126" description="&lt;p&gt;object&lt;/p&gt;" type="mixed" variable="$obj">
-            <type>mixed</type>
-          </tag>
-          <tag name="return" line="126" description="logs" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$level</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$msg</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$obj</name>
-          <default></default>
-          <type>mixed</type>
-        </argument>
-      </method>
-    </class>
+        <type>string</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$default</name>
+        <default>null</default>
+        <type>mixed</type>
+      </argument>
+    </function>
   </file>
   <package name="Default" full_name="Default"/>
   <package name="global" full_name="global"/>
