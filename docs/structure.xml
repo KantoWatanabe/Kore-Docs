@@ -1,6 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project title="API Documentation" version="2.9.1">
   <partials/>
+  <file path="helpers.php" generated-path="helpers.html" hash="a1246af58f96a54091a4d4fb6a59926d" package="Default">
+    <docblock line="0">
+      <description>Kore : Simple And Minimal Framework</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <function namespace="" line="14" package="Default">
+      <name>url_add_query</name>
+      <full_name>\url_add_query()</full_name>
+      <docblock line="14">
+        <description>Add query parameters to URL</description>
+        <long-description></long-description>
+        <tag name="package" line="14" description="Default"/>
+        <tag name="param" line="14" description="&lt;p&gt;URL&lt;/p&gt;" type="string" variable="$url">
+          <type>string</type>
+        </tag>
+        <tag name="param" line="14" description="&lt;p&gt;Query parameters&lt;/p&gt;" type="\array&lt;mixed&gt;" variable="$params">
+          <type>\array&lt;mixed&gt;</type>
+        </tag>
+        <tag name="return" line="14" description="URL with query parameters" type="string">
+          <type>string</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$url</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$params</name>
+        <default></default>
+        <type>\array&lt;mixed&gt;</type>
+      </argument>
+    </function>
+    <function namespace="" line="28" package="Default">
+      <name>array_get_recursive</name>
+      <full_name>\array_get_recursive()</full_name>
+      <docblock line="28">
+        <description>Get array values recursively</description>
+        <long-description></long-description>
+        <tag name="package" line="28" description="Default"/>
+        <tag name="param" line="28" description="&lt;p&gt;array&lt;/p&gt;" type="\array&lt;mixed&gt;" variable="$array">
+          <type>\array&lt;mixed&gt;</type>
+        </tag>
+        <tag name="param" line="28" description="&lt;p&gt;key&lt;/p&gt;" type="string" variable="$key">
+          <type>string</type>
+        </tag>
+        <tag name="param" line="28" description="&lt;p&gt;default value&lt;/p&gt;" type="mixed" variable="$default">
+          <type>mixed</type>
+        </tag>
+        <tag name="return" line="28" description="value" type="mixed">
+          <type>mixed</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$array</name>
+        <default></default>
+        <type>\array&lt;mixed&gt;</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$key</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$default</name>
+        <default>null</default>
+        <type>mixed</type>
+      </argument>
+    </function>
+  </file>
   <file path="bootstrap.php" generated-path="bootstrap.html" hash="9d60a0b2b682973bc1ac2e5350429d52" package="Default">
     <docblock line="0">
       <description>Kore : Simple And Minimal Framework</description>
@@ -146,7 +217,7 @@
       </argument>
     </function>
   </file>
-  <file path="HttpClient.php" generated-path="HttpClient.html" hash="df85f871ffec7950c6146f3f9cd34dde" package="Default">
+  <file path="HttpClient.php" generated-path="HttpClient.html" hash="fcadb28fe8469e64989b0decd4a7e132" package="Default">
     <docblock line="0">
       <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
@@ -678,7 +749,7 @@ For unlimited, specify 0.</long-description>
       </method>
     </class>
   </file>
-  <file path="Command.php" generated-path="Command.html" hash="919398a37bdf5cddddf67aa4fd416e29" package="Default">
+  <file path="Command.php" generated-path="Command.html" hash="c1e044cc9d5203f89c9e20ed3d92eb35" package="Default">
     <docblock line="0">
       <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
@@ -882,7 +953,7 @@ If you need to customize, please override it with subclasses.</long-description>
       </method>
     </class>
   </file>
-  <file path="Application.php" generated-path="Application.html" hash="cf1087aaa9a302ae9c76ec6f065e7874" package="Default">
+  <file path="Application.php" generated-path="Application.html" hash="7cfc3d02c893a55190d478bb748f1df9" package="Default">
     <docblock line="0">
       <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
@@ -1076,7 +1147,7 @@ Used in running web applications.</long-description>
       </method>
     </class>
   </file>
-  <file path="Log.php" generated-path="Log.html" hash="34c8da044884736e1e832daa9668a179" package="Default">
+  <file path="Log.php" generated-path="Log.html" hash="880a87b78b40047e9d395ce151ba7a57" package="Default">
     <docblock line="0">
       <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
@@ -1441,7 +1512,7 @@ If the key is passed dot-delimited, it is interpreted as an array path.</long-de
       </method>
     </class>
   </file>
-  <file path="Controller.php" generated-path="Controller.html" hash="23f303097dcda95299a811f83f5ecade" package="Default">
+  <file path="Controller.php" generated-path="Controller.html" hash="b729732edf5f5589d70662eff9e3d636" package="Default">
     <docblock line="0">
       <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
@@ -1874,7 +1945,7 @@ If you need to customize, please override it with subclasses.</long-description>
       </method>
     </class>
   </file>
-  <file path="DB.php" generated-path="DB.html" hash="ba4bdedce8d24e0e174dbdfe67e2183d" package="Default">
+  <file path="DB.php" generated-path="DB.html" hash="8f3dae1e84efb3f8a5537e447b3c737b" package="Default">
     <docblock line="0">
       <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
@@ -2233,7 +2304,7 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>\Kore\array&lt;mixed&gt;</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Kore" line="273" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="273" package="Default">
         <name>execute</name>
         <full_name>\Kore\DB::execute()</full_name>
         <docblock line="273">
@@ -2256,7 +2327,7 @@ If you need to customize, please override it with subclasses.</long-description>
         </argument>
         <argument line="0" by_reference="false">
           <name>$params</name>
-          <default></default>
+          <default>array()</default>
           <type>\Kore\array&lt;mixed&gt;</type>
         </argument>
       </method>
@@ -2299,77 +2370,6 @@ If you need to customize, please override it with subclasses.</long-description>
         </argument>
       </method>
     </class>
-  </file>
-  <file path="helpers.php" generated-path="helpers.html" hash="a1246af58f96a54091a4d4fb6a59926d" package="Default">
-    <docblock line="0">
-      <description>Kore : Simple And Minimal Framework</description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <function namespace="" line="14" package="Default">
-      <name>url_add_query</name>
-      <full_name>\url_add_query()</full_name>
-      <docblock line="14">
-        <description>Add query parameters to URL</description>
-        <long-description></long-description>
-        <tag name="package" line="14" description="Default"/>
-        <tag name="param" line="14" description="&lt;p&gt;URL&lt;/p&gt;" type="string" variable="$url">
-          <type>string</type>
-        </tag>
-        <tag name="param" line="14" description="&lt;p&gt;Query parameters&lt;/p&gt;" type="\array&lt;mixed&gt;" variable="$params">
-          <type>\array&lt;mixed&gt;</type>
-        </tag>
-        <tag name="return" line="14" description="URL with query parameters" type="string">
-          <type>string</type>
-        </tag>
-      </docblock>
-      <argument line="0" by_reference="false">
-        <name>$url</name>
-        <default></default>
-        <type>string</type>
-      </argument>
-      <argument line="0" by_reference="false">
-        <name>$params</name>
-        <default></default>
-        <type>\array&lt;mixed&gt;</type>
-      </argument>
-    </function>
-    <function namespace="" line="28" package="Default">
-      <name>array_get_recursive</name>
-      <full_name>\array_get_recursive()</full_name>
-      <docblock line="28">
-        <description>Get array values recursively</description>
-        <long-description></long-description>
-        <tag name="package" line="28" description="Default"/>
-        <tag name="param" line="28" description="&lt;p&gt;array&lt;/p&gt;" type="\array&lt;mixed&gt;" variable="$array">
-          <type>\array&lt;mixed&gt;</type>
-        </tag>
-        <tag name="param" line="28" description="&lt;p&gt;key&lt;/p&gt;" type="string" variable="$key">
-          <type>string</type>
-        </tag>
-        <tag name="param" line="28" description="&lt;p&gt;default value&lt;/p&gt;" type="mixed" variable="$default">
-          <type>mixed</type>
-        </tag>
-        <tag name="return" line="28" description="value" type="mixed">
-          <type>mixed</type>
-        </tag>
-      </docblock>
-      <argument line="0" by_reference="false">
-        <name>$array</name>
-        <default></default>
-        <type>\array&lt;mixed&gt;</type>
-      </argument>
-      <argument line="0" by_reference="false">
-        <name>$key</name>
-        <default></default>
-        <type>string</type>
-      </argument>
-      <argument line="0" by_reference="false">
-        <name>$default</name>
-        <default>null</default>
-        <type>mixed</type>
-      </argument>
-    </function>
   </file>
   <package name="Default" full_name="Default"/>
   <package name="global" full_name="global"/>

@@ -67,6 +67,7 @@
 <li class="method public "><a href="#method_connection" title="connection() :: Get DB instance corresponding to the DB configuration key"><span class="description">Get DB instance corresponding to the DB configuration key</span><pre>connection()</pre></a></li>
 <li class="method public "><a href="#method_count" title="count() :: Run the select count statement"><span class="description">Run the select count statement</span><pre>count()</pre></a></li>
 <li class="method public "><a href="#method_delete" title="delete() :: Run the delete statement"><span class="description">Run the delete statement</span><pre>delete()</pre></a></li>
+<li class="method public "><a href="#method_execute" title="execute() :: Run the query statement"><span class="description">Run the query statement</span><pre>execute()</pre></a></li>
 <li class="method public "><a href="#method_getInClause" title="getInClause() :: Get the IN clause"><span class="description">Get the IN clause</span><pre>getInClause()</pre></a></li>
 <li class="method public "><a href="#method_getPdo" title="getPdo() :: Get \PDO instance"><span class="description">Get \PDO instance</span><pre>getPdo()</pre></a></li>
 <li class="method public "><a href="#method_insert" title="insert() :: Run the insert statement"><span class="description">Run the insert statement</span><pre>insert()</pre></a></li>
@@ -85,7 +86,6 @@
 <li class="method private "><a href="#method___construct" title="__construct() :: __construct method"><span class="description">__construct method</span><pre>__construct()</pre></a></li>
 <li class="method private "><a href="#method_dataType" title="dataType() :: Get the data_type from the variable"><span class="description">Get the data_type from the variable</span><pre>dataType()</pre></a></li>
 <li class="method private "><a href="#method_debugValue" title="debugValue() :: Get the debug value from the variable"><span class="description">Get the debug value from the variable</span><pre>debugValue()</pre></a></li>
-<li class="method private "><a href="#method_execute" title="execute() :: Run the query statement"><span class="description">Run the query statement</span><pre>execute()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header">
@@ -195,6 +195,24 @@
 <h3>Returns</h3>
 <div class="subelement response">
 <code>integer</code>number of deleted records</div>
+</div></div>
+</div>
+<a id="method_execute"></a><div class="element clickable method public method_execute " data-toggle="collapse" data-target=".method_execute .collapse" title="public">
+<h2>Run the query statement</h2>
+<pre>execute(string $query, \Kore\array&lt;mixed&gt; $params<code> = array()</code>) : \PDOStatement</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$query</h4>
+<code>string</code><p>SQL query</p></div>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>\Kore\array&lt;mixed&gt;</code><p>SQL query parameters</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\PDOStatement</code>\PDOStatement object</div>
 </div></div>
 </div>
 <a id="method_getInClause"></a><div class="element clickable method public method_getInClause " data-toggle="collapse" data-target=".method_getInClause .collapse" title="public">
@@ -389,24 +407,6 @@
 <code>mixed</code>debug value</div>
 </div></div>
 </div>
-<a id="method_execute"></a><div class="element clickable method private method_execute " data-toggle="collapse" data-target=".method_execute .collapse" title="private">
-<h2>Run the query statement</h2>
-<pre>execute(string $query, \Kore\array&lt;mixed&gt; $params) : \PDOStatement</pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$query</h4>
-<code>string</code><p>SQL query</p></div>
-<div class="subelement argument">
-<h4>$params</h4>
-<code>\Kore\array&lt;mixed&gt;</code><p>SQL query parameters</p></div>
-<h3>Returns</h3>
-<div class="subelement response">
-<code>\PDOStatement</code>\PDOStatement object</div>
-</div></div>
-</div>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
 <a id="property_pdo"> </a><div class="element clickable property protected property_pdo" data-toggle="collapse" data-target=".property_pdo .collapse" title="protected">
@@ -426,7 +426,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.1</a> and<br>
-            generated on 2021-02-06T20:45:11+09:00.<br></footer></div>
+            generated on 2021-02-14T00:19:09+09:00.<br></footer></div>
 </div>
 </body>
 </html>
