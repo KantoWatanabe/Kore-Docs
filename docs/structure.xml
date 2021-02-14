@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project title="API Documentation" version="2.9.1">
   <partials/>
-  <file path="helpers.php" generated-path="helpers.html" hash="a1246af58f96a54091a4d4fb6a59926d" package="Default">
+  <file path="helpers.php" generated-path="helpers.html" hash="0e3b8f70564aa86ff6ec6e8dbfc5d424" package="Default">
     <docblock line="0">
       <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
@@ -35,23 +35,23 @@
         <type>\array&lt;mixed&gt;</type>
       </argument>
     </function>
-    <function namespace="" line="28" package="Default">
+    <function namespace="" line="30" package="Default">
       <name>array_get_recursive</name>
       <full_name>\array_get_recursive()</full_name>
-      <docblock line="28">
+      <docblock line="30">
         <description>Get array values recursively</description>
-        <long-description></long-description>
-        <tag name="package" line="28" description="Default"/>
-        <tag name="param" line="28" description="&lt;p&gt;array&lt;/p&gt;" type="\array&lt;mixed&gt;" variable="$array">
+        <long-description>If the key is passed dot-delimited, it is interpreted as an array path.</long-description>
+        <tag name="package" line="30" description="Default"/>
+        <tag name="param" line="30" description="&lt;p&gt;array&lt;/p&gt;" type="\array&lt;mixed&gt;" variable="$array">
           <type>\array&lt;mixed&gt;</type>
         </tag>
-        <tag name="param" line="28" description="&lt;p&gt;key&lt;/p&gt;" type="string" variable="$key">
+        <tag name="param" line="30" description="&lt;p&gt;key&lt;/p&gt;" type="string" variable="$key">
           <type>string</type>
         </tag>
-        <tag name="param" line="28" description="&lt;p&gt;default value&lt;/p&gt;" type="mixed" variable="$default">
+        <tag name="param" line="30" description="&lt;p&gt;default value&lt;/p&gt;" type="mixed" variable="$default">
           <type>mixed</type>
         </tag>
-        <tag name="return" line="28" description="value" type="mixed">
+        <tag name="return" line="30" description="value" type="mixed">
           <type>mixed</type>
         </tag>
       </docblock>
@@ -217,7 +217,7 @@
       </argument>
     </function>
   </file>
-  <file path="HttpClient.php" generated-path="HttpClient.html" hash="fcadb28fe8469e64989b0decd4a7e132" package="Default">
+  <file path="HttpClient.php" generated-path="HttpClient.html" hash="68dd3a67606381d84550a5533a8b8662" package="Default">
     <docblock line="0">
       <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
@@ -299,30 +299,32 @@ For unlimited, specify 0.</long-description>
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="68" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="69" package="Default">
         <name>get</name>
         <full_name>\Kore\HttpClient::get()</full_name>
-        <docblock line="68">
+        <docblock line="69">
           <description>GET Communication</description>
           <long-description></long-description>
-          <tag name="param" line="68" description="&lt;p&gt;request url&lt;/p&gt;" type="string" variable="$url">
+          <tag name="param" line="69" description="&lt;p&gt;request url&lt;/p&gt;" type="string" variable="$url">
             <type>string</type>
           </tag>
-          <tag name="param" line="68" description="&lt;p&gt;request parameters&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$params">
+          <tag name="param" line="69" description="&lt;p&gt;request parameters&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$params">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="param" line="68" description="&lt;p&gt;request headers&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$headers">
+          <tag name="param" line="69" description="&lt;p&gt;request headers&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$headers">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="param" line="68" description="&lt;p&gt;user name and password&lt;/p&gt;" type="string|null" variable="$userpwd">
+          <tag name="param" line="69" description="&lt;p&gt;user name and password&lt;/p&gt;" type="string|null" variable="$userpwd">
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="return" line="68" description="\Kore\HttpResponse" type="\Kore\HttpResponse|false">
+          <tag name="return" line="69" description="\Kore\HttpResponse" type="\Kore\HttpResponse">
             <type>\Kore\HttpResponse</type>
-            <type>false</type>
           </tag>
-          <tag name="see" line="68" description="" link="\Kore\HttpResponse"/>
+          <tag name="throws" line="69" description="" type="\Exception">
+            <type>\Exception</type>
+          </tag>
+          <tag name="see" line="69" description="" link="\Kore\HttpResponse"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$url</name>
@@ -345,30 +347,32 @@ For unlimited, specify 0.</long-description>
           <type>string|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="83" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="85" package="Default">
         <name>post</name>
         <full_name>\Kore\HttpClient::post()</full_name>
-        <docblock line="83">
+        <docblock line="85">
           <description>POST Communication</description>
           <long-description></long-description>
-          <tag name="param" line="83" description="&lt;p&gt;request url&lt;/p&gt;" type="string" variable="$url">
+          <tag name="param" line="85" description="&lt;p&gt;request url&lt;/p&gt;" type="string" variable="$url">
             <type>string</type>
           </tag>
-          <tag name="param" line="83" description="&lt;p&gt;request parameters&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$params">
+          <tag name="param" line="85" description="&lt;p&gt;request parameters&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$params">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="param" line="83" description="&lt;p&gt;request headers&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$headers">
+          <tag name="param" line="85" description="&lt;p&gt;request headers&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$headers">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="param" line="83" description="&lt;p&gt;user name and password&lt;/p&gt;" type="string|null" variable="$userpwd">
+          <tag name="param" line="85" description="&lt;p&gt;user name and password&lt;/p&gt;" type="string|null" variable="$userpwd">
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="return" line="83" description="\Kore\HttpResponse" type="\Kore\HttpResponse|false">
+          <tag name="return" line="85" description="\Kore\HttpResponse" type="\Kore\HttpResponse">
             <type>\Kore\HttpResponse</type>
-            <type>false</type>
           </tag>
-          <tag name="see" line="83" description="" link="\Kore\HttpResponse"/>
+          <tag name="throws" line="85" description="" type="\Exception">
+            <type>\Exception</type>
+          </tag>
+          <tag name="see" line="85" description="" link="\Kore\HttpResponse"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$url</name>
@@ -391,30 +395,32 @@ For unlimited, specify 0.</long-description>
           <type>string|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="98" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="101" package="Default">
         <name>put</name>
         <full_name>\Kore\HttpClient::put()</full_name>
-        <docblock line="98">
+        <docblock line="101">
           <description>PUT Communication</description>
           <long-description></long-description>
-          <tag name="param" line="98" description="&lt;p&gt;request url&lt;/p&gt;" type="string" variable="$url">
+          <tag name="param" line="101" description="&lt;p&gt;request url&lt;/p&gt;" type="string" variable="$url">
             <type>string</type>
           </tag>
-          <tag name="param" line="98" description="&lt;p&gt;request parameters&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$params">
+          <tag name="param" line="101" description="&lt;p&gt;request parameters&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$params">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="param" line="98" description="&lt;p&gt;request headers&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$headers">
+          <tag name="param" line="101" description="&lt;p&gt;request headers&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$headers">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="param" line="98" description="&lt;p&gt;user name and password&lt;/p&gt;" type="string|null" variable="$userpwd">
+          <tag name="param" line="101" description="&lt;p&gt;user name and password&lt;/p&gt;" type="string|null" variable="$userpwd">
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="return" line="98" description="" type="\Kore\HttpResponse|false">
+          <tag name="return" line="101" description="\Kore\HttpResponse" type="\Kore\HttpResponse">
             <type>\Kore\HttpResponse</type>
-            <type>false</type>
           </tag>
-          <tag name="see" line="98" description="" link="\Kore\HttpResponse"/>
+          <tag name="throws" line="101" description="" type="\Exception">
+            <type>\Exception</type>
+          </tag>
+          <tag name="see" line="101" description="" link="\Kore\HttpResponse"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$url</name>
@@ -437,30 +443,32 @@ For unlimited, specify 0.</long-description>
           <type>string|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="113" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="117" package="Default">
         <name>patch</name>
         <full_name>\Kore\HttpClient::patch()</full_name>
-        <docblock line="113">
+        <docblock line="117">
           <description>PATCH Communication</description>
           <long-description></long-description>
-          <tag name="param" line="113" description="&lt;p&gt;request url&lt;/p&gt;" type="string" variable="$url">
+          <tag name="param" line="117" description="&lt;p&gt;request url&lt;/p&gt;" type="string" variable="$url">
             <type>string</type>
           </tag>
-          <tag name="param" line="113" description="&lt;p&gt;request parameters&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$params">
+          <tag name="param" line="117" description="&lt;p&gt;request parameters&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$params">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="param" line="113" description="&lt;p&gt;request headers&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$headers">
+          <tag name="param" line="117" description="&lt;p&gt;request headers&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$headers">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="param" line="113" description="&lt;p&gt;user name and password&lt;/p&gt;" type="string|null" variable="$userpwd">
+          <tag name="param" line="117" description="&lt;p&gt;user name and password&lt;/p&gt;" type="string|null" variable="$userpwd">
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="return" line="113" description="\Kore\HttpResponse" type="\Kore\HttpResponse|false">
+          <tag name="return" line="117" description="\Kore\HttpResponse" type="\Kore\HttpResponse">
             <type>\Kore\HttpResponse</type>
-            <type>false</type>
           </tag>
-          <tag name="see" line="113" description="" link="\Kore\HttpResponse"/>
+          <tag name="throws" line="117" description="" type="\Exception">
+            <type>\Exception</type>
+          </tag>
+          <tag name="see" line="117" description="" link="\Kore\HttpResponse"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$url</name>
@@ -483,30 +491,32 @@ For unlimited, specify 0.</long-description>
           <type>string|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="128" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="133" package="Default">
         <name>delete</name>
         <full_name>\Kore\HttpClient::delete()</full_name>
-        <docblock line="128">
+        <docblock line="133">
           <description>DELETE Communication</description>
           <long-description></long-description>
-          <tag name="param" line="128" description="&lt;p&gt;request url&lt;/p&gt;" type="string" variable="$url">
+          <tag name="param" line="133" description="&lt;p&gt;request url&lt;/p&gt;" type="string" variable="$url">
             <type>string</type>
           </tag>
-          <tag name="param" line="128" description="&lt;p&gt;request parameters&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$params">
+          <tag name="param" line="133" description="&lt;p&gt;request parameters&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$params">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="param" line="128" description="&lt;p&gt;request headers&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$headers">
+          <tag name="param" line="133" description="&lt;p&gt;request headers&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$headers">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="param" line="128" description="&lt;p&gt;user name and password&lt;/p&gt;" type="string|null" variable="$userpwd">
+          <tag name="param" line="133" description="&lt;p&gt;user name and password&lt;/p&gt;" type="string|null" variable="$userpwd">
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="return" line="128" description="\Kore\HttpResponse" type="\Kore\HttpResponse|false">
+          <tag name="return" line="133" description="\Kore\HttpResponse" type="\Kore\HttpResponse">
             <type>\Kore\HttpResponse</type>
-            <type>false</type>
           </tag>
-          <tag name="see" line="128" description="" link="\Kore\HttpResponse"/>
+          <tag name="throws" line="133" description="" type="\Exception">
+            <type>\Exception</type>
+          </tag>
+          <tag name="see" line="133" description="" link="\Kore\HttpResponse"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$url</name>
@@ -529,33 +539,35 @@ For unlimited, specify 0.</long-description>
           <type>string|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="144" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="150" package="Default">
         <name>communicate</name>
         <full_name>\Kore\HttpClient::communicate()</full_name>
-        <docblock line="144">
+        <docblock line="150">
           <description>Communication Processing</description>
           <long-description></long-description>
-          <tag name="param" line="144" description="&lt;p&gt;http method&lt;/p&gt;" type="string" variable="$method">
+          <tag name="param" line="150" description="&lt;p&gt;http method&lt;/p&gt;" type="string" variable="$method">
             <type>string</type>
           </tag>
-          <tag name="param" line="144" description="&lt;p&gt;request url&lt;/p&gt;" type="string" variable="$url">
+          <tag name="param" line="150" description="&lt;p&gt;request url&lt;/p&gt;" type="string" variable="$url">
             <type>string</type>
           </tag>
-          <tag name="param" line="144" description="&lt;p&gt;request parameters&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$params">
+          <tag name="param" line="150" description="&lt;p&gt;request parameters&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$params">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="param" line="144" description="&lt;p&gt;request headers&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$headers">
+          <tag name="param" line="150" description="&lt;p&gt;request headers&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$headers">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="param" line="144" description="&lt;p&gt;user name and password&lt;/p&gt;" type="string|null" variable="$userpwd">
+          <tag name="param" line="150" description="&lt;p&gt;user name and password&lt;/p&gt;" type="string|null" variable="$userpwd">
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="return" line="144" description="\Kore\HttpResponse" type="\Kore\HttpResponse|false">
+          <tag name="return" line="150" description="\Kore\HttpResponse" type="\Kore\HttpResponse">
             <type>\Kore\HttpResponse</type>
-            <type>false</type>
           </tag>
-          <tag name="see" line="144" description="" link="\Kore\HttpResponse"/>
+          <tag name="throws" line="150" description="" type="\Exception">
+            <type>\Exception</type>
+          </tag>
+          <tag name="see" line="150" description="" link="\Kore\HttpResponse"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$method</name>
@@ -583,16 +595,16 @@ For unlimited, specify 0.</long-description>
           <type>string|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="200" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="206" package="Default">
         <name>buildHeader</name>
         <full_name>\Kore\HttpClient::buildHeader()</full_name>
-        <docblock line="200">
+        <docblock line="206">
           <description>Build headers</description>
           <long-description>Build the associative array headers into a curl-friendly format.</long-description>
-          <tag name="param" line="200" description="&lt;p&gt;headers&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$headers">
+          <tag name="param" line="206" description="&lt;p&gt;headers&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$headers">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="return" line="200" description="built headers" type="\Kore\array&lt;string&gt;">
+          <tag name="return" line="206" description="built headers" type="\Kore\array&lt;string&gt;">
             <type>\Kore\array&lt;string&gt;</type>
           </tag>
         </docblock>
@@ -603,67 +615,67 @@ For unlimited, specify 0.</long-description>
         </argument>
       </method>
     </class>
-    <class final="false" abstract="false" namespace="Kore" line="218" package="Default">
+    <class final="false" abstract="false" namespace="Kore" line="224" package="Default">
       <extends/>
       <name>HttpResponse</name>
       <full_name>\Kore\HttpResponse</full_name>
-      <docblock line="218">
+      <docblock line="224">
         <description>HttpResponse class</description>
         <long-description></long-description>
-        <tag name="package" line="218" description="Default"/>
+        <tag name="package" line="224" description="Default"/>
       </docblock>
-      <property static="false" visibility="private" namespace="Kore" line="240" package="Default">
+      <property static="false" visibility="private" namespace="Kore" line="246" package="Default">
         <name>$httpCode</name>
         <full_name>\Kore\HttpResponse::$httpCode</full_name>
         <default></default>
-        <docblock line="240">
+        <docblock line="246">
           <description>http status code</description>
           <long-description></long-description>
-          <tag name="var" line="240" description="" type="integer" variable="">
+          <tag name="var" line="246" description="" type="integer" variable="">
             <type>integer</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="Kore" line="246" package="Default">
+      <property static="false" visibility="private" namespace="Kore" line="252" package="Default">
         <name>$header</name>
         <full_name>\Kore\HttpResponse::$header</full_name>
         <default></default>
-        <docblock line="246">
-          <description>response headers</description>
-          <long-description></long-description>
-          <tag name="var" line="246" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="Kore" line="252" package="Default">
-        <name>$body</name>
-        <full_name>\Kore\HttpResponse::$body</full_name>
-        <default></default>
         <docblock line="252">
-          <description>response body</description>
+          <description>response headers</description>
           <long-description></long-description>
           <tag name="var" line="252" description="" type="string" variable="">
             <type>string</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="228" package="Default">
+      <property static="false" visibility="private" namespace="Kore" line="258" package="Default">
+        <name>$body</name>
+        <full_name>\Kore\HttpResponse::$body</full_name>
+        <default></default>
+        <docblock line="258">
+          <description>response body</description>
+          <long-description></long-description>
+          <tag name="var" line="258" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="234" package="Default">
         <name>__construct</name>
         <full_name>\Kore\HttpResponse::__construct()</full_name>
-        <docblock line="228">
+        <docblock line="234">
           <description>__construct method</description>
           <long-description></long-description>
-          <tag name="param" line="228" description="&lt;p&gt;http status code&lt;/p&gt;" type="integer" variable="$httpCode">
+          <tag name="param" line="234" description="&lt;p&gt;http status code&lt;/p&gt;" type="integer" variable="$httpCode">
             <type>integer</type>
           </tag>
-          <tag name="param" line="228" description="&lt;p&gt;response headers&lt;/p&gt;" type="string" variable="$header">
+          <tag name="param" line="234" description="&lt;p&gt;response headers&lt;/p&gt;" type="string" variable="$header">
             <type>string</type>
           </tag>
-          <tag name="param" line="228" description="&lt;p&gt;response body&lt;/p&gt;" type="string" variable="$body">
+          <tag name="param" line="234" description="&lt;p&gt;response body&lt;/p&gt;" type="string" variable="$body">
             <type>string</type>
           </tag>
-          <tag name="return" line="228" description="" type="void">
+          <tag name="return" line="234" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -683,38 +695,38 @@ For unlimited, specify 0.</long-description>
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="259" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="265" package="Default">
         <name>getHttpCode</name>
         <full_name>\Kore\HttpResponse::getHttpCode()</full_name>
-        <docblock line="259">
+        <docblock line="265">
           <description>Get the http status code</description>
           <long-description></long-description>
-          <tag name="return" line="259" description="http status code" type="integer">
+          <tag name="return" line="265" description="http status code" type="integer">
             <type>integer</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="269" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="275" package="Default">
         <name>getHeader</name>
         <full_name>\Kore\HttpResponse::getHeader()</full_name>
-        <docblock line="269">
+        <docblock line="275">
           <description>Get the response headers</description>
           <long-description></long-description>
-          <tag name="return" line="269" description="response headers" type="string">
+          <tag name="return" line="275" description="response headers" type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="280" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="286" package="Default">
         <name>getHeaderLine</name>
         <full_name>\Kore\HttpResponse::getHeaderLine()</full_name>
-        <docblock line="280">
+        <docblock line="286">
           <description>Get the header value by specifying the header name</description>
           <long-description></long-description>
-          <tag name="param" line="280" description="&lt;p&gt;header name&lt;/p&gt;" type="string" variable="$key">
+          <tag name="param" line="286" description="&lt;p&gt;header name&lt;/p&gt;" type="string" variable="$key">
             <type>string</type>
           </tag>
-          <tag name="return" line="280" description="header value" type="string|null">
+          <tag name="return" line="286" description="header value" type="string|null">
             <type>string</type>
             <type>null</type>
           </tag>
@@ -725,24 +737,24 @@ For unlimited, specify 0.</long-description>
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="294" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="300" package="Default">
         <name>getBody</name>
         <full_name>\Kore\HttpResponse::getBody()</full_name>
-        <docblock line="294">
+        <docblock line="300">
           <description>Get the response body</description>
           <long-description></long-description>
-          <tag name="return" line="294" description="response body" type="string">
+          <tag name="return" line="300" description="response body" type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="304" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="310" package="Default">
         <name>getJsonBody</name>
         <full_name>\Kore\HttpResponse::getJsonBody()</full_name>
-        <docblock line="304">
+        <docblock line="310">
           <description>Get the response body in json format</description>
           <long-description></long-description>
-          <tag name="return" line="304" description="response body" type="\Kore\array&lt;mixed&gt;">
+          <tag name="return" line="310" description="response body" type="\Kore\array&lt;mixed&gt;">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
         </docblock>
@@ -1147,7 +1159,7 @@ Used in running web applications.</long-description>
       </method>
     </class>
   </file>
-  <file path="Log.php" generated-path="Log.html" hash="880a87b78b40047e9d395ce151ba7a57" package="Default">
+  <file path="Log.php" generated-path="Log.html" hash="e9efbd4a32c45a43781ce087c6b94fb4" package="Default">
     <docblock line="0">
       <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
@@ -1945,7 +1957,7 @@ If you need to customize, please override it with subclasses.</long-description>
       </method>
     </class>
   </file>
-  <file path="DB.php" generated-path="DB.html" hash="8f3dae1e84efb3f8a5537e447b3c737b" package="Default">
+  <file path="DB.php" generated-path="DB.html" hash="6a3e9d586fcb6ec808db96820a1745b1" package="Default">
     <docblock line="0">
       <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
@@ -2225,17 +2237,20 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>\Kore\array&lt;mixed&gt;</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="193" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="194" package="Default">
         <name>transaction</name>
         <full_name>\Kore\DB::transaction()</full_name>
-        <docblock line="193">
+        <docblock line="194">
           <description>Run in a transaction</description>
           <long-description>Rollback if an exception is raised in the callback.</long-description>
-          <tag name="param" line="193" description="&lt;p&gt;callback processing&lt;/p&gt;" type="callable" variable="$callback">
+          <tag name="param" line="194" description="&lt;p&gt;callback processing&lt;/p&gt;" type="callable" variable="$callback">
             <type>callable</type>
           </tag>
-          <tag name="return" line="193" description="" type="void">
+          <tag name="return" line="194" description="" type="void">
             <type>void</type>
+          </tag>
+          <tag name="throws" line="194" description="" type="\Exception">
+            <type>\Exception</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -2244,52 +2259,52 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>callable</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="210" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="211" package="Default">
         <name>beginTransaction</name>
         <full_name>\Kore\DB::beginTransaction()</full_name>
-        <docblock line="210">
+        <docblock line="211">
           <description>Begin transaction</description>
           <long-description></long-description>
-          <tag name="return" line="210" description="" type="void">
+          <tag name="return" line="211" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="220" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="221" package="Default">
         <name>commit</name>
         <full_name>\Kore\DB::commit()</full_name>
-        <docblock line="220">
+        <docblock line="221">
           <description>Commit</description>
           <long-description></long-description>
-          <tag name="return" line="220" description="" type="void">
+          <tag name="return" line="221" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="230" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="231" package="Default">
         <name>rollback</name>
         <full_name>\Kore\DB::rollback()</full_name>
-        <docblock line="230">
+        <docblock line="231">
           <description>Rollback</description>
           <long-description></long-description>
-          <tag name="return" line="230" description="" type="void">
+          <tag name="return" line="231" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="250" package="Default">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Kore" line="251" package="Default">
         <name>getInClause</name>
         <full_name>\Kore\DB::getInClause()</full_name>
-        <docblock line="250">
+        <docblock line="251">
           <description>Get the IN clause</description>
           <long-description></long-description>
-          <tag name="param" line="250" description="&lt;p&gt;parameter marker&lt;/p&gt;" type="string" variable="$marker">
+          <tag name="param" line="251" description="&lt;p&gt;parameter marker&lt;/p&gt;" type="string" variable="$marker">
             <type>string</type>
           </tag>
-          <tag name="param" line="250" description="&lt;p&gt;value specified in the IN clause&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$values">
+          <tag name="param" line="251" description="&lt;p&gt;value specified in the IN clause&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$values">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="return" line="250" description="IN clause information&#10;                     array(&#10;                         'IN (:MARKER_0, :MARKER_1, :MARKER_2)',&#10;                         array(&#10;                             'MARKER_0' =&gt; 'value',&#10;                             'MARKER_1' =&gt; 'value',&#10;                             'MARKER_2' =&gt; 'value'&#10;                         )&#10;                     )" type="\Kore\array&lt;mixed&gt;">
+          <tag name="return" line="251" description="IN clause information&#10;                     array(&#10;                         'IN (:MARKER_0, :MARKER_1, :MARKER_2)',&#10;                         array(&#10;                             'MARKER_0' =&gt; 'value',&#10;                             'MARKER_1' =&gt; 'value',&#10;                             'MARKER_2' =&gt; 'value'&#10;                         )&#10;                     )" type="\Kore\array&lt;mixed&gt;">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
         </docblock>
@@ -2304,19 +2319,19 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>\Kore\array&lt;mixed&gt;</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="273" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Kore" line="274" package="Default">
         <name>execute</name>
         <full_name>\Kore\DB::execute()</full_name>
-        <docblock line="273">
+        <docblock line="274">
           <description>Run the query statement</description>
           <long-description></long-description>
-          <tag name="param" line="273" description="&lt;p&gt;SQL query&lt;/p&gt;" type="string" variable="$query">
+          <tag name="param" line="274" description="&lt;p&gt;SQL query&lt;/p&gt;" type="string" variable="$query">
             <type>string</type>
           </tag>
-          <tag name="param" line="273" description="&lt;p&gt;SQL query parameters&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$params">
+          <tag name="param" line="274" description="&lt;p&gt;SQL query parameters&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$params">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="return" line="273" description="\PDOStatement object" type="\PDOStatement">
+          <tag name="return" line="274" description="\PDOStatement object" type="\PDOStatement">
             <type>\PDOStatement</type>
           </tag>
         </docblock>
@@ -2331,16 +2346,16 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>\Kore\array&lt;mixed&gt;</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Kore" line="300" package="Default">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Kore" line="301" package="Default">
         <name>debugValue</name>
         <full_name>\Kore\DB::debugValue()</full_name>
-        <docblock line="300">
+        <docblock line="301">
           <description>Get the debug value from the variable</description>
           <long-description></long-description>
-          <tag name="param" line="300" description="&lt;p&gt;variable&lt;/p&gt;" type="mixed" variable="$value">
+          <tag name="param" line="301" description="&lt;p&gt;variable&lt;/p&gt;" type="mixed" variable="$value">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="300" description="debug value" type="mixed">
+          <tag name="return" line="301" description="debug value" type="mixed">
             <type>mixed</type>
           </tag>
         </docblock>
@@ -2350,16 +2365,16 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Kore" line="325" package="Default">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Kore" line="326" package="Default">
         <name>dataType</name>
         <full_name>\Kore\DB::dataType()</full_name>
-        <docblock line="325">
+        <docblock line="326">
           <description>Get the data_type from the variable</description>
           <long-description></long-description>
-          <tag name="param" line="325" description="&lt;p&gt;variable&lt;/p&gt;" type="mixed" variable="$value">
+          <tag name="param" line="326" description="&lt;p&gt;variable&lt;/p&gt;" type="mixed" variable="$value">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="325" description="data_type" type="integer">
+          <tag name="return" line="326" description="data_type" type="integer">
             <type>integer</type>
           </tag>
         </docblock>
