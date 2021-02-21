@@ -64,12 +64,13 @@
 </li>
 <li class="nav-header protected">» Protected
                     <ul>
-<li class="method protected "><a href="#method_commandName" title="commandName() :: Get the the command name"><span class="description">Get the the command name</span><pre>commandName()</pre></a></li>
+<li class="method protected "><a href="#method_commandName" title="commandName() :: Get the command name"><span class="description">Get the command name</span><pre>commandName()</pre></a></li>
 <li class="method protected "><a href="#method_exec" title="exec() :: Processing Execution"><span class="description">Processing Execution</span><pre>exec()</pre></a></li>
-<li class="method protected "><a href="#method_getArg" title="getArg() :: Get the the command arguments"><span class="description">Get the the command arguments</span><pre>getArg()</pre></a></li>
-<li class="method protected "><a href="#method_getOpt" title="getOpt() :: Get the the command options"><span class="description">Get the the command options</span><pre>getOpt()</pre></a></li>
+<li class="method protected "><a href="#method_getArg" title="getArg() :: Get the command arguments"><span class="description">Get the command arguments</span><pre>getArg()</pre></a></li>
+<li class="method protected "><a href="#method_getOpt" title="getOpt() :: Get the command options"><span class="description">Get the command options</span><pre>getOpt()</pre></a></li>
 <li class="method protected "><a href="#method_handleError" title="handleError() :: Handling Errors"><span class="description">Handling Errors</span><pre>handleError()</pre></a></li>
-<li class="method protected "><a href="#method_logLevel" title="logLevel() :: Get the the log level"><span class="description">Get the the log level</span><pre>logLevel()</pre></a></li>
+<li class="method protected "><a href="#method_lockTime" title="lockTime() :: Get the lock time"><span class="description">Get the lock time</span><pre>lockTime()</pre></a></li>
+<li class="method protected "><a href="#method_logLevel" title="logLevel() :: Get the log level"><span class="description">Get the log level</span><pre>logLevel()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header">
@@ -124,7 +125,7 @@
 </div></div>
 </div>
 <a id="method_commandName"></a><div class="element clickable method protected method_commandName " data-toggle="collapse" data-target=".method_commandName .collapse" title="protected">
-<h2>Get the the command name</h2>
+<h2>Get the command name</h2>
 <pre>commandName() : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
@@ -142,7 +143,7 @@ If you need to customize, please override it with subclasses.</p></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"><p>The process is implemented in subclasses.</p></div></div></div>
 </div>
 <a id="method_getArg"></a><div class="element clickable method protected method_getArg " data-toggle="collapse" data-target=".method_getArg .collapse" title="protected">
-<h2>Get the the command arguments</h2>
+<h2>Get the command arguments</h2>
 <pre>getArg(string|null $key<code> = null</code>, mixed $default<code> = null</code>) : string | \Kore\array&lt;string&gt; | null</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
@@ -160,7 +161,7 @@ If you need to customize, please override it with subclasses.</p></div>
 </div></div>
 </div>
 <a id="method_getOpt"></a><div class="element clickable method protected method_getOpt " data-toggle="collapse" data-target=".method_getOpt .collapse" title="protected">
-<h2>Get the the command options</h2>
+<h2>Get the command options</h2>
 <pre>getOpt(string|null $key<code> = null</code>, mixed $default<code> = null</code>) : string | \Kore\array&lt;string&gt; | null</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
@@ -189,8 +190,20 @@ If you need to customize, please override it with subclasses.</p></div>
 <code>\Exception</code><p>errors</p></div>
 </div></div>
 </div>
+<a id="method_lockTime"></a><div class="element clickable method protected method_lockTime " data-toggle="collapse" data-target=".method_lockTime .collapse" title="protected">
+<h2>Get the lock time</h2>
+<pre>lockTime() : integer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The default is 24 hours.
+If you need to customize, please override it with subclasses.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>integer</code>lock time</div>
+</div></div>
+</div>
 <a id="method_logLevel"></a><div class="element clickable method protected method_logLevel " data-toggle="collapse" data-target=".method_logLevel .collapse" title="protected">
-<h2>Get the the log level</h2>
+<h2>Get the log level</h2>
 <pre>logLevel() : integer</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
@@ -244,7 +257,7 @@ If you need to customize, please override it with subclasses.</p></div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.1</a> and<br>
-            generated on 2021-02-14T23:47:11+09:00.<br></footer></div>
+            generated on 2021-02-21T11:12:43+09:00.<br></footer></div>
 </div>
 </body>
 </html>

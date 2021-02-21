@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project title="API Documentation" version="2.9.1">
   <partials/>
-  <file path="helpers.php" generated-path="helpers.html" hash="0e3b8f70564aa86ff6ec6e8dbfc5d424" package="Default">
+  <file path="helpers.php" generated-path="helpers.html" hash="318585d2bccef413f2864879d216aadc" package="Default">
     <docblock line="0">
       <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
@@ -761,7 +761,7 @@ For unlimited, specify 0.</long-description>
       </method>
     </class>
   </file>
-  <file path="Command.php" generated-path="Command.html" hash="c1e044cc9d5203f89c9e20ed3d92eb35" package="Default">
+  <file path="Command.php" generated-path="Command.html" hash="1e0a84c9df643ddaf2dcdae6f3fdb066" package="Default">
     <docblock line="0">
       <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
@@ -859,41 +859,53 @@ For unlimited, specify 0.</long-description>
           <type>\Kore\array&lt;string&gt;</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="85" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="84" package="Default">
         <name>commandName</name>
         <full_name>\Kore\Command::commandName()</full_name>
-        <docblock line="85">
-          <description>Get the the command name</description>
+        <docblock line="84">
+          <description>Get the command name</description>
           <long-description>The default is the end of the command namespace.
 If you need to customize, please override it with subclasses.</long-description>
-          <tag name="return" line="85" description="command name" type="string">
+          <tag name="return" line="84" description="command name" type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="99" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="98" package="Default">
         <name>logLevel</name>
         <full_name>\Kore\Command::logLevel()</full_name>
-        <docblock line="99">
-          <description>Get the the log level</description>
+        <docblock line="98">
+          <description>Get the log level</description>
           <long-description>The default is Log::LEVEL_DEBUG.
 If you need to customize, please override it with subclasses.</long-description>
-          <tag name="return" line="99" description="log level" type="integer">
+          <tag name="return" line="98" description="log level" type="integer">
             <type>integer</type>
           </tag>
-          <tag name="see" line="99" description="" link="\Kore\Log"/>
+          <tag name="see" line="98" description="" link="\Kore\Log"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="111" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="110" package="Default">
+        <name>lockTime</name>
+        <full_name>\Kore\Command::lockTime()</full_name>
+        <docblock line="110">
+          <description>Get the lock time</description>
+          <long-description>The default is 24 hours.
+If you need to customize, please override it with subclasses.</long-description>
+          <tag name="return" line="110" description="lock time" type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="122" package="Default">
         <name>handleError</name>
         <full_name>\Kore\Command::handleError()</full_name>
-        <docblock line="111">
+        <docblock line="122">
           <description>Handling Errors</description>
           <long-description>If you need to customize the handling of errors, please override it with subclasses.</long-description>
-          <tag name="param" line="111" description="&lt;p&gt;errors&lt;/p&gt;" type="\Exception" variable="$e">
+          <tag name="param" line="122" description="&lt;p&gt;errors&lt;/p&gt;" type="\Exception" variable="$e">
             <type>\Exception</type>
           </tag>
-          <tag name="return" line="111" description="" type="void">
+          <tag name="return" line="122" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -903,20 +915,20 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>\Exception</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="124" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="135" package="Default">
         <name>getArg</name>
         <full_name>\Kore\Command::getArg()</full_name>
-        <docblock line="124">
-          <description>Get the the command arguments</description>
+        <docblock line="135">
+          <description>Get the command arguments</description>
           <long-description>If no key is specified, all command arguments are returned.</long-description>
-          <tag name="param" line="124" description="&lt;p&gt;command arguments key&lt;/p&gt;" type="string|null" variable="$key">
+          <tag name="param" line="135" description="&lt;p&gt;command arguments key&lt;/p&gt;" type="string|null" variable="$key">
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="param" line="124" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
+          <tag name="param" line="135" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="124" description="command arguments" type="string|\Kore\array&lt;string&gt;|null">
+          <tag name="return" line="135" description="command arguments" type="string|\Kore\array&lt;string&gt;|null">
             <type>string</type>
             <type>\Kore\array&lt;string&gt;</type>
             <type>null</type>
@@ -933,20 +945,20 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="143" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="154" package="Default">
         <name>getOpt</name>
         <full_name>\Kore\Command::getOpt()</full_name>
-        <docblock line="143">
-          <description>Get the the command options</description>
+        <docblock line="154">
+          <description>Get the command options</description>
           <long-description>If no key is specified, all command options are returned.</long-description>
-          <tag name="param" line="143" description="&lt;p&gt;command options key&lt;/p&gt;" type="string|null" variable="$key">
+          <tag name="param" line="154" description="&lt;p&gt;command options key&lt;/p&gt;" type="string|null" variable="$key">
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="param" line="143" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
+          <tag name="param" line="154" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="143" description="command options" type="string|\Kore\array&lt;string&gt;|null">
+          <tag name="return" line="154" description="command options" type="string|\Kore\array&lt;string&gt;|null">
             <type>string</type>
             <type>\Kore\array&lt;string&gt;</type>
             <type>null</type>
@@ -1524,7 +1536,7 @@ If the key is passed dot-delimited, it is interpreted as an array path.</long-de
       </method>
     </class>
   </file>
-  <file path="Controller.php" generated-path="Controller.html" hash="b729732edf5f5589d70662eff9e3d636" package="Default">
+  <file path="Controller.php" generated-path="Controller.html" hash="ef0da3ddb65a871d8b41ed6a0e3e1f27" package="Default">
     <docblock line="0">
       <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
@@ -1602,52 +1614,52 @@ If the key is passed dot-delimited, it is interpreted as an array path.</long-de
           <type>\Kore\array&lt;string&gt;</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="69" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="68" package="Default">
         <name>moduleName</name>
         <full_name>\Kore\Controller::moduleName()</full_name>
-        <docblock line="69">
-          <description>Get the the module name</description>
+        <docblock line="68">
+          <description>Get the module name</description>
           <long-description>The default is 'app'.
 If you need to customize, please override it with subclasses.</long-description>
-          <tag name="return" line="69" description="module name" type="string">
+          <tag name="return" line="68" description="module name" type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="82" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="81" package="Default">
         <name>logLevel</name>
         <full_name>\Kore\Controller::logLevel()</full_name>
-        <docblock line="82">
-          <description>Get the the log level</description>
+        <docblock line="81">
+          <description>Get the log level</description>
           <long-description>The default is Log::LEVEL_DEBUG.
 If you need to customize, please override it with subclasses.</long-description>
-          <tag name="return" line="82" description="log level" type="integer">
+          <tag name="return" line="81" description="log level" type="integer">
             <type>integer</type>
           </tag>
-          <tag name="see" line="82" description="" link="\Kore\Log"/>
+          <tag name="see" line="81" description="" link="\Kore\Log"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="93" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="92" package="Default">
         <name>preaction</name>
         <full_name>\Kore\Controller::preaction()</full_name>
-        <docblock line="93">
+        <docblock line="92">
           <description>Preprocessing of the action</description>
           <long-description>If you need to customize, please override it with subclasses.</long-description>
-          <tag name="return" line="93" description="" type="void">
+          <tag name="return" line="92" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="105" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="104" package="Default">
         <name>handleError</name>
         <full_name>\Kore\Controller::handleError()</full_name>
-        <docblock line="105">
+        <docblock line="104">
           <description>Handling Errors</description>
           <long-description>If you need to customize the handling of errors, please override it with subclasses.</long-description>
-          <tag name="param" line="105" description="&lt;p&gt;errors&lt;/p&gt;" type="\Exception" variable="$e">
+          <tag name="param" line="104" description="&lt;p&gt;errors&lt;/p&gt;" type="\Exception" variable="$e">
             <type>\Exception</type>
           </tag>
-          <tag name="return" line="105" description="" type="void">
+          <tag name="return" line="104" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -1657,30 +1669,30 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>\Exception</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="115" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="114" package="Default">
         <name>getMethod</name>
         <full_name>\Kore\Controller::getMethod()</full_name>
-        <docblock line="115">
+        <docblock line="114">
           <description>Get the http method</description>
           <long-description></long-description>
-          <tag name="return" line="115" description="http method" type="string">
+          <tag name="return" line="114" description="http method" type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="127" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="126" package="Default">
         <name>getHeader</name>
         <full_name>\Kore\Controller::getHeader()</full_name>
-        <docblock line="127">
+        <docblock line="126">
           <description>Get the http header</description>
           <long-description></long-description>
-          <tag name="param" line="127" description="&lt;p&gt;header key&lt;/p&gt;" type="string" variable="$key">
+          <tag name="param" line="126" description="&lt;p&gt;header key&lt;/p&gt;" type="string" variable="$key">
             <type>string</type>
           </tag>
-          <tag name="param" line="127" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
+          <tag name="param" line="126" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="127" description="http header" type="string|null">
+          <tag name="return" line="126" description="http header" type="string|null">
             <type>string</type>
             <type>null</type>
           </tag>
@@ -1696,20 +1708,20 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="144" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="143" package="Default">
         <name>getQuery</name>
         <full_name>\Kore\Controller::getQuery()</full_name>
-        <docblock line="144">
+        <docblock line="143">
           <description>Get the query parameters</description>
           <long-description>If no key is specified, all query parameters are returned.</long-description>
-          <tag name="param" line="144" description="&lt;p&gt;query parameters key&lt;/p&gt;" type="string|null" variable="$key">
+          <tag name="param" line="143" description="&lt;p&gt;query parameters key&lt;/p&gt;" type="string|null" variable="$key">
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="param" line="144" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
+          <tag name="param" line="143" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="144" description="query parameters" type="string|\Kore\array&lt;string&gt;|null">
+          <tag name="return" line="143" description="query parameters" type="string|\Kore\array&lt;string&gt;|null">
             <type>string</type>
             <type>\Kore\array&lt;string&gt;</type>
             <type>null</type>
@@ -1726,20 +1738,20 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="163" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="162" package="Default">
         <name>getPost</name>
         <full_name>\Kore\Controller::getPost()</full_name>
-        <docblock line="163">
+        <docblock line="162">
           <description>Get the post parameters</description>
           <long-description>If no key is specified, all post parameters are returned.</long-description>
-          <tag name="param" line="163" description="&lt;p&gt;post parameters key&lt;/p&gt;" type="string|null" variable="$key">
+          <tag name="param" line="162" description="&lt;p&gt;post parameters key&lt;/p&gt;" type="string|null" variable="$key">
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="param" line="163" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
+          <tag name="param" line="162" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="163" description="post parameters" type="string|\Kore\array&lt;string&gt;|null">
+          <tag name="return" line="162" description="post parameters" type="string|\Kore\array&lt;string&gt;|null">
             <type>string</type>
             <type>\Kore\array&lt;string&gt;</type>
             <type>null</type>
@@ -1756,42 +1768,42 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="179" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="178" package="Default">
         <name>getBody</name>
         <full_name>\Kore\Controller::getBody()</full_name>
-        <docblock line="179">
+        <docblock line="178">
           <description>Get the body data</description>
           <long-description></long-description>
-          <tag name="return" line="179" description="body data" type="string">
+          <tag name="return" line="178" description="body data" type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="191" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="190" package="Default">
         <name>getJsonBody</name>
         <full_name>\Kore\Controller::getJsonBody()</full_name>
-        <docblock line="191">
+        <docblock line="190">
           <description>Get the body data in json format</description>
           <long-description></long-description>
-          <tag name="return" line="191" description="body data" type="\Kore\array&lt;mixed&gt;">
+          <tag name="return" line="190" description="body data" type="\Kore\array&lt;mixed&gt;">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="205" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="204" package="Default">
         <name>getCookie</name>
         <full_name>\Kore\Controller::getCookie()</full_name>
-        <docblock line="205">
+        <docblock line="204">
           <description>Get the cookie parameters</description>
           <long-description>If no key is specified, all cookie parameters are returned.</long-description>
-          <tag name="param" line="205" description="&lt;p&gt;cookie parameters key&lt;/p&gt;" type="string|null" variable="$key">
+          <tag name="param" line="204" description="&lt;p&gt;cookie parameters key&lt;/p&gt;" type="string|null" variable="$key">
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="param" line="205" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
+          <tag name="param" line="204" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="205" description="cookie parameters" type="string|\Kore\array&lt;string&gt;|null">
+          <tag name="return" line="204" description="cookie parameters" type="string|\Kore\array&lt;string&gt;|null">
             <type>string</type>
             <type>\Kore\array&lt;string&gt;</type>
             <type>null</type>
@@ -1808,20 +1820,20 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="224" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="223" package="Default">
         <name>getArg</name>
         <full_name>\Kore\Controller::getArg()</full_name>
-        <docblock line="224">
+        <docblock line="223">
           <description>Get the path arguments</description>
           <long-description>If no key is specified, all path arguments are returned.</long-description>
-          <tag name="param" line="224" description="&lt;p&gt;path arguments key&lt;/p&gt;" type="string|null" variable="$key">
+          <tag name="param" line="223" description="&lt;p&gt;path arguments key&lt;/p&gt;" type="string|null" variable="$key">
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="param" line="224" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
+          <tag name="param" line="223" description="&lt;p&gt;default value if there is no value specified in the key&lt;/p&gt;" type="mixed" variable="$default">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="224" description="path arguments" type="string|\Kore\array&lt;string&gt;|null">
+          <tag name="return" line="223" description="path arguments" type="string|\Kore\array&lt;string&gt;|null">
             <type>string</type>
             <type>\Kore\array&lt;string&gt;</type>
             <type>null</type>
@@ -1838,22 +1850,22 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="243" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="242" package="Default">
         <name>respondView</name>
         <full_name>\Kore\Controller::respondView()</full_name>
-        <docblock line="243">
+        <docblock line="242">
           <description>Respond in view format</description>
           <long-description></long-description>
-          <tag name="param" line="243" description="&lt;p&gt;view file path&lt;/p&gt;" type="string" variable="$path">
+          <tag name="param" line="242" description="&lt;p&gt;view file path&lt;/p&gt;" type="string" variable="$path">
             <type>string</type>
           </tag>
-          <tag name="param" line="243" description="&lt;p&gt;response data&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$data">
+          <tag name="param" line="242" description="&lt;p&gt;response data&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$data">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="param" line="243" description="&lt;p&gt;http status code, the default is 200&lt;/p&gt;" type="integer" variable="$responseCode">
+          <tag name="param" line="242" description="&lt;p&gt;http status code, the default is 200&lt;/p&gt;" type="integer" variable="$responseCode">
             <type>integer</type>
           </tag>
-          <tag name="return" line="243" description="" type="void">
+          <tag name="return" line="242" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -1873,19 +1885,19 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="256" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="255" package="Default">
         <name>extractView</name>
         <full_name>\Kore\Controller::extractView()</full_name>
-        <docblock line="256">
+        <docblock line="255">
           <description>Extract the view</description>
           <long-description></long-description>
-          <tag name="param" line="256" description="&lt;p&gt;view file path&lt;/p&gt;" type="string" variable="$path">
+          <tag name="param" line="255" description="&lt;p&gt;view file path&lt;/p&gt;" type="string" variable="$path">
             <type>string</type>
           </tag>
-          <tag name="param" line="256" description="&lt;p&gt;response data&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$data">
+          <tag name="param" line="255" description="&lt;p&gt;response data&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$data">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="return" line="256" description="view" type="string|false">
+          <tag name="return" line="255" description="view" type="string|false">
             <type>string</type>
             <type>false</type>
           </tag>
@@ -1901,19 +1913,19 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>\Kore\array&lt;mixed&gt;</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="272" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="271" package="Default">
         <name>respondJson</name>
         <full_name>\Kore\Controller::respondJson()</full_name>
-        <docblock line="272">
+        <docblock line="271">
           <description>Respond in json format</description>
           <long-description></long-description>
-          <tag name="param" line="272" description="&lt;p&gt;response data&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$data">
+          <tag name="param" line="271" description="&lt;p&gt;response data&lt;/p&gt;" type="\Kore\array&lt;mixed&gt;" variable="$data">
             <type>\Kore\array&lt;mixed&gt;</type>
           </tag>
-          <tag name="param" line="272" description="&lt;p&gt;http status code, the default is 200&lt;/p&gt;" type="integer" variable="$responseCode">
+          <tag name="param" line="271" description="&lt;p&gt;http status code, the default is 200&lt;/p&gt;" type="integer" variable="$responseCode">
             <type>integer</type>
           </tag>
-          <tag name="return" line="272" description="" type="void">
+          <tag name="return" line="271" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -1928,19 +1940,19 @@ If you need to customize, please override it with subclasses.</long-description>
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="287" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Kore" line="286" package="Default">
         <name>redirect</name>
         <full_name>\Kore\Controller::redirect()</full_name>
-        <docblock line="287">
+        <docblock line="286">
           <description>Redirect</description>
           <long-description></long-description>
-          <tag name="param" line="287" description="&lt;p&gt;redirect url&lt;/p&gt;" type="string" variable="$url">
+          <tag name="param" line="286" description="&lt;p&gt;redirect url&lt;/p&gt;" type="string" variable="$url">
             <type>string</type>
           </tag>
-          <tag name="param" line="287" description="&lt;p&gt;http status code, the default is 302&lt;/p&gt;" type="integer" variable="$responseCode">
+          <tag name="param" line="286" description="&lt;p&gt;http status code, the default is 302&lt;/p&gt;" type="integer" variable="$responseCode">
             <type>integer</type>
           </tag>
-          <tag name="return" line="287" description="" type="void">
+          <tag name="return" line="286" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
