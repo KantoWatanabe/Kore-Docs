@@ -74,6 +74,8 @@
 <li class="method protected "><a href="#method_getMethod" title="getMethod() :: Get the http method"><span class="description">Get the http method</span><pre>getMethod()</pre></a></li>
 <li class="method protected "><a href="#method_getPost" title="getPost() :: Get the post parameters"><span class="description">Get the post parameters</span><pre>getPost()</pre></a></li>
 <li class="method protected "><a href="#method_getQuery" title="getQuery() :: Get the query parameters"><span class="description">Get the query parameters</span><pre>getQuery()</pre></a></li>
+<li class="method protected "><a href="#method_getServer" title="getServer() :: Get the server parameter"><span class="description">Get the server parameter</span><pre>getServer()</pre></a></li>
+<li class="method protected "><a href="#method_getUserAgent" title="getUserAgent() :: Get the User Agent"><span class="description">Get the User Agent</span><pre>getUserAgent()</pre></a></li>
 <li class="method protected "><a href="#method_handleError" title="handleError() :: Handling Errors"><span class="description">Handling Errors</span><pre>handleError()</pre></a></li>
 <li class="method protected "><a href="#method_logLevel" title="logLevel() :: Get the log level"><span class="description">Get the log level</span><pre>logLevel()</pre></a></li>
 <li class="method protected "><a href="#method_moduleName" title="moduleName() :: Get the module name"><span class="description">Get the module name</span><pre>moduleName()</pre></a></li>
@@ -232,13 +234,13 @@
 </div>
 <a id="method_getMethod"></a><div class="element clickable method protected method_getMethod " data-toggle="collapse" data-target=".method_getMethod .collapse" title="protected">
 <h2>Get the http method</h2>
-<pre>getMethod() : string</pre>
+<pre>getMethod() : string | null</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>string</code>http method</div>
+<code>string</code><code>null</code>http method</div>
 </div></div>
 </div>
 <a id="method_getPost"></a><div class="element clickable method protected method_getPost " data-toggle="collapse" data-target=".method_getPost .collapse" title="protected">
@@ -275,6 +277,35 @@
 <h3>Returns</h3>
 <div class="subelement response">
 <code>string</code><code>\Kore\array&lt;string&gt;</code><code>null</code>query parameters</div>
+</div></div>
+</div>
+<a id="method_getServer"></a><div class="element clickable method protected method_getServer " data-toggle="collapse" data-target=".method_getServer .collapse" title="protected">
+<h2>Get the server parameter</h2>
+<pre>getServer(string|null $key, mixed $default<code> = null</code>) : string | null</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code><code>null</code><p>server parameter key</p></div>
+<div class="subelement argument">
+<h4>$default</h4>
+<code>mixed</code><p>default value if there is no value specified in the key</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>null</code>server parameter</div>
+</div></div>
+</div>
+<a id="method_getUserAgent"></a><div class="element clickable method protected method_getUserAgent " data-toggle="collapse" data-target=".method_getUserAgent .collapse" title="protected">
+<h2>Get the User Agent</h2>
+<pre>getUserAgent() : string | null</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>null</code>User Agent</div>
 </div></div>
 </div>
 <a id="method_handleError"></a><div class="element clickable method protected method_handleError " data-toggle="collapse" data-target=".method_handleError .collapse" title="protected">
@@ -400,7 +431,7 @@ If you need to customize, please override it with subclasses.</p></div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.1</a> and<br>
-            generated on 2021-02-21T11:12:43+09:00.<br></footer></div>
+            generated on 2021-03-06T16:39:13+09:00.<br></footer></div>
 </div>
 </body>
 </html>
