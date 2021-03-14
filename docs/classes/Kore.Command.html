@@ -67,6 +67,7 @@
 <li class="method protected "><a href="#method_commandName" title="commandName() :: Get the command name"><span class="description">Get the command name</span><pre>commandName()</pre></a></li>
 <li class="method protected "><a href="#method_exec" title="exec() :: Processing Execution"><span class="description">Processing Execution</span><pre>exec()</pre></a></li>
 <li class="method protected "><a href="#method_getArg" title="getArg() :: Get the command arguments"><span class="description">Get the command arguments</span><pre>getArg()</pre></a></li>
+<li class="method protected "><a href="#method_getFromArray" title="getFromArray() :: Get from array"><span class="description">Get from array</span><pre>getFromArray()</pre></a></li>
 <li class="method protected "><a href="#method_getOpt" title="getOpt() :: Get the command options"><span class="description">Get the command options</span><pre>getOpt()</pre></a></li>
 <li class="method protected "><a href="#method_handleError" title="handleError() :: Handling Errors"><span class="description">Handling Errors</span><pre>handleError()</pre></a></li>
 <li class="method protected "><a href="#method_lockTime" title="lockTime() :: Get the lock time"><span class="description">Get the lock time</span><pre>lockTime()</pre></a></li>
@@ -144,38 +145,59 @@ If you need to customize, please override it with subclasses.</p></div>
 </div>
 <a id="method_getArg"></a><div class="element clickable method protected method_getArg " data-toggle="collapse" data-target=".method_getArg .collapse" title="protected">
 <h2>Get the command arguments</h2>
-<pre>getArg(string|null $key<code> = null</code>, mixed $default<code> = null</code>) : string | \Kore\array&lt;string&gt; | null</pre>
+<pre>getArg(string|null $key<code> = null</code>, mixed $default<code> = null</code>) : mixed</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>If no key is specified, all command arguments are returned.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$key</h4>
-<code>string</code><code>null</code><p>command arguments key</p></div>
+<code>string</code><code>null</code><p>command argument key</p></div>
 <div class="subelement argument">
 <h4>$default</h4>
 <code>mixed</code><p>default value if there is no value specified in the key</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>string</code><code>\Kore\array&lt;string&gt;</code><code>null</code>command arguments</div>
+<code>mixed</code>command arguments</div>
+</div></div>
+</div>
+<a id="method_getFromArray"></a><div class="element clickable method protected method_getFromArray " data-toggle="collapse" data-target=".method_getFromArray .collapse" title="protected">
+<h2>Get from array</h2>
+<pre>getFromArray(\Kore\array&lt;mixed&gt; $array, string|null $key, mixed $default) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If no key is specified, array is returned.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$array</h4>
+<code>\Kore\array&lt;mixed&gt;</code><p>array</p></div>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code><code>null</code><p>path key</p></div>
+<div class="subelement argument">
+<h4>$default</h4>
+<code>mixed</code><p>default value if there is no value specified in the key</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>value</div>
 </div></div>
 </div>
 <a id="method_getOpt"></a><div class="element clickable method protected method_getOpt " data-toggle="collapse" data-target=".method_getOpt .collapse" title="protected">
 <h2>Get the command options</h2>
-<pre>getOpt(string|null $key<code> = null</code>, mixed $default<code> = null</code>) : string | \Kore\array&lt;string&gt; | null</pre>
+<pre>getOpt(string|null $key<code> = null</code>, mixed $default<code> = null</code>) : mixed</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>If no key is specified, all command options are returned.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$key</h4>
-<code>string</code><code>null</code><p>command options key</p></div>
+<code>string</code><code>null</code><p>command option key</p></div>
 <div class="subelement argument">
 <h4>$default</h4>
 <code>mixed</code><p>default value if there is no value specified in the key</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>string</code><code>\Kore\array&lt;string&gt;</code><code>null</code>command options</div>
+<code>mixed</code>command options</div>
 </div></div>
 </div>
 <a id="method_handleError"></a><div class="element clickable method protected method_handleError " data-toggle="collapse" data-target=".method_handleError .collapse" title="protected">
@@ -188,6 +210,11 @@ If you need to customize, please override it with subclasses.</p></div>
 <div class="subelement argument">
 <h4>$e</h4>
 <code>\Exception</code><p>errors</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\Exception</code></th>
+<td></td>
+</tr></table>
 </div></div>
 </div>
 <a id="method_lockTime"></a><div class="element clickable method protected method_lockTime " data-toggle="collapse" data-target=".method_lockTime .collapse" title="protected">
@@ -257,7 +284,7 @@ If you need to customize, please override it with subclasses.</p></div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.1</a> and<br>
-            generated on 2021-03-06T16:39:13+09:00.<br></footer></div>
+            generated on 2021-03-14T13:15:54+09:00.<br></footer></div>
 </div>
 </body>
 </html>

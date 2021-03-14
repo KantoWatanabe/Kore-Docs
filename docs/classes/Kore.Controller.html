@@ -69,12 +69,13 @@
 <li class="method protected "><a href="#method_getArg" title="getArg() :: Get the path arguments"><span class="description">Get the path arguments</span><pre>getArg()</pre></a></li>
 <li class="method protected "><a href="#method_getBody" title="getBody() :: Get the body data"><span class="description">Get the body data</span><pre>getBody()</pre></a></li>
 <li class="method protected "><a href="#method_getCookie" title="getCookie() :: Get the cookie parameters"><span class="description">Get the cookie parameters</span><pre>getCookie()</pre></a></li>
+<li class="method protected "><a href="#method_getFromArray" title="getFromArray() :: Get from array"><span class="description">Get from array</span><pre>getFromArray()</pre></a></li>
 <li class="method protected "><a href="#method_getHeader" title="getHeader() :: Get the http header"><span class="description">Get the http header</span><pre>getHeader()</pre></a></li>
 <li class="method protected "><a href="#method_getJsonBody" title="getJsonBody() :: Get the body data in json format"><span class="description">Get the body data in json format</span><pre>getJsonBody()</pre></a></li>
 <li class="method protected "><a href="#method_getMethod" title="getMethod() :: Get the http method"><span class="description">Get the http method</span><pre>getMethod()</pre></a></li>
 <li class="method protected "><a href="#method_getPost" title="getPost() :: Get the post parameters"><span class="description">Get the post parameters</span><pre>getPost()</pre></a></li>
 <li class="method protected "><a href="#method_getQuery" title="getQuery() :: Get the query parameters"><span class="description">Get the query parameters</span><pre>getQuery()</pre></a></li>
-<li class="method protected "><a href="#method_getServer" title="getServer() :: Get the server parameter"><span class="description">Get the server parameter</span><pre>getServer()</pre></a></li>
+<li class="method protected "><a href="#method_getServer" title="getServer() :: Get the server parameters"><span class="description">Get the server parameters</span><pre>getServer()</pre></a></li>
 <li class="method protected "><a href="#method_getUserAgent" title="getUserAgent() :: Get the User Agent"><span class="description">Get the User Agent</span><pre>getUserAgent()</pre></a></li>
 <li class="method protected "><a href="#method_handleError" title="handleError() :: Handling Errors"><span class="description">Handling Errors</span><pre>handleError()</pre></a></li>
 <li class="method protected "><a href="#method_logLevel" title="logLevel() :: Get the log level"><span class="description">Get the log level</span><pre>logLevel()</pre></a></li>
@@ -158,20 +159,20 @@
 </div>
 <a id="method_getArg"></a><div class="element clickable method protected method_getArg " data-toggle="collapse" data-target=".method_getArg .collapse" title="protected">
 <h2>Get the path arguments</h2>
-<pre>getArg(string|null $key<code> = null</code>, mixed $default<code> = null</code>) : string | \Kore\array&lt;string&gt; | null</pre>
+<pre>getArg(string|null $key<code> = null</code>, mixed $default<code> = null</code>) : mixed</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>If no key is specified, all path arguments are returned.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$key</h4>
-<code>string</code><code>null</code><p>path arguments key</p></div>
+<code>string</code><code>null</code><p>path argument key</p></div>
 <div class="subelement argument">
 <h4>$default</h4>
 <code>mixed</code><p>default value if there is no value specified in the key</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>string</code><code>\Kore\array&lt;string&gt;</code><code>null</code>path arguments</div>
+<code>mixed</code>path arguments</div>
 </div></div>
 </div>
 <a id="method_getBody"></a><div class="element clickable method protected method_getBody " data-toggle="collapse" data-target=".method_getBody .collapse" title="protected">
@@ -187,25 +188,46 @@
 </div>
 <a id="method_getCookie"></a><div class="element clickable method protected method_getCookie " data-toggle="collapse" data-target=".method_getCookie .collapse" title="protected">
 <h2>Get the cookie parameters</h2>
-<pre>getCookie(string|null $key<code> = null</code>, mixed $default<code> = null</code>) : string | \Kore\array&lt;string&gt; | null</pre>
+<pre>getCookie(string|null $key<code> = null</code>, mixed $default<code> = null</code>) : mixed</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>If no key is specified, all cookie parameters are returned.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$key</h4>
-<code>string</code><code>null</code><p>cookie parameters key</p></div>
+<code>string</code><code>null</code><p>cookie parameter key</p></div>
 <div class="subelement argument">
 <h4>$default</h4>
 <code>mixed</code><p>default value if there is no value specified in the key</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>string</code><code>\Kore\array&lt;string&gt;</code><code>null</code>cookie parameters</div>
+<code>mixed</code>cookie parameters</div>
+</div></div>
+</div>
+<a id="method_getFromArray"></a><div class="element clickable method protected method_getFromArray " data-toggle="collapse" data-target=".method_getFromArray .collapse" title="protected">
+<h2>Get from array</h2>
+<pre>getFromArray(\Kore\array&lt;mixed&gt; $array, string|null $key, mixed $default) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If no key is specified, array is returned.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$array</h4>
+<code>\Kore\array&lt;mixed&gt;</code><p>array</p></div>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code><code>null</code><p>path key</p></div>
+<div class="subelement argument">
+<h4>$default</h4>
+<code>mixed</code><p>default value if there is no value specified in the key</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>value</div>
 </div></div>
 </div>
 <a id="method_getHeader"></a><div class="element clickable method protected method_getHeader " data-toggle="collapse" data-target=".method_getHeader .collapse" title="protected">
 <h2>Get the http header</h2>
-<pre>getHeader(string $key, mixed $default<code> = null</code>) : string | null</pre>
+<pre>getHeader(string $key, mixed $default<code> = null</code>) : mixed</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -218,7 +240,7 @@
 <code>mixed</code><p>default value if there is no value specified in the key</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>string</code><code>null</code>http header</div>
+<code>mixed</code>http header</div>
 </div></div>
 </div>
 <a id="method_getJsonBody"></a><div class="element clickable method protected method_getJsonBody " data-toggle="collapse" data-target=".method_getJsonBody .collapse" title="protected">
@@ -234,57 +256,57 @@
 </div>
 <a id="method_getMethod"></a><div class="element clickable method protected method_getMethod " data-toggle="collapse" data-target=".method_getMethod .collapse" title="protected">
 <h2>Get the http method</h2>
-<pre>getMethod() : string | null</pre>
+<pre>getMethod() : mixed</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>string</code><code>null</code>http method</div>
+<code>mixed</code>http method</div>
 </div></div>
 </div>
 <a id="method_getPost"></a><div class="element clickable method protected method_getPost " data-toggle="collapse" data-target=".method_getPost .collapse" title="protected">
 <h2>Get the post parameters</h2>
-<pre>getPost(string|null $key<code> = null</code>, mixed $default<code> = null</code>) : string | \Kore\array&lt;string&gt; | null</pre>
+<pre>getPost(string|null $key<code> = null</code>, mixed $default<code> = null</code>) : mixed</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>If no key is specified, all post parameters are returned.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$key</h4>
-<code>string</code><code>null</code><p>post parameters key</p></div>
+<code>string</code><code>null</code><p>post parameter key</p></div>
 <div class="subelement argument">
 <h4>$default</h4>
 <code>mixed</code><p>default value if there is no value specified in the key</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>string</code><code>\Kore\array&lt;string&gt;</code><code>null</code>post parameters</div>
+<code>mixed</code>post parameters</div>
 </div></div>
 </div>
 <a id="method_getQuery"></a><div class="element clickable method protected method_getQuery " data-toggle="collapse" data-target=".method_getQuery .collapse" title="protected">
 <h2>Get the query parameters</h2>
-<pre>getQuery(string|null $key<code> = null</code>, mixed $default<code> = null</code>) : string | \Kore\array&lt;string&gt; | null</pre>
+<pre>getQuery(string|null $key<code> = null</code>, mixed $default<code> = null</code>) : mixed</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>If no key is specified, all query parameters are returned.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$key</h4>
-<code>string</code><code>null</code><p>query parameters key</p></div>
+<code>string</code><code>null</code><p>query parameter key</p></div>
 <div class="subelement argument">
 <h4>$default</h4>
 <code>mixed</code><p>default value if there is no value specified in the key</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>string</code><code>\Kore\array&lt;string&gt;</code><code>null</code>query parameters</div>
+<code>mixed</code>query parameters</div>
 </div></div>
 </div>
 <a id="method_getServer"></a><div class="element clickable method protected method_getServer " data-toggle="collapse" data-target=".method_getServer .collapse" title="protected">
-<h2>Get the server parameter</h2>
-<pre>getServer(string|null $key, mixed $default<code> = null</code>) : string | null</pre>
+<h2>Get the server parameters</h2>
+<pre>getServer(string|null $key<code> = null</code>, mixed $default<code> = null</code>) : mixed</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
+<div class="long_description"><p>If no key is specified, all server parameters are returned.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$key</h4>
@@ -294,18 +316,18 @@
 <code>mixed</code><p>default value if there is no value specified in the key</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>string</code><code>null</code>server parameter</div>
+<code>mixed</code>server parameters</div>
 </div></div>
 </div>
 <a id="method_getUserAgent"></a><div class="element clickable method protected method_getUserAgent " data-toggle="collapse" data-target=".method_getUserAgent .collapse" title="protected">
 <h2>Get the User Agent</h2>
-<pre>getUserAgent() : string | null</pre>
+<pre>getUserAgent() : mixed</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>string</code><code>null</code>User Agent</div>
+<code>mixed</code>User Agent</div>
 </div></div>
 </div>
 <a id="method_handleError"></a><div class="element clickable method protected method_handleError " data-toggle="collapse" data-target=".method_handleError .collapse" title="protected">
@@ -318,6 +340,11 @@
 <div class="subelement argument">
 <h4>$e</h4>
 <code>\Exception</code><p>errors</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\Exception</code></th>
+<td></td>
+</tr></table>
 </div></div>
 </div>
 <a id="method_logLevel"></a><div class="element clickable method protected method_logLevel " data-toggle="collapse" data-target=".method_logLevel .collapse" title="protected">
@@ -431,7 +458,7 @@ If you need to customize, please override it with subclasses.</p></div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.1</a> and<br>
-            generated on 2021-03-06T16:39:13+09:00.<br></footer></div>
+            generated on 2021-03-14T13:15:54+09:00.<br></footer></div>
 </div>
 </body>
 </html>
