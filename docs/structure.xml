@@ -761,7 +761,7 @@ For unlimited, specify 0.</long-description>
       </method>
     </class>
   </file>
-  <file path="Command.php" generated-path="Command.html" hash="5efee7202ec59d4a729c37e52aae23c3" package="Default">
+  <file path="Command.php" generated-path="Command.html" hash="cc9d902c1b46670c7a196c571f57937c" package="Default">
     <docblock line="0">
       <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
@@ -1129,7 +1129,7 @@ If you need to customize, please override it with subclasses.</long-description>
       </method>
     </class>
   </file>
-  <file path="Application.php" generated-path="Application.html" hash="7cfc3d02c893a55190d478bb748f1df9" package="Default">
+  <file path="Application.php" generated-path="Application.html" hash="b318871c2c509c232bec403b34979c87" package="Default">
     <docblock line="0">
       <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
@@ -1190,7 +1190,7 @@ Used in running web applications.</long-description>
         <docblock line="48">
           <description>Set the base path</description>
           <long-description></long-description>
-          <tag name="param" line="48" description="&lt;p&gt;bath path ex. 'mybasepath'&lt;/p&gt;" type="string" variable="$basePath">
+          <tag name="param" line="48" description="&lt;p&gt;bath path ex. '/mybasepath'&lt;/p&gt;" type="string" variable="$basePath">
             <type>string</type>
           </tag>
           <tag name="return" line="48" description="" type="void">
@@ -1688,7 +1688,7 @@ If the key is passed dot-delimited, it is interpreted as an array path.</long-de
       </method>
     </class>
   </file>
-  <file path="Controller.php" generated-path="Controller.html" hash="92f3a49e3c2872162f604217b39272d4" package="Default">
+  <file path="Controller.php" generated-path="Controller.html" hash="664f119db84ec9dc6535258dbedf7c3a" package="Default">
     <docblock line="0">
       <description>Kore : Simple And Minimal Framework</description>
       <long-description></long-description>
