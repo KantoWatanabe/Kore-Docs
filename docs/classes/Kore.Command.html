@@ -60,7 +60,10 @@
 <ul xmlns:php="http://php.net/xsl" class="side-nav nav nav-list">
 <li class="nav-header">
 <i title="Methods" class="icon-custom icon-method"></i> Methods
-                    <ul><li class="method public "><a href="#method_main" title="main() :: Main Processing"><span class="description">Main Processing</span><pre>main()</pre></a></li></ul>
+                    <ul>
+<li class="method public "><a href="#method_handleShutdown" title="handleShutdown() :: Handling Shutdown"><span class="description">Handling Shutdown</span><pre>handleShutdown()</pre></a></li>
+<li class="method public "><a href="#method_main" title="main() :: Main Processing"><span class="description">Main Processing</span><pre>main()</pre></a></li>
+</ul>
 </li>
 <li class="nav-header protected">» Protected
                     <ul>
@@ -82,6 +85,7 @@
                     <ul>
 <li class="property protected "><a href="#property_args" title="$args() :: command arguments"><span class="description"></span><pre>$args</pre></a></li>
 <li class="property protected "><a href="#property_command" title="$command() :: command namespace"><span class="description"></span><pre>$command</pre></a></li>
+<li class="property protected "><a href="#property_lockManager" title="$lockManager() :: LockManager"><span class="description"></span><pre>$lockManager</pre></a></li>
 <li class="property protected "><a href="#property_opts" title="$opts() :: command options"><span class="description"></span><pre>$opts</pre></a></li>
 </ul>
 </li>
@@ -107,6 +111,18 @@
 </tr></table>
 <h3>
 <i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_handleShutdown"></a><div class="element clickable method public method_handleShutdown " data-toggle="collapse" data-target=".method_handleShutdown .collapse" title="public">
+<h2>Handling Shutdown</h2>
+<pre>handleShutdown() : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If you need to customize the handling of shutdown, please override it with subclasses.</p></div>
+<table class="table table-bordered"><tr>
+<th>codeCoverageIgnore</th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
 <a id="method_main"></a><div class="element clickable method public method_main " data-toggle="collapse" data-target=".method_main .collapse" title="public">
 <h2>Main Processing</h2>
 <pre>main(string $command, \Kore\array&lt;string&gt; $args, \Kore\array&lt;string&gt; $opts) : void</pre>
@@ -267,6 +283,16 @@ If you need to customize, please override it with subclasses.</p></div>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
+<a id="property_lockManager"> </a><div class="element clickable property protected property_lockManager" data-toggle="collapse" data-target=".property_lockManager .collapse" title="protected">
+<h2>LockManager</h2>
+<pre>$lockManager : \Kore\LockManager</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 <a id="property_opts"> </a><div class="element clickable property protected property_opts" data-toggle="collapse" data-target=".property_opts .collapse" title="protected">
 <h2>command options</h2>
 <pre>$opts : \Kore\array&lt;string&gt;</pre>
@@ -284,7 +310,7 @@ If you need to customize, please override it with subclasses.</p></div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.1</a> and<br>
-            generated on 2021-03-21T10:42:51+09:00.<br></footer></div>
+            generated on 2021-05-23T11:16:40+09:00.<br></footer></div>
 </div>
 </body>
 </html>
